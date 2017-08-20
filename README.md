@@ -1,6 +1,10 @@
 # UniFi HotSpot Manager
 This is a HotSpot Manager like the default one of [UniFi Ubiquiti](https://unifi-sdn.ubnt.com/), but this one has some advantages and is easier to use.
 
+[![Latest stable release](https://img.shields.io/github/release/mcmilk/UniFi-HotSpot-Manager.svg)](https://github.com/mcmilk/UniFi-HotSpot-Manager/releases)
+[![PayPal.me](https://img.shields.io/badge/PayPal-me-blue.svg?maxAge=2592000)](https://www.paypal.me/TinoReichardt)
+
+
 ## Features
 - allow different Usergroups via Voucher prefixes with just one [Ubiquiti Controller] ;)
 - own user access control, no need for users to get a real admin account on the [Ubiquiti Controller]
