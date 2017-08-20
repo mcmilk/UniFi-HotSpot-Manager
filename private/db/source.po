@@ -1,0 +1,640 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-08-20T16:24:55+00:00\n"
+"PO-Revision-Date: 2017-08-20T16:24:55+00:00\n"
+"Language: \n"
+
+#: form_about.php:22
+msgid "License"
+msgstr ""
+
+#: form_langadd.php:24
+#: site_list_guests.php:41
+#: site_stat_voucher.php:41
+msgid "Code"
+msgstr ""
+
+#: form_langadd.php:33
+#: site.php:161
+msgid "Language"
+msgstr ""
+
+#: form_langadd.php:42
+#: site_list_guests.php:125
+msgid "Browser"
+msgstr ""
+
+#: form_login.php:23
+#: form_login.php:43
+msgid "Sign In"
+msgstr ""
+
+#: form_login.php:28
+#: form_useradd.php:27
+#: form_useradd.php:38
+#: site_list_guests.php:46
+#: site_usermgnt.php:38
+#: site_usermgnt.php:145
+msgid "Username"
+msgstr ""
+
+#: form_login.php:37
+#: form_useradd.php:47
+#: form_userpass.php:26
+msgid "Password"
+msgstr ""
+
+#: form_useradd.php:24
+msgid "Please select at least one authorization method."
+msgstr ""
+
+#: form_useradd.php:25
+msgid "Usergroup"
+msgstr ""
+
+#: form_useradd.php:26
+#: site_usermgnt.php:144
+msgid "Administrator"
+msgstr ""
+
+#: form_useradd.php:28
+#: site_usermgnt.php:146
+msgid "Disabled"
+msgstr ""
+
+#: form_useradd.php:56
+#: form_userpass.php:35
+msgid "Confirm Password"
+msgstr ""
+
+#: form_useradd.php:64
+msgid "voucher prefix"
+msgstr ""
+
+#: form_useradd.php:65
+msgid "prefix_"
+msgstr ""
+
+#: form_useradd.php:73
+#: form_useradd.php:74
+#: site_usermgnt.php:41
+msgid "voucher headline"
+msgstr ""
+
+#: functions.php:42
+msgid "year"
+msgstr ""
+
+#: functions.php:42
+#: functions.php:52
+msgid "years"
+msgstr ""
+
+#: functions.php:43
+msgid "week"
+msgstr ""
+
+#: functions.php:43
+#: functions.php:52
+msgid "weeks"
+msgstr ""
+
+#: functions.php:44
+msgid "day"
+msgstr ""
+
+#: functions.php:44
+#: functions.php:52
+msgid "days"
+msgstr ""
+
+#: functions.php:45
+msgid "hour"
+msgstr ""
+
+#: functions.php:45
+#: functions.php:52
+msgid "hours"
+msgstr ""
+
+#: functions.php:46
+msgid "minute"
+msgstr ""
+
+#: functions.php:46
+#: functions.php:52
+msgid "minutes"
+msgstr ""
+
+#: functions.php:47
+msgid "second"
+msgstr ""
+
+#: functions.php:47
+msgid "seconds"
+msgstr ""
+
+#: functions.php:173
+#: site_list_clients.php:41
+#: site_list_guests.php:111
+msgid "Download"
+msgstr ""
+
+#: functions.php:179
+#: site_list_clients.php:42
+#: site_list_guests.php:110
+msgid "Upload"
+msgstr ""
+
+#: functions.php:185
+msgid "Time"
+msgstr ""
+
+#: functions.php:191
+#: site_create_voucher.php:40
+#: site_list_guests.php:109
+#: site_stat_voucher.php:45
+msgid "Limit"
+msgstr ""
+
+#: functions.php:235
+msgid "No data available"
+msgstr ""
+
+#: functions.php:236
+msgid "_START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+#: functions.php:237
+msgid "0 to 0 of 0 entries"
+msgstr ""
+
+#: functions.php:238
+msgid "filtered of _MAX_ entries"
+msgstr ""
+
+#: functions.php:239
+msgid "_MENU_ entries per page"
+msgstr ""
+
+#: functions.php:240
+msgid "Downloading"
+msgstr ""
+
+#: functions.php:241
+#: site_stat_voucher.php:137
+msgid "Working. Please wait."
+msgstr ""
+
+#: functions.php:242
+#: site_translator.php:104
+msgid "Search"
+msgstr ""
+
+#: functions.php:243
+msgid "No entries available."
+msgstr ""
+
+#: functions.php:244
+msgid "First"
+msgstr ""
+
+#: functions.php:245
+msgid "Previous"
+msgstr ""
+
+#: functions.php:246
+msgid "Next"
+msgstr ""
+
+#: functions.php:247
+msgid "Last"
+msgstr ""
+
+#: functions.php:248
+msgid "All"
+msgstr ""
+
+#: site.php:87
+msgid "Vouchers"
+msgstr ""
+
+#: site.php:90
+msgid "Voucher menu"
+msgstr ""
+
+#: site.php:91
+#: site.php:106
+msgid "Overview"
+msgstr ""
+
+#: site.php:93
+#: site_create_voucher.php:19
+#: site_create_voucher.php:89
+msgid "Create vouchers"
+msgstr ""
+
+#: site.php:102
+msgid "Guests"
+msgstr ""
+
+#: site.php:105
+msgid "Activated vouchers"
+msgstr ""
+
+#: site.php:108
+msgid "Guests online"
+msgstr ""
+
+#: site.php:109
+msgid "Guests APs"
+msgstr ""
+
+#: site.php:119
+msgid "Admin"
+msgstr ""
+
+#: site.php:122
+msgid "Admin menu"
+msgstr ""
+
+#: site.php:123
+msgid "Wireless user"
+msgstr ""
+
+#: site.php:124
+msgid "Other wireless networks"
+msgstr ""
+
+#: site.php:126
+#: site_usermgnt.php:23
+msgid "User management"
+msgstr ""
+
+#: site.php:133
+msgid "Translation"
+msgstr ""
+
+#: site.php:136
+msgid "Translation Tools"
+msgstr ""
+
+#: site.php:137
+msgid "Languages"
+msgstr ""
+
+#: site.php:138
+msgid "Translations"
+msgstr ""
+
+#: site.php:145
+msgid "Logout"
+msgstr ""
+
+#: site.php:149
+msgid "About"
+msgstr ""
+
+#: site.php:153
+msgid "Themes"
+msgstr ""
+
+#: site_create_voucher.php:26
+msgid "Number of vouchers"
+msgstr ""
+
+#: site_create_voucher.php:56
+#: site_list_guests.php:104
+#: site_stat_voucher.php:44
+msgid "Validity"
+msgstr ""
+
+#: site_create_voucher.php:80
+#: site_list_guests.php:47
+msgid "Comment"
+msgstr ""
+
+#: site_create_voucher.php:90
+msgid "Create"
+msgstr ""
+
+#: site_languages.php:23
+msgid "Language Management"
+msgstr ""
+
+#: site_languages.php:24
+msgid "You can define here new languages for the HotSpot Manager."
+msgstr ""
+
+#: site_languages.php:28
+#: site_languages.php:172
+#: site_languages.php:181
+msgid "Add language"
+msgstr ""
+
+#: site_languages.php:29
+#: site_list_clients.php:27
+#: site_list_guests.php:32
+#: site_list_rogueaps.php:26
+#: site_list_users.php:26
+#: site_stat_voucher.php:32
+#: site_translator.php:31
+#: site_usermgnt.php:29
+msgid "Refresh now"
+msgstr ""
+
+#: site_languages.php:38
+msgid "Language ID"
+msgstr ""
+
+#: site_languages.php:39
+msgid "Name in navbar"
+msgstr ""
+
+#: site_languages.php:40
+msgid "Browser language"
+msgstr ""
+
+#: site_languages.php:41
+msgid "Action"
+msgstr ""
+
+#: site_languages.php:100
+#: site_languages.php:127
+#: site_languages.php:130
+msgid "Delete language"
+msgstr ""
+
+#: site_languages.php:128
+msgid "Warning, do you really want to delete this translation ?"
+msgstr ""
+
+#: site_languages.php:129
+#: site_languages.php:178
+#: site_usermgnt.php:205
+#: site_usermgnt.php:231
+#: site_usermgnt.php:257
+msgid "Cancel"
+msgstr ""
+
+#: site_list_clients.php:22
+msgid "List of online clients"
+msgstr ""
+
+#: site_list_clients.php:23
+msgid "Displays all currently active devices or users on the network."
+msgstr ""
+
+#: site_list_clients.php:36
+#: site_list_guests.php:44
+#: site_list_users.php:36
+msgid "Hostname"
+msgstr ""
+
+#: site_list_clients.php:37
+msgid "Idle"
+msgstr ""
+
+#: site_list_clients.php:38
+#: site_list_users.php:38
+msgid "First Seen"
+msgstr ""
+
+#: site_list_clients.php:39
+#: site_list_rogueaps.php:39
+#: site_list_users.php:39
+msgid "Last Seen"
+msgstr ""
+
+#: site_list_clients.php:40
+msgid "Bandwidth"
+msgstr ""
+
+#: site_list_clients.php:74
+msgid "No hostname"
+msgstr ""
+
+#: site_list_guests.php:22
+msgid "List of guests"
+msgstr ""
+
+#: site_list_guests.php:23
+msgid "All guests who currently have a valid voucher in the network are shown here."
+msgstr ""
+
+#: site_list_guests.php:30
+msgid "Show expired vouchers"
+msgstr ""
+
+#: site_list_guests.php:43
+#: site_stat_voucher.php:42
+msgid "Voucher comment"
+msgstr ""
+
+#: site_list_guests.php:48
+#: site_list_guests.php:126
+msgid "Traffic"
+msgstr ""
+
+#: site_list_guests.php:49
+msgid "Valid until"
+msgstr ""
+
+#: site_list_guests.php:108
+msgid "Limits"
+msgstr ""
+
+#: site_list_guests.php:122
+msgid "Systemdata"
+msgstr ""
+
+#: site_list_guests.php:123
+msgid "IP address"
+msgstr ""
+
+#: site_list_guests.php:124
+#: site_list_users.php:37
+msgid "MAC address"
+msgstr ""
+
+#: site_list_guests.php:127
+msgid "Sent"
+msgstr ""
+
+#: site_list_guests.php:128
+msgid "Received"
+msgstr ""
+
+#: site_list_guests.php:129
+msgid "Total"
+msgstr ""
+
+#: site_list_guests.php:131
+msgid "Wireless information"
+msgstr ""
+
+#: site_list_guests.php:132
+msgid "Last AP"
+msgstr ""
+
+#: site_list_guests.php:133
+msgid "Channel"
+msgstr ""
+
+#: site_list_guests.php:134
+msgid "Radio"
+msgstr ""
+
+#: site_list_guests.php:135
+msgid "Roaming"
+msgstr ""
+
+#: site_list_guests.php:148
+msgid "Invalidate voucher"
+msgstr ""
+
+#: site_list_guests.php:163
+msgid "Unblock user"
+msgstr ""
+
+#: site_list_guests.php:167
+msgid "Block user"
+msgstr ""
+
+#: site_list_guests.php:171
+msgid "Re-connect user"
+msgstr ""
+
+#: site_list_rogueaps.php:21
+msgid "Wireless networks nearby"
+msgstr ""
+
+#: site_list_rogueaps.php:22
+msgid "Here, wireless networks are displayed, which according to MAC address also have vouchers."
+msgstr ""
+
+#: site_list_rogueaps.php:35
+msgid "ESSID"
+msgstr ""
+
+#: site_list_rogueaps.php:36
+msgid "Security"
+msgstr ""
+
+#: site_list_rogueaps.php:37
+#: site_list_users.php:35
+msgid "OUI"
+msgstr ""
+
+#: site_list_rogueaps.php:38
+msgid "BSSID"
+msgstr ""
+
+#: site_list_rogueaps.php:40
+msgid "Report time"
+msgstr ""
+
+#: site_list_rogueaps.php:41
+msgid "Age"
+msgstr ""
+
+#: site_list_users.php:21
+msgid "Userlist"
+msgstr ""
+
+#: site_list_users.php:22
+msgid "List of all user, which are / were connected to our wireless network."
+msgstr ""
+
+#: site_list_users.php:40
+msgid "Connection"
+msgstr ""
+
+#: site_stat_voucher.php:25
+msgid "Available vouchers"
+msgstr ""
+
+#: site_stat_voucher.php:26
+msgid "Overview of all vouchers that have not been activated at the moment."
+msgstr ""
+
+#: site_stat_voucher.php:30
+msgid "Print selection"
+msgstr ""
+
+#: site_stat_voucher.php:31
+msgid "Delete selection"
+msgstr ""
+
+#: site_stat_voucher.php:43
+msgid "Created on"
+msgstr ""
+
+#: site_translator.php:23
+msgid "Translation Management"
+msgstr ""
+
+#: site_translator.php:24
+msgid "When you want, you can translate the whole HotSpot Manager to your language ;)"
+msgstr ""
+
+#: site_translator.php:32
+#: site_translator.php:49
+msgid "Destination Language"
+msgstr ""
+
+#: site_translator.php:47
+msgid "Reference Count"
+msgstr ""
+
+#: site_translator.php:48
+msgid "Source Code"
+msgstr ""
+
+#: site_translator.php:92
+msgid "empty"
+msgstr ""
+
+#: site_usermgnt.php:24
+msgid "You can create, modify or delete the users of the HotSpot Manager."
+msgstr ""
+
+#: site_usermgnt.php:28
+msgid "New user"
+msgstr ""
+
+#: site_usermgnt.php:39
+msgid "Ticketprefix"
+msgstr ""
+
+#: site_usermgnt.php:40
+msgid "Permissions"
+msgstr ""
+
+#: site_usermgnt.php:42
+msgid "Actions"
+msgstr ""
+
+#: site_usermgnt.php:120
+#: site_usermgnt.php:199
+#: site_usermgnt.php:210
+msgid "Change password"
+msgstr ""
+
+#: site_usermgnt.php:123
+#: site_usermgnt.php:228
+#: site_usermgnt.php:234
+msgid "Delete user"
+msgstr ""
+
+#: site_usermgnt.php:251
+#: site_usermgnt.php:260
+msgid "Add user"
+msgstr ""

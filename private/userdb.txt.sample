@@ -1,0 +1,7 @@
+###########################################################################################
+# username | password | prefix | options | headline
+#
+# user = SampleAdmin, password = SamplePassword
+# -> please create new user and delete/rename this one!!!
+###########################################################################################
+SampleAdmin:$2y$10$nfn2QUh7HcqS3vTwfLABr.v3jkQqMuOm7CWd4qd/QlFtm43f/LXTy::a:Headline
