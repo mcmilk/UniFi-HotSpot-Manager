@@ -1,5 +1,4 @@
 <?php
-
 /**
  * UniFi PHP API client
  *

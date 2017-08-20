@@ -38,9 +38,9 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - the `private` folder can be setup to some private directory (not meant to stay in webroot)
 - the files `js/hotspot.js` and `index.php` should be copied to your web folder
 - edit the file `index.php` for setting up the private path
-- then go to your `private` path an take a look into the file `config.php.sample`
+- then go to your `private` path an take a look into the file `config.sample.php`
 - modify that file and rename it to `config.php`
-- then take a look at the file `user.txt.sample` ... then rename it to `userdb.txt`
+- then take a look at the file `userdb.sample.txt` ... then rename it to `userdb.txt`
 - start your browser and modify the user data...
 - for creating an own qr-code of the WiFi settings for your network on the vouchers, just use the script provided here: `contrib/qr-gen.sh`
 
