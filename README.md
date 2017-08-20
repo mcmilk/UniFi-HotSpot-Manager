@@ -37,12 +37,13 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - then go to your `private` path an take a look into the file `config.php.sample`
 - modify that file and rename it to `config.php`
 - then take a look at the file `user.txt.sample` ... then rename it to `userdb.txt`
-- start your browser and modify the user data, you should have it then
+- start your browser and modify the user data...
+- for creating an own qr-code of the WiFi settings for your network on the vouchers, just use the script provided here: `contrib/qr-gen.sh`
 
 ## Todo
 - move userdb.txt to json format (like languages.json)
-- find string which have been overseen by current i18n
-- when all strings are found, users could submit new translations
+- find strings, which have not been found by my current i18n initiative ;)
+- when all strings are found, users can submit new translations
 - show some more information on the "list_clients" action
 - the same for the "list_guest_aps" site
 
