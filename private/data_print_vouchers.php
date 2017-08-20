@@ -20,7 +20,7 @@ $print_ids = explode(',', $_POST['PrintIDs']);
 $pdf = new PDF('P', 'mm', 'A4');
 $pdf->SetTitle("HotSpot Manager");
 $pdf->SetSubject($headline);
-$pdf->SetAuthor("HotSpot Manager, <?php echo __("Username"); ?> " . $username);
+$pdf->SetAuthor("HotSpot Manager, " . __("Username") . ": " . $username);
 $pdf->SetCreator("HotSpot Manager, (C) 2017 Tino Reichardt");
 
 $note_len = strlen($note_prefix);

@@ -33,3 +33,10 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 [DataTables]:https://datatables.net/
 [jQuery]:https://github.com/jquery/jquery
 [Bootstrap]:https://github.com/twbs/bootstrap
+
+## Screenshots
+![CreateVouchers](https://raw.githubusercontent.com/mcmilk/UniFi-HotSpot-Manager/master/contrib/01_CreateVouchers_de.png "CreateVouchers - german")
+![CreateVouchers](https://raw.githubusercontent.com/mcmilk/UniFi-HotSpot-Manager/master/contrib/02_CreateVouchers_en.png "CreateVouchers - english")
+![CreateVouchers](https://raw.githubusercontent.com/mcmilk/UniFi-HotSpot-Manager/master/contrib/02_CreateVouchers_en.png "CreateVouchers German")
+![CreateVouchers](https://raw.githubusercontent.com/mcmilk/UniFi-HotSpot-Manager/master/contrib/04_UserManagement.png "CreateVouchers German")
+![CreateVouchers](https://raw.githubusercontent.com/mcmilk/UniFi-HotSpot-Manager/master/contrib/05_Translations.png "CreateVouchers German")
