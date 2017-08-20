@@ -1,13 +1,12 @@
+# UniFi HotSpot Manager
+This is a HotSpot Manager like the default one of [UniFi Ubiquiti](https://unifi-sdn.ubnt.com/), but this one has some advantages and is easier to use.
 
-## UniFi HotSpot Manager
-This is a HotSpot Manager like the default one of Ubiquiti. But it has some advantages and is easier to use ;)
-
-### Features
-- allow different Usergroups via Voucher prefixes with just one Controller ;)
-- own user access control, no need for users to get real account on the Ubiquiti Controller
+## Features
+- allow different Usergroups via Voucher prefixes with just one [Ubiquiti Controller] ;)
+- own user access control, no need for users to get a real admin account on the [Ubiquiti Controller]
 - variable printing, creating, filtering and deleting of vouchers
-- deleting multiple vouchers in just one step works, but the needed time is about one seconds per voucher :(
-- blocking, unblocking and re-connecting of users (the default HotSpot system misses these functions)
+- deleting multiple vouchers with _one click_ just works, but the needed time is about 0.8 seconds per voucher :(
+- blocking, unblocking and re-connecting of users (the default HotSpot system misses these functions, but the admin interface has, yes I know... but this is not for users)
 - ... a lot more, this is just the first writing of that README
 
 ## Included libraries
@@ -25,6 +24,28 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - [Bootstrap Dialog](https://github.com/nakupanda/bootstrap3-dialog) - used
 - [MomentJS](https://momentjs.com/) - Parse, validate, manipulate and display dates and times in JavaScript
 
+## Requirements
+- an [Ubiquiti Controller]
+- a webserver wit PHP >= 5.5
+- some time for installing and testing
+
+## Installation
+- clone the repository `git clone https://github.com/mcmilk/UniFi-HotSpot-Manager`
+- the `private` folder can be setup to some private directory (not meant to stay in webroot)
+- the files `js/hotspot.js` and `index.php` should be copied to your web folder
+- edit the file `index.php` for setting up the private path
+- then go to your `private` path an take a look into the file `config.php.sample`
+- modify that file and rename it to `config.php`
+- then take a look at the file `user.txt.sample` ... then rename it to `userdb.txt`
+- start your browser and modify the user data, you should have it then
+
+## Todo
+- move userdb.txt to json format (like languages.json)
+- find string which have been overseen by current i18n
+- when all strings are found, users could submit new translations
+- show some more information on the "list_clients" action
+- the same for the "list_guest_aps" site
+
 ## Screenshots
 - creating vouchers and language selection
 ![p1](https://github.com/mcmilk/UniFi-HotSpot-Manager/blob/master/contrib/01_CreateVouchers_de.png)
@@ -37,20 +58,10 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - same guest list, but a much smaller screen, responsive design ;)
 ![p5](https://github.com/mcmilk/UniFi-HotSpot-Manager/blob/master/contrib/07_GuestListSmall.png)
 
-## Installation
-- clone the repository `git clone https://github.com/mcmilk/UniFi-HotSpot-Manager`
-- the `private` folder can be setup to some private directory (not meant to stay in webroot)
-- the files `js/hotspot.js` and `index.php` should be copied to your web folder
-- edit the file `index.php` for setting up the private path
-- then go to your `private` path an take a look into the file `config.php.sample`
-- modify that file and rename it to `config.php`
-- then take a look at the file `user.txt.sample` ... then rename it to `userdb.txt`
-- start you browser and modify the user data and you are ready...
-
 ## Sample voucher lists
-- printed, with german language settings
-- printed with english language settings
-- the comments in the last line are the same, the headline is setable per user
+- [printed, with german language settings](https://github.com/mcmilk/UniFi-HotSpot-Manager/blob/master/contrib/tickets-de.pdf)
+- [printed with english language settings](https://github.com/mcmilk/UniFi-HotSpot-Manager/blob/master/contrib/tickets-en.pdf)
+- the comments in the last line are the same, the headline can be set per user
 
 ## License and redistribution
 This HotSpot Manager is licensed under the [MIT license], Copyright (c) 2017 Tino Reichardt.
@@ -60,3 +71,4 @@ This HotSpot Manager is licensed under the [MIT license], Copyright (c) 2017 Tin
 [DataTables]:https://datatables.net/
 [jQuery]:https://github.com/jquery/jquery
 [Bootstrap]:https://github.com/twbs/bootstrap
+[Ubiquiti Controller]:https://www.ubnt.com/download/unifi/unifi-cloud-key/uc-ck
