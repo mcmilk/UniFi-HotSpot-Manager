@@ -125,7 +125,7 @@ $(document).ready(function(){
         BootstrapDialog.confirm({
           draggable: true,
           title: "<?php echo __("Delete language"); ?>",
-          message: "<?php echo __("Warning, do you really want to delete this translation ?"); ?>",
+          message: "<?php echo __("Warning, do you really want to delete this translation?"); ?>",
           btnCancelLabel: "<?php echo __("Cancel"); ?>",
           btnOKLabel: "<?php echo __("Delete language"); ?>",
           btnOKClass: 'btn-danger',

@@ -226,7 +226,7 @@ $(document).ready(function(){
 
   var userdelDialog = new BootstrapDialog({
     title: '<?php echo __("Delete user"); ?>',
-    message: $('<form><div>Soll der Benutzer wirklich gelöscht werden ?</div><input type="hidden" name="username" value=""></form>'),
+    message: $('<form><div><?php echo __("Are you sure you want to delete the user?"); ?></div><input type="hidden" name="username" value=""></form>'),
     buttons: [{
       label: "<?php echo __("Cancel"); ?>",
       action: function(me) { me.close(); }

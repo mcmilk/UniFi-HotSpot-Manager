@@ -242,7 +242,7 @@ function dataTablesDefaults() {
   $sSearch         = __("Search");
   $sZeroRecords    = __("No entries available.");
   $sFirst          = __("First");
-  $sPrevious       = __("Previous");
+  $sPrevious       = __("Prev");
   $sNext           = __("Next");
   $sLast           = __("Last");
   $sAll            = __("All");

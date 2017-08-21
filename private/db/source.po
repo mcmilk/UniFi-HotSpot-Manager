@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2017-08-20T17:46:39+00:00\n"
-"PO-Revision-Date: 2017-08-20T17:46:39+00:00\n"
+"POT-Creation-Date: 2017-08-21T09:25:26+00:00\n"
+"PO-Revision-Date: 2017-08-21T09:25:26+00:00\n"
 "Language: \n"
 
 #: data_print_vouchers.php:23
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: form_about.php:22
+#: form_about.php:19
 msgid "License"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid "First"
 msgstr ""
 
 #: functions.php:245
-msgid "Previous"
+msgid "Prev"
 msgstr ""
 
 #: functions.php:246
@@ -374,7 +374,7 @@ msgid "Delete language"
 msgstr ""
 
 #: site_languages.php:128
-msgid "Warning, do you really want to delete this translation ?"
+msgid "Warning, do you really want to delete this translation?"
 msgstr ""
 
 #: site_languages.php:129
@@ -633,6 +633,10 @@ msgstr ""
 #: site_usermgnt.php:228
 #: site_usermgnt.php:234
 msgid "Delete user"
+msgstr ""
+
+#: site_usermgnt.php:229
+msgid "Are you sure you want to delete the user?"
 msgstr ""
 
 #: site_usermgnt.php:251

@@ -87,7 +87,7 @@ $(document).ready(function(){
       { "data": null, "render": local_banuser, "orderable": false },
       { "data": "username", "className": "text-center select-filter", "defaultContent": "", "render": local_username },
       { "data": "usernote", "className": "text-center select-filter", "defaultContent": "", "render": local_usernote },
-      { "data": "bytes", "className": "text-center", "render": fmt_human },
+      { "data": "bytes", "className": "text-center", "defaultContent": "0", "render": fmt_human },
       { "data": "end", "className": "text-center", "render": fmt_datetime }
     ],
     "order": [[ 7, "desc" ]]
