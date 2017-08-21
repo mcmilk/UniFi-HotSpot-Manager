@@ -121,6 +121,11 @@ if ($is_user) {
   $includefile = "form_login.php";
 }
 
+if (isset($_GET["get_form"]) && $_GET["get_form"] === "about") {
+  include("form_about.php");
+  exit;
+}
+
 require_once("unifi_cache.php");
 
 /**
@@ -138,9 +143,6 @@ if ($is_user) {
       break;
     case "langadd":
       include("form_langadd.php");
-      break;
-    case "about":
-      include("form_about.php");
       break;
     }
     exit;
@@ -161,11 +163,6 @@ if ($is_user) {
 
     /* action: delete voucher */
     if ($action === "stat_voucher" && isset($_POST["DeleteIDs"]) && strlen($_POST["DeleteIDs"])) {
-      include("data_delete_vouchers.php");
-    }
-
-    /* action: usermgnt */
-    if ($action === "usermgnt" && isset($_POST["DeleteIDs"]) && strlen($_POST["DeleteIDs"])) {
       include("data_delete_vouchers.php");
     }
 

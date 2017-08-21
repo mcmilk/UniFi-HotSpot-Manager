@@ -16,12 +16,9 @@ if (!defined('HOTSPOT')) { exit; }
 
 ?>
 
-<form data-toggle="validator" method="POST" action="">
-  <fieldset>
-
-  <p><i class="fa fa-copyright"></i> 2017 Tino Reichardt, <?php echo __("License"); ?>: <a href="https://opensource.org/licenses/MIT">MIT</a>
-  <p>
-  <pre>
+<p><i class="fa fa-copyright"></i> 2017 Tino Reichardt, <?php echo __("License"); ?>: <a href="https://opensource.org/licenses/MIT">MIT</a>
+<p>
+<pre>
 Copyright (c) 2017 Tino Reichardt
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -43,6 +40,3 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </pre>
-
-  </fieldset>
-</form>
