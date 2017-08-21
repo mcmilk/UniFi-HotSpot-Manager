@@ -101,6 +101,7 @@ class Translations extends ArrayObject
     ];
 
     private $headers;
+    private $translationsCount;
 
     /**
      * @see ArrayObject::__construct()
@@ -462,11 +463,18 @@ class Translations extends ArrayObject
     {
         $a = array();
         $v = get_object_vars($this);
+        $this->$translationsCount = 0;
         foreach ($v as $obj) {
+          if (strlen($obj->getTranslation())) $this->$translationsCount += 1;
           $a[] = $obj->getTranslation();
         }
         $v = 0;
         return $a;
+    }
+
+    public function getTranslationsCount()
+    {
+        return $this->$translationsCount;
     }
 
     /**

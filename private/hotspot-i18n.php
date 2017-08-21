@@ -163,19 +163,28 @@ function i18n_update_json() {
  * build <li>'s for the destlang dropdown
  */
 function i18n_menu_destlang() {
-  global $languages;
+  global $languages, $i18ndir;
 
   foreach($languages as $lang) {
+    $file = "$i18ndir/".$lang->id.".json";
+    if (!is_file($file)) continue;
+
+    $tls = Translations::fromJsonFile($file);
+    $tl = $tls->getTranslations();
+    $tlc = $tls->getTranslationsCount();
+    $num = count($tls->getTranslations());
+
     if ($_SESSION['destlang'] === $lang->id) {
-      echo '<li class="active"><a href="?destlang=' . $lang->id . '">'.$lang->name . '</a></li>';
+      echo '<li class="active"><a href="?destlang=' . $lang->id . '">'.$lang->name . ' ['.$tlc.'/'.$num.']</a></li>';
     } else {
-      echo '<li><a href="?destlang=' . $lang->id . '">'.$lang->name . '</a></li>';
+      echo '<li><a href="?destlang=' . $lang->id . '">'.$lang->name . ' ('.$tlc.'/'.$num.')</a></li>';
     }
   }
 }
 
 function i18n_table_destlang() {
   global $languages;
+
 
   foreach($languages as $lang) {
     if ($_SESSION['destlang'] === $lang->id) {
