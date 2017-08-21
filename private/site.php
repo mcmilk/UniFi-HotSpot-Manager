@@ -246,7 +246,7 @@ if (!defined('HOTSPOT')) { exit; }
 
   $("#about").click(function(){
     BootstrapDialog.show({
-      title:    'HotSpot Manager Version 0.4a (2017-08-20)',
+      title:    'HotSpot Manager Version 0.4b (2017-08-21)',
       message:  $('<div></div>').load('?get_form=about')
     });
   });
