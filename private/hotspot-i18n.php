@@ -68,30 +68,36 @@ function i18n_init() {
   global $PATH_PRIVATE, $datadir, $i18ndir;
   global $languages, $language, $i18n;
 
-  // create mini json language definition
+  // create 'mini' json language definition
   $file = "$datadir/languages.json";
   if (!is_file($file)) {
     $a = [];
-    $a[] = array("id" => "ca", "name" => "Català",     "browser" => "ca");
-    $a[] = array("id" => "cs", "name" => "Čeština",    "browser" => "cs");
-    $a[] = array("id" => "de", "name" => "Deutsch",    "browser" => "de,de-de,de-at");
-    $a[] = array("id" => "en", "name" => "English",    "browser" => "en,en-us,en-gb");
-    $a[] = array("id" => "es", "name" => "Español",    "browser" => "es,es-es");
-    $a[] = array("id" => "hr", "name" => "Hrvatski",   "browser" => "hr");
-    $a[] = array("id" => "it", "name" => "Italiano",   "browser" => "it");
-    $a[] = array("id" => "nl", "name" => "Nederlands", "browser" => "nl");
-    $a[] = array("id" => "pl", "name" => "Polski",     "browser" => "pl");
-    $a[] = array("id" => "pt", "name" => "Português",  "browser" => "pt,pt-pt");
-    $a[] = array("id" => "ru", "name" => "Русский",    "browser" => "ru");
-    $a[] = array("id" => "sv", "name" => "Svenska",    "browser" => "sv");
-    $a[] = array("id" => "tr", "name" => "Türkçe",     "browser" => "tr");
-    $a[] = array("id" => "zh-cn", "name" => "中文",    "browser" => "zh-cn");
+    $a[] = array("id" => "ar",    "name" => "ﺔﻴﺐﺮﻌﻠﺍ",    "browser" => "ar");
+    $a[] = array("id" => "ca-es", "name" => "Català",     "browser" => "ca-es");
+    $a[] = array("id" => "cs",    "name" => "Čeština",    "browser" => "cs");
+    $a[] = array("id" => "de",    "name" => "Deutsch",    "browser" => "de");
+    $a[] = array("id" => "en",    "name" => "English",    "browser" => "en");
+    $a[] = array("id" => "es",    "name" => "Español",    "browser" => "es");
+    $a[] = array("id" => "fr",    "name" => "Français",   "browser" => "fr");
+    $a[] = array("id" => "hr",    "name" => "Hrvatski",   "browser" => "hr");
+    $a[] = array("id" => "it",    "name" => "Italiano",   "browser" => "it");
+    $a[] = array("id" => "ja",    "name" => "日本語",     "browser" => "ja");
+    $a[] = array("id" => "ko",    "name" => "한국어",     "browser" => "ko");
+    $a[] = array("id" => "nl",    "name" => "Nederlands", "browser" => "nl");
+    $a[] = array("id" => "pl",    "name" => "Polski",     "browser" => "pl");
+    $a[] = array("id" => "pt",    "name" => "Português",  "browser" => "pt");
+    $a[] = array("id" => "ru",    "name" => "Русский",    "browser" => "ru");
+    $a[] = array("id" => "sv",    "name" => "Svenska",    "browser" => "sv");
+    $a[] = array("id" => "tr",    "name" => "Türkçe",     "browser" => "tr");
+    $a[] = array("id" => "zh-cn", "name" => "中文",       "browser" => "zh,zh-cn");
     file_put_contents($file, json_encode($a));
   }
 
   // read our lang database
   $languages = json_decode(file_get_contents($file));
-  i18n_update_json();
+
+  // only enable this, when we do mass translating
+  //i18n_update_json();
 
   // default from configuration
   $userlang = $language;
@@ -138,6 +144,9 @@ function i18n_update_json() {
   $tlc = Translations::fromPhpCodeFile($files);
   $tlc->toPoFile("$datadir/source.po");
 
+  // export to csv for automatic translation via Bing/Google
+  //$tlc->toCsvFile("$datadir/source.csv");
+
   // write json for each defined language
   foreach($languages as $lang) {
     $sfile = "$datadir/source.po";
@@ -156,6 +165,9 @@ function i18n_update_json() {
       $tlc->mergeWith($tlx, Merge::REFERENCES_OURS);
     }
     $tlc->toJsonFile($file);
+    // generate po files for re-viewing
+    //$file2 = "$i18ndir/" . $lang->id . '.po';
+    //$tlc->toPoFile($file2);
   }
 }
 

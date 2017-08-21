@@ -26,7 +26,7 @@ if (!defined('HOTSPOT')) { exit; }
   <div class="col-xs-12 col-md-6 text-right">
     <h2></h2>
     <button type="button" id="langadd" class="btn btn-primary"><i class="fa fa-plus"></i> <?php echo __("Add language"); ?></button>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 
@@ -36,7 +36,7 @@ if (!defined('HOTSPOT')) { exit; }
     <thead>
       <tr class="info">
         <th class="text-center"><?php echo __("Language ID"); ?></th>
-        <th class="text-center"><?php echo __("Name in navbar"); ?></th>
+        <th class="text-center"><?php echo __("Name in menu"); ?></th>
         <th class="text-center"><?php echo __("Browser language"); ?></th>
         <th class="text-center"><?php echo __("Action"); ?></th>
       </tr>

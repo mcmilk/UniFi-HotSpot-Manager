@@ -29,7 +29,7 @@ if (!defined('HOTSPOT')) { exit; }
       <span class="fa fa-square-o fa-lg"></span>
       <span class="content"><?php echo __("Show expired vouchers"); ?></span>
     </label>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 
@@ -119,17 +119,17 @@ $(document).ready(function(){
   function local_hostname(val, type, row) {
     if (type === 'display') {
       var ttip = "";
-      ttip += "<p><b><?php echo __("Systemdata"); ?></b>";
+      ttip += "<p><b><?php echo __("Client information"); ?></b>";
       ttip += "<br><?php echo __("IP address"); ?>: " + row.ip;
       ttip += "<br><?php echo __("MAC address"); ?>: " + row.mac;
       ttip += "<br><?php echo __("Browser"); ?>: " + row.user_agent;
-      ttip += "<p><b><?php echo __("Traffic"); ?></b>";
-      ttip += "<br><?php echo __("Sent"); ?>: " + fmt_human(row.tx_bytes, type);
-      ttip += "<br><?php echo __("Received"); ?>: " + fmt_human(row.rx_bytes, type);
-      ttip += "<br><?php echo __("Total"); ?>: " + fmt_human(row.bytes, type);
+      ttip += "<p><b><?php echo __("Data Traffic"); ?></b>";
+      ttip += "<br><?php echo __("Data Sent"); ?>: " + fmt_human(row.tx_bytes, type);
+      ttip += "<br><?php echo __("Data Received"); ?>: " + fmt_human(row.rx_bytes, type);
+      ttip += "<br><?php echo __("Data Total"); ?>: " + fmt_human(row.bytes, type);
       if (row.radio) {
         ttip += "<p><b><?php echo __("Wireless information"); ?></b>";
-        ttip += "<br><?php echo __("Last AP"); ?>: " + row.ap_mac;
+        ttip += "<br><?php echo __("Last access point"); ?>: " + row.ap_mac;
         ttip += "<br><?php echo __("Channel"); ?>: " + row.channel;
         ttip += "<br><?php echo __("Radio"); ?>: " + row.radio;
         ttip += "<br><?php echo __("Roaming"); ?>: " + row.roam_count;
@@ -145,7 +145,7 @@ $(document).ready(function(){
       var html = "";
       if (row.expired != 1) {
         var font = '<label class="btn btn-default btn-xs"><span class="fa-stack"><i class="fa fa-wifi fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span></label>';
-        html = ' <a href="#" rel="tooltip" class="action" data-action="unauth_guest" data-mac='+row.mac+' data-html="true" title="<?php echo __("Invalidate voucher"); ?>">'+font+'</a>';
+        html = ' <a href="#" rel="tooltip" class="action" data-action="unauth_guest" data-mac='+row.mac+' data-html="true" title="<?php echo __("Discard voucher"); ?>">'+font+'</a>';
       }
       return html;
     }
@@ -160,15 +160,16 @@ $(document).ready(function(){
 
       if (row.blocked == 1) {
         font = '<label class="btn btn-default btn-xs"><span class="fa-stack"><i class="fa fa-user fa-stack-2x"></i><i class="fa fa-check fa-stack-2x text-success"></i></span></label>';
-        text = "<?php echo __("Unblock user"); ?>";
+        text = "<?php echo __("Enable user"); ?>";
         html = '<a href="#" rel="tooltip" class="action" data-action="unblock_sta" data-mac='+row.mac+' data-html="true" title="'+text+'">'+font+'</a> ';
       } else {
         font = '<label class="btn btn-default btn-xs"><span class="fa-stack"><i class="fa fa-user fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span></label>';
         text = "<?php echo __("Block user"); ?>";
         html = '<a href="#" rel="tooltip" class="action" data-action="block_sta" data-mac='+row.mac+' data-html="true" title="'+text+'">'+font+'</a> ';
       }
+      text = "<?php echo __("Reset user device"); ?>"
       font = '<label class="btn btn-default btn-xs"><span class="fa-stack"><i class="fa fa-user fa-stack-1x"></i><i class="fa fa-repeat fa-stack-2x text-danger"></i></span></label>';
-      html += '<a href="#" rel="tooltip" class="action" data-action="reconnect_sta" data-mac='+row.mac+' data-html="true" title="<?php echo __("Re-connect user"); ?>">'+font+'</a> ';
+      html += '<a href="#" rel="tooltip" class="action" data-action="reconnect_sta" data-mac='+row.mac+' data-html="true" title="'+text+'">'+font+'</a> ';
       return html;
     }
     return val;
@@ -176,7 +177,7 @@ $(document).ready(function(){
 
   function local_username(val, type, row) {
     if (type === 'display') {
-      var html = '<a href="#" class="edit-name" data-value="'+val+'" data-type="text" data-pk="'+row.user_id+'" data-title="Benutzer eingeben">'+val+'</a>';
+      var html = '<a href="#" class="edit-name" data-value="'+val+'" data-type="text" data-pk="'+row.user_id+'">'+val+'</a>';
       return html;
     }
     return val;
@@ -184,7 +185,7 @@ $(document).ready(function(){
 
   function local_usernote(val, type, row) {
     if (type === 'display') {
-      var html = '<a href="#" class="edit-note" data-value="'+val+'" data-type="textarea" data-pk="'+row.user_id+'" data-title="Kommentar eingeben">'+val+'</a>';
+      var html = '<a href="#" class="edit-note" data-value="'+val+'" data-type="textarea" data-pk="'+row.user_id+'">'+val+'</a>';
       return html;
     }
     return val;

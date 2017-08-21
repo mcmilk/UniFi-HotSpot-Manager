@@ -18,12 +18,12 @@ if (!defined('HOTSPOT')) { exit; }
 
 <div class="row">
   <div class="col-md-6">
-    <h2><?php echo __("Userlist"); ?></h2>
-    <p><?php echo __("List of all user, which are / were connected to our wireless network."); ?></p>
+    <h2><?php echo __("User list"); ?></h2>
+    <p><?php echo __("List of all user, which are connected to our wireless network."); ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 

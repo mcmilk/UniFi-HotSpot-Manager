@@ -39,12 +39,12 @@ function fmt_duration($seconds) {
   $minutes = intval($seconds/60);
   $seconds -= $minutes * 60;
   $r = "";
-  if ($years)   { if ($years == 1)   { $r .= "1 ".__("year")   ." "; } else { $r .= "$years "  .__("years")   ." "; } }
-  if ($weeks)   { if ($weeks == 1)   { $r .= "1 ".__("week")   ." "; } else { $r .= "$weeks "  .__("weeks")   ." "; } }
-  if ($days)    { if ($days == 1)    { $r .= "1 ".__("day")    ." "; } else { $r .= "$days "   .__("days")    ." "; } }
-  if ($hours)   { if ($hours == 1)   { $r .= "1 ".__("hour")   ." "; } else { $r .= "$hours "  .__("hours")   ." "; } }
-  if ($minutes) { if ($minutes == 1) { $r .= "1 ".__("minute") ." "; } else { $r .= "$minutes ".__("minutes") ." "; } }
-  if ($seconds) { if ($seconds == 1) { $r .= "1 ".__("second") ." "; } else { $r .= "$seconds ".__("seconds") ." "; } }
+  if ($years)   { if ($years == 1)   { $r .= __("1 year")   ." "; } else { $r .= "$years "  .__("years")   ." "; } }
+  if ($weeks)   { if ($weeks == 1)   { $r .= __("1 week")   ." "; } else { $r .= "$weeks "  .__("weeks")   ." "; } }
+  if ($days)    { if ($days == 1)    { $r .= __("1 day")    ." "; } else { $r .= "$days "   .__("days")    ." "; } }
+  if ($hours)   { if ($hours == 1)   { $r .= __("1 hour")   ." "; } else { $r .= "$hours "  .__("hours")   ." "; } }
+  if ($minutes) { if ($minutes == 1) { $r .= __("1 minute") ." "; } else { $r .= "$minutes ".__("minutes") ." "; } }
+  if ($seconds) { if ($seconds == 1) { $r .= __("1 second") ." "; } else { $r .= "$seconds ".__("seconds") ." "; } }
   return $r;
 }
 
@@ -232,17 +232,17 @@ function navbar_themes() {
 }
 
 function dataTablesDefaults() {
-  $sEmptyTable     = __("No data available");
-  $sInfo           = __("_START_ to _END_ of _TOTAL_ entries");
-  $sInfoEmpty      = __("0 to 0 of 0 entries");
-  $sInfoFiltered   = __("filtered of _MAX_ entries");
-  $sLengthMenu     = __("_MENU_ entries per page");
-  $sLoadingRecords = __("Downloading");
-  $sProcessing     = __("Working. Please wait.");
+  $sEmptyTable     = __("No data available in table");
+  $sInfo           = __("Showing _START_ to _END_ of _TOTAL_ entries");
+  $sInfoEmpty      = __("Showing 0 to 0 of 0 entries");
+  $sInfoFiltered   = __("(filtered from _MAX_ total entries)");
+  $sLengthMenu     = __("Show _MENU_ entries");
+  $sLoadingRecords = __("Loading...");
+  $sProcessing     = __("Processing...");
   $sSearch         = __("Search");
-  $sZeroRecords    = __("No entries available.");
+  $sZeroRecords    = __("No matching records found");
   $sFirst          = __("First");
-  $sPrevious       = __("Prev");
+  $sPrevious       = __("Previous");
   $sNext           = __("Next");
   $sLast           = __("Last");
   $sAll            = __("All");

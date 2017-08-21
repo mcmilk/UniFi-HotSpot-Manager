@@ -26,7 +26,7 @@ if (!defined('HOTSPOT')) { exit; }
   <div class="col-xs-12 col-md-6 text-right">
     <h2></h2>
     <button type="button" id="useradd" class="btn btn-primary"><i class="fa fa-user-plus"></i> <?php echo __("New user"); ?></button>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 
@@ -36,9 +36,9 @@ if (!defined('HOTSPOT')) { exit; }
     <thead>
       <tr class="info">
         <th class="text-center"><?php echo __("Username"); ?></th>
-        <th class="text-center"><?php echo __("Ticketprefix"); ?></th>
+        <th class="text-center"><?php echo __("Voucher prefix"); ?></th>
         <th class="text-center"><?php echo __("Permissions"); ?></th>
-        <th class="text-center"><?php echo __("voucher headline"); ?></th>
+        <th class="text-center"><?php echo __("Voucher headline"); ?></th>
         <th class="text-center"><?php echo __("Actions"); ?></th>
       </tr>
     </thead>

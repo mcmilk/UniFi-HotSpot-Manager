@@ -47,7 +47,6 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 ## Todo
 - move userdb.txt to json format (like languages.json)
 - find strings, which have not been found by my current i18n initiative ;)
-- when all strings are found, users can submit new translations
 - show some more information on the "list_clients" action
 - the same for the "list_guest_aps" site
 

@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2017-08-21T11:02:32+00:00\n"
-"PO-Revision-Date: 2017-08-21T11:02:32+00:00\n"
+"POT-Creation-Date: 2017-08-21T20:00:43+00:00\n"
+"PO-Revision-Date: 2017-08-21T20:00:43+00:00\n"
 "Language: \n"
 
 #: data_print_vouchers.php:23
@@ -76,30 +76,30 @@ msgid "Confirm Password"
 msgstr ""
 
 #: form_useradd.php:64
-msgid "voucher prefix"
-msgstr ""
-
 #: form_useradd.php:65
-msgid "prefix_"
+#: site_usermgnt.php:39
+msgid "Voucher prefix"
 msgstr ""
 
 #: form_useradd.php:73
 #: form_useradd.php:74
 #: site_usermgnt.php:41
-msgid "voucher headline"
+msgid "Voucher headline"
 msgstr ""
 
 #: functions.php:42
-msgid "year"
+#: site.php:236
+msgid "1 year"
 msgstr ""
 
 #: functions.php:42
 #: functions.php:52
+#: site.php:236
 msgid "years"
 msgstr ""
 
 #: functions.php:43
-msgid "week"
+msgid "1 week"
 msgstr ""
 
 #: functions.php:43
@@ -108,37 +108,45 @@ msgid "weeks"
 msgstr ""
 
 #: functions.php:44
-msgid "day"
+#: site.php:237
+msgid "1 day"
 msgstr ""
 
 #: functions.php:44
 #: functions.php:52
+#: site.php:237
 msgid "days"
 msgstr ""
 
 #: functions.php:45
-msgid "hour"
+#: site.php:238
+msgid "1 hour"
 msgstr ""
 
 #: functions.php:45
 #: functions.php:52
+#: site.php:238
 msgid "hours"
 msgstr ""
 
 #: functions.php:46
-msgid "minute"
+#: site.php:239
+msgid "1 minute"
 msgstr ""
 
 #: functions.php:46
 #: functions.php:52
+#: site.php:239
 msgid "minutes"
 msgstr ""
 
 #: functions.php:47
-msgid "second"
+#: site.php:240
+msgid "1 second"
 msgstr ""
 
 #: functions.php:47
+#: site.php:240
 msgid "seconds"
 msgstr ""
 
@@ -166,32 +174,31 @@ msgid "Limit"
 msgstr ""
 
 #: functions.php:235
-msgid "No data available"
+msgid "No data available in table"
 msgstr ""
 
 #: functions.php:236
-msgid "_START_ to _END_ of _TOTAL_ entries"
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
 msgstr ""
 
 #: functions.php:237
-msgid "0 to 0 of 0 entries"
+msgid "Showing 0 to 0 of 0 entries"
 msgstr ""
 
 #: functions.php:238
-msgid "filtered of _MAX_ entries"
+msgid "(filtered from _MAX_ total entries)"
 msgstr ""
 
 #: functions.php:239
-msgid "_MENU_ entries per page"
+msgid "Show _MENU_ entries"
 msgstr ""
 
 #: functions.php:240
-msgid "Downloading"
+msgid "Loading..."
 msgstr ""
 
 #: functions.php:241
-#: site_stat_voucher.php:137
-msgid "Working. Please wait."
+msgid "Processing..."
 msgstr ""
 
 #: functions.php:242
@@ -200,7 +207,7 @@ msgid "Search"
 msgstr ""
 
 #: functions.php:243
-msgid "No entries available."
+msgid "No matching records found"
 msgstr ""
 
 #: functions.php:244
@@ -208,7 +215,7 @@ msgid "First"
 msgstr ""
 
 #: functions.php:245
-msgid "Prev"
+msgid "Previous"
 msgstr ""
 
 #: functions.php:246
@@ -255,7 +262,7 @@ msgid "Guests online"
 msgstr ""
 
 #: site.php:109
-msgid "Guests APs"
+msgid "Guest access points"
 msgstr ""
 
 #: site.php:119
@@ -348,7 +355,7 @@ msgstr ""
 #: site_stat_voucher.php:32
 #: site_translator.php:31
 #: site_usermgnt.php:29
-msgid "Refresh now"
+msgid "Reload Now"
 msgstr ""
 
 #: site_languages.php:38
@@ -356,7 +363,7 @@ msgid "Language ID"
 msgstr ""
 
 #: site_languages.php:39
-msgid "Name in navbar"
+msgid "Name in menu"
 msgstr ""
 
 #: site_languages.php:40
@@ -440,7 +447,6 @@ msgid "Voucher comment"
 msgstr ""
 
 #: site_list_guests.php:48
-#: site_list_guests.php:126
 msgid "Traffic"
 msgstr ""
 
@@ -453,7 +459,7 @@ msgid "Limits"
 msgstr ""
 
 #: site_list_guests.php:122
-msgid "Systemdata"
+msgid "Client information"
 msgstr ""
 
 #: site_list_guests.php:123
@@ -465,16 +471,20 @@ msgstr ""
 msgid "MAC address"
 msgstr ""
 
+#: site_list_guests.php:126
+msgid "Data Traffic"
+msgstr ""
+
 #: site_list_guests.php:127
-msgid "Sent"
+msgid "Data Sent"
 msgstr ""
 
 #: site_list_guests.php:128
-msgid "Received"
+msgid "Data Received"
 msgstr ""
 
 #: site_list_guests.php:129
-msgid "Total"
+msgid "Data Total"
 msgstr ""
 
 #: site_list_guests.php:131
@@ -482,7 +492,7 @@ msgid "Wireless information"
 msgstr ""
 
 #: site_list_guests.php:132
-msgid "Last AP"
+msgid "Last access point"
 msgstr ""
 
 #: site_list_guests.php:133
@@ -498,19 +508,19 @@ msgid "Roaming"
 msgstr ""
 
 #: site_list_guests.php:148
-msgid "Invalidate voucher"
+msgid "Discard voucher"
 msgstr ""
 
 #: site_list_guests.php:163
-msgid "Unblock user"
+msgid "Enable user"
 msgstr ""
 
 #: site_list_guests.php:167
 msgid "Block user"
 msgstr ""
 
-#: site_list_guests.php:171
-msgid "Re-connect user"
+#: site_list_guests.php:170
+msgid "Reset user device"
 msgstr ""
 
 #: site_list_rogueaps.php:21
@@ -547,11 +557,11 @@ msgid "Age"
 msgstr ""
 
 #: site_list_users.php:21
-msgid "Userlist"
+msgid "User list"
 msgstr ""
 
 #: site_list_users.php:22
-msgid "List of all user, which are / were connected to our wireless network."
+msgid "List of all user, which are connected to our wireless network."
 msgstr ""
 
 #: site_list_users.php:40
@@ -578,25 +588,32 @@ msgstr ""
 msgid "Created on"
 msgstr ""
 
+#: site_stat_voucher.php:137
+msgid "Working. Please wait."
+msgstr ""
+
 #: site_translator.php:23
 msgid "Translation Management"
 msgstr ""
 
 #: site_translator.php:24
-msgid "When you want, you can translate the whole HotSpot Manager to your language ;)"
+msgid "If you want, you can help translate the entire HotSpot Manager into your native language."
 msgstr ""
 
 #: site_translator.php:32
-#: site_translator.php:49
-msgid "Destination Language"
+msgid "Target language"
 msgstr ""
 
 #: site_translator.php:47
-msgid "Reference Count"
+msgid "References"
 msgstr ""
 
 #: site_translator.php:48
-msgid "Source Code"
+msgid "Source"
+msgstr ""
+
+#: site_translator.php:49
+msgid "Target Language"
 msgstr ""
 
 #: site_translator.php:92
@@ -609,10 +626,6 @@ msgstr ""
 
 #: site_usermgnt.php:28
 msgid "New user"
-msgstr ""
-
-#: site_usermgnt.php:39
-msgid "Ticketprefix"
 msgstr ""
 
 #: site_usermgnt.php:40

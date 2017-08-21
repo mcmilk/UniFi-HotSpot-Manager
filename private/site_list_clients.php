@@ -24,7 +24,7 @@ if (!defined('HOTSPOT')) { exit; }
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 

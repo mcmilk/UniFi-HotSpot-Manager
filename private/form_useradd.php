@@ -61,8 +61,8 @@ if (!defined('HOTSPOT')) { exit; }
 
     <div class="form-group has-feedback">
       <div class="input-group">
-        <span class="input-group-addon"><?php echo __("voucher prefix"); ?>:</span>
-        <input type="text" name="prefix" class="form-control" placeholder="<?php echo __("prefix_"); ?>">
+        <span class="input-group-addon"><?php echo __("Voucher prefix"); ?>:</span>
+        <input type="text" name="prefix" class="form-control" placeholder="<?php echo __("Voucher prefix"); ?>">
       </div>
       <span class="glyphicon form-control-feedback"></span>
       <div class="help-block with-errors"></div>
@@ -70,8 +70,8 @@ if (!defined('HOTSPOT')) { exit; }
 
     <div class="form-group has-feedback">
       <div class="input-group">
-        <span class="input-group-addon"><?php echo __("voucher headline"); ?>:</span>
-        <input type="text" name="headline" required class="form-control" placeholder="<?php echo __("voucher headline"); ?>">
+        <span class="input-group-addon"><?php echo __("Voucher headline"); ?>:</span>
+        <input type="text" name="headline" required class="form-control" placeholder="<?php echo __("Voucher headline"); ?>">
       </div>
       <span class="glyphicon form-control-feedback"></span>
       <div class="help-block with-errors"></div>

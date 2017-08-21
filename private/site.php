@@ -106,7 +106,7 @@ if (!defined('HOTSPOT')) { exit; }
                 <li><a href="?action=list_guests"><?php echo __("Overview"); ?></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="?action=list_clients"><?php echo __("Guests online"); ?></a></li>
-                <li><a href="?action=list_guest_aps"><?php echo __("Guests APs"); ?></a></li>
+                <li><a href="?action=list_guest_aps"><?php echo __("Guest access points"); ?></a></li>
             </ul>
         </li>
       </ul>
@@ -173,6 +173,77 @@ if (!defined('HOTSPOT')) { exit; }
 </div><!-- /.container-fluid -->
 
 <script>
+
+  var debug = 1;
+  function log() {
+    if (window.console && console.log && debug)
+      console.log('[hotspot] ' + Array.prototype.join.call(arguments,' '));
+  }
+
+  /**
+   * see https://datatables.net/reference/option/columns.render
+   * type: filter / display / type / sort
+   * filter + display => schick machen
+   */
+  function fmt_wificode(val, type, row) {
+    //log("fmt_wificode() val="+val+" type="+type);
+    if (!val) return "-";
+    if (type === 'display' || type === 'filter') {
+      return val.slice(0, 5) + "-" + val.slice(5, 10);
+    }
+    return val;
+  }
+
+  function fmt_datetime(val, type) {
+    //log("fmt_datetime() val="+val+" type="+type);
+    if (type === 'display' || type === 'filter') {
+      return (moment(val*1000).format("YYYY-MM-DD")) + " um " + (moment(val*1000).format("HH:mm"));
+    }
+    return val;
+  }
+
+  function fmt_human(bytes, type, row) {
+    //log("fmt_human() val="+bytes+" type="+type);
+    if (typeof bytes === undefined) bytes = 0;
+    if (type === 'display' || type === 'filter') {
+      //console.log(row);
+      var sizes = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+      if (bytes == 0) return '0 Byte';
+      var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+      return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+    }
+    return bytes;
+  };
+
+  function fmt_human_mb(mbytes, type, row) {
+    return fmt_human(1024 * 1024 * mbytes, type, row);
+  };
+
+  function fmt_duration(seconds, type) {
+    //log("fmt_duration() val="+seconds+" type="+type);
+    if (type === 'display' || type === 'filter') {
+      seconds *= 60;
+      var years = parseInt(seconds/60/60/24/365);
+      seconds -= years * 60 * 60 * 24 * 365;
+      var days = parseInt(seconds/60/60/24);
+      seconds -= days * 60 * 60 * 24;
+      var hours = parseInt(seconds/60/60);
+      seconds -= hours * 60 * 60;
+      var minutes = parseInt(seconds/60);
+      seconds -= minutes * 60;
+
+      r = "";
+      if (years)   { if (years == 1)   { r += "<?php echo __("1 year"); ?> ";   } else { r += years   + " <?php echo __("years"); ?> "; } }
+      if (days)    { if (days == 1)    { r += "<?php echo __("1 day"); ?> ";    } else { r += days    + " <?php echo __("days"); ?> "; } }
+      if (hours)   { if (hours == 1)   { r += "<?php echo __("1 hour"); ?> ";   } else { r += hours   + " <?php echo __("hours"); ?> "; } }
+      if (minutes) { if (minutes == 1) { r += "<?php echo __("1 minute"); ?> "; } else { r += minutes + " <?php echo __("minutes"); ?> "; } }
+      if (seconds) { if (seconds == 1) { r += "<?php echo __("1 second"); ?> "; } else { r += seconds + " <?php echo __("seconds"); ?> "; } }
+
+      return r;
+    }
+    return seconds;
+  }
+
   $("#about").click(function(){
     BootstrapDialog.show({
       title:    'HotSpot Manager Version 0.4a (2017-08-20)',

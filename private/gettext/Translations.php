@@ -463,9 +463,9 @@ class Translations extends ArrayObject
     {
         $a = array();
         $v = get_object_vars($this);
-        $this->$translationsCount = 0;
+        $this->translationsCount = 0;
         foreach ($v as $obj) {
-          if (strlen($obj->getTranslation())) $this->$translationsCount += 1;
+          if (strlen($obj->getTranslation())) $this->translationsCount += 1;
           $a[] = $obj->getTranslation();
         }
         $v = 0;
@@ -474,7 +474,7 @@ class Translations extends ArrayObject
 
     public function getTranslationsCount()
     {
-        return $this->$translationsCount;
+        return $this->translationsCount;
     }
 
     /**

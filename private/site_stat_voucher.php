@@ -29,7 +29,7 @@ if (!defined('HOTSPOT')) { exit; }
     <h2></h2>
     <button type="submit" id="print"  class="btn btn-primary"><i class="fa fa-print"></i> <?php echo __("Print selection"); ?></button>
     <button type="submit" id="delete" class="btn btn-primary"><i class="fa fa-trash"></i> <?php echo __("Delete selection"); ?></button>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 

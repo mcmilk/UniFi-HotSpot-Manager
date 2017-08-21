@@ -21,15 +21,15 @@ if (!defined('HOTSPOT')) { exit; }
 <div class="row">
   <div class="col-xs-12 col-md-6">
     <h2><?php echo __("Translation Management"); ?></h2>
-    <p><?php echo __("When you want, you can translate the whole HotSpot Manager to your language ;)"); ?></p>
+    <p><?php echo __("If you want, you can help translate the entire HotSpot Manager into your native language."); ?></p>
   </div>
 
   <div class="col-xs-12 col-md-6 text-right">
     <h2></h2>
 
 <div class="dropdown">
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Refresh now"); ?></button>
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo __("Destination Language"); ?>
+    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo __("Target language"); ?>
   <span class="caret"></span></button>
   <ul class="dropdown-menu dropdown-menu-right">
       <?php i18n_menu_destlang(); ?>
@@ -44,9 +44,9 @@ if (!defined('HOTSPOT')) { exit; }
   <table id="myTable" class="table table-hover table-responsive table-bordered" width="100%">
     <thead>
       <tr class="info">
-        <th class="text-center"><?php echo __("Reference Count"); ?></th>
-        <th class="text-center"><?php echo __("Source Code"); ?></th>
-        <th class="text-center"><?php echo __("Destination Language"); i18n_table_destlang(); ?></th>
+        <th class="text-center"><?php echo __("References"); ?></th>
+        <th class="text-center"><?php echo __("Source"); ?></th>
+        <th class="text-center"><?php echo __("Target Language"); i18n_table_destlang(); ?></th>
       </tr>
     </thead>
     <tfoot>
