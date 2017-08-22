@@ -53,9 +53,6 @@ if (!defined('HOTSPOT')) { exit; }
   <!-- moment datetime (en) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
-  <!--  own stuff -->
-  <script src="js/hotspot.js"></script>
-
   <!-- custom CSS styling -->
   <style>
     body { padding-top: 60px; }
@@ -174,6 +171,9 @@ if (!defined('HOTSPOT')) { exit; }
 
 <script>
 
+  // global variable, each site here has such a table
+  var myTable;
+
   var debug = 1;
   function log() {
     if (window.console && console.log && debug)
@@ -242,6 +242,41 @@ if (!defined('HOTSPOT')) { exit; }
       return r;
     }
     return seconds;
+  }
+
+  function add_table_search() {
+    myTable.columns('.select-filter').every(function(){
+      var column = this;
+      var select = $('<select><option value=""></option></select>')
+        .appendTo($(column.footer()).empty())
+        .on('change', function(){
+            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+            column
+                .search( val ? '^'+val+'$' : '', true, false )
+                .draw();
+        });
+      column.cache('search').unique().sort().each(function(d, j) {
+        select.append('<option value="'+d+'">'+d+'</option>')
+      });
+    });
+
+    $('#myTable tfoot th').each(function(){
+        var title = $(this).text();
+        if ($(this).hasClass("input-filter")) {
+          $(this).html( '<input type="text" placeholder="<?php echo __("Search"); ?> '+title+'" />' );
+        }
+    });
+
+    myTable.columns('.input-filter').every(function() {
+        var that = this;
+        $('input', this.footer() ).on( 'keyup change', function(){
+            if (that.search() !== this.value) {
+                that
+                    .search(this.value)
+                    .draw();
+            }
+        });
+    });
   }
 
   $("#about").click(function(){

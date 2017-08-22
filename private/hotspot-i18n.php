@@ -389,4 +389,8 @@ function i18n_tmod() {
   http_204();
 }
 
+function ___($text) {
+  return addslashes(__($text));
+}
+
 ?>

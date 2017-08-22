@@ -58,7 +58,7 @@ if (!defined('HOTSPOT')) { exit; }
 <script>
 $(document).ready(function(){
 
-  var myTable = $('.table').DataTable({
+  myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
       "url": "?get_data=i18n_langlist",

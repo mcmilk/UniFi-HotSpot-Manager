@@ -73,7 +73,7 @@ if (!defined('HOTSPOT')) { exit; }
 
 <script>
 $(document).ready(function(){
-  var myTable = $('.table').DataTable({
+  myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
       "url": "?get_data=list_guests",
@@ -145,7 +145,7 @@ $(document).ready(function(){
       var html = "";
       if (row.expired != 1) {
         var font = '<label class="btn btn-default btn-xs"><span class="fa-stack"><i class="fa fa-wifi fa-stack-1x"></i><i class="fa fa-ban fa-stack-2x text-danger"></i></span></label>';
-        html = ' <a href="#" rel="tooltip" class="action" data-action="unauth_guest" data-mac='+row.mac+' data-html="true" title="<?php echo __("Discard voucher"); ?>">'+font+'</a>';
+        html = ' <a href="#" rel="tooltip" class="action" data-action="unauthorize_guest" data-mac='+row.mac+' data-html="true" title="<?php echo __("Discard voucher"); ?>">'+font+'</a>';
       }
       return html;
     }
@@ -215,7 +215,7 @@ $(document).ready(function(){
        method: "POST",
        data: { "mac": mac },
       }).done(function(data){
-        if (action == 'unauth_guest') btn.remove();
+        if (action == 'unauthorize_guest') btn.remove();
         if (action == 'block_sta' || action == 'unblock_sta') $("#reload").click();
       });
     });
@@ -223,21 +223,7 @@ $(document).ready(function(){
 
   /* add select fields under each column */
   function fnInitComplete(settings, json) {
-    myTable.columns('.select-filter').every(function(){
-      var column = this;
-      var select = $('<select><option value=""></option></select>')
-        .appendTo($(column.footer()).empty())
-        .on( 'change', function(){
-            var val = $.fn.dataTable.util.escapeRegex($(this).val());
-            column
-                .search(val ? '^'+val+'$' : '', true, false)
-                .draw();
-        });
-
-      column.cache('search').unique().sort().each(function(d, j) {
-          select.append( '<option value="'+d+'">'+d+'</option>' )
-      });
-    });
+    add_table_search();
 
     myTable.on('draw', function(e, datatable, columns) {
       CheckActions();

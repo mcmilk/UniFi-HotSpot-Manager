@@ -65,7 +65,7 @@ if (!defined('HOTSPOT')) { exit; }
 <script>
 $(document).ready(function(){
 
-  var myTable = $('.table').DataTable({
+  myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
       "url": "?get_data=i18n_tlist",
@@ -98,22 +98,7 @@ $(document).ready(function(){
   }
 
   function fnInitComplete(row, data, index) {
-
-    $('#myTable tfoot th').each( function () {
-        var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="<?php echo __("Search"); ?> '+title+'" />' );
-    });
-
-    myTable.columns('.input-filter').every(function() {
-        var that = this;
-        $('input', this.footer() ).on( 'keyup change', function(){
-            if (that.search() !== this.value) {
-                that
-                    .search(this.value)
-                    .draw();
-            }
-        });
-    });
+    add_table_search();
 
     myTable.on('draw', function(e, datatable, columns) {
       CheckActions();

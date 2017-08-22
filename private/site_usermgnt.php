@@ -59,7 +59,7 @@ if (!defined('HOTSPOT')) { exit; }
 
 <script>
 $(document).ready(function(){
-  var myTable = $('.table').DataTable({
+  myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
       "url": "?get_data=hotspot_userlist",
@@ -117,10 +117,10 @@ $(document).ready(function(){
       var font = "";
       var html = "";
 
-      font = '<label class="btn btn-primary btn-sm"><i class="fa fa-key"></i> <?php echo __("Change password"); ?></label>';
+      font = '<label class="btn btn-primary btn-sm"><i class="fa fa-key"></i> <?php echo ___("Change password"); ?></label>';
       html += '<a href="#" class="action" data-action="userpass" data-html="true" data-pk="'+row.username+'">'+font+'</a> ';
 
-      font = '<label class="btn btn-danger btn-sm"><i class="fa fa-user-times"></i> <?php echo __("Delete user"); ?></label>';
+      font = '<label class="btn btn-danger btn-sm"><i class="fa fa-user-times"></i> <?php echo ___("Delete user"); ?></label>';
       html += '<a href="#" class="action" data-action="userdel" data-html="true" data-pk="'+row.username+'">'+font+'</a> ';
       return html;
     }
@@ -196,7 +196,7 @@ $(document).ready(function(){
   });
 
   var userpassDialog = new BootstrapDialog({
-    title: '<?php echo __("Change password"); ?>',
+    title: "<?php echo __("Change password"); ?>",
     message: $('<div></div>').load('?get_form=userpass'),
     onshown: function(){
       $("form").validator('update');
@@ -207,7 +207,7 @@ $(document).ready(function(){
        me.close();
       }
     }, {
-      label: '<i class="fa fa-key"></i> <?php echo __("Change password"); ?>',
+      label: '<i class="fa fa-key"></i> <?php echo ___("Change password"); ?>',
       cssClass: 'btn-primary',
       action: function(me) {
         var username = $("input[name=username]").val();
@@ -225,13 +225,13 @@ $(document).ready(function(){
   });
 
   var userdelDialog = new BootstrapDialog({
-    title: '<?php echo __("Delete user"); ?>',
-    message: $('<form><div><?php echo __("Are you sure you want to delete the user?"); ?></div><input type="hidden" name="username" value=""></form>'),
+    title: "<?php echo __("Delete user"); ?>",
+    message: $('<form><div><?php echo ___("Are you sure you want to delete the user?"); ?></div><input type="hidden" name="username" value=""></form>'),
     buttons: [{
       label: "<?php echo __("Cancel"); ?>",
       action: function(me) { me.close(); }
     }, {
-      label: '<i class="fa fa-user-times"></i> <?php echo __("Delete user"); ?>',
+      label: "<i class=\"fa fa-user-times\"></i> <?php echo __("Delete user"); ?>",
       cssClass: 'btn-danger',
       action: function(me) {
         var username = $("input[name=username]").val();
@@ -248,7 +248,7 @@ $(document).ready(function(){
   });
 
   var useraddDialog = new BootstrapDialog({
-    title: '<?php echo __("Add user"); ?>',
+    title: "<?php echo __("Add user"); ?>",
     message: $('<div></div>').load('?get_form=useradd'),
     onshown: function(){
       $("form").validator('update');
@@ -257,7 +257,7 @@ $(document).ready(function(){
       label: "<?php echo __("Cancel"); ?>",
       action: function(me) { me.close(); }
     }, {
-      label: '<i class="fa fa-user-plus"></i> <?php echo __("Add user"); ?>',
+      label: '<i class="fa fa-user-plus"></i> <?php echo ___("Add user"); ?>',
       cssClass: 'btn-primary',
       action: function(me) {
         var username = $("input[name=username]").val();

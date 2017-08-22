@@ -14,7 +14,7 @@ function __($original)
     $text = BaseTranslator::$current->gettext($original);
 
     if (func_num_args() === 1) {
-        return $text;
+        $text;
     }
 
     $args = array_slice(func_get_args(), 1);
