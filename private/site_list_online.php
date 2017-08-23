@@ -19,17 +19,12 @@ if (!defined('HOTSPOT')) { exit; }
 
 <div class="row">
   <div class="col-md-6">
-    <h2><?php echo __("List of guests"); ?></h2>
-    <p><?php echo __("All guests who currently have a valid voucher in the network are shown here."); ?></p>
+    <h2><?php echo __("List of online clients"); ?></h2>
+    <p><?php echo __("Displays all currently active devices or users on the network."); ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
-    <p>
-    <label id="expired" class="btn btn-primary">
-      <span class="fa fa-square-o fa-lg"></span>
-      <span class="content"><?php echo __("Show expired vouchers"); ?></span>
-    </label>
-    <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
+    <p><button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
 
@@ -43,6 +38,8 @@ if (!defined('HOTSPOT')) { exit; }
         <th class="text-center"><?php echo __("Voucher comment"); ?></th>
         <th class="text-center"><?php echo __("Hostname"); ?></th>
         <th class="text-center"></th>
+        <th class="text-center"><?php echo __("Bandwidth"); ?></th>
+        <th class="text-center"><?php echo __("Idle"); ?></th>
         <th class="text-center"><?php echo __("Username"); ?></th>
         <th class="text-center"><?php echo __("Comment"); ?></th>
         <th class="text-center"><?php echo __("Traffic"); ?></th>
@@ -53,6 +50,8 @@ if (!defined('HOTSPOT')) { exit; }
     </tbody>
     <tfoot>
       <tr class="info">
+        <th class="text-center"></th>
+        <th class="text-center"></th>
         <th class="text-center"></th>
         <th class="text-center"></th>
         <th class="text-center"></th>
@@ -76,7 +75,7 @@ $(document).ready(function(){
   myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
-      "url": "?get_data=list_guests",
+      "url": "?get_data=list_online",
       "type": "POST",
     },
     "columns": [
@@ -85,16 +84,15 @@ $(document).ready(function(){
       { "data": "name", "className": "text-center select-filter" },
       { "data": "hostname", "className": "text-center select-filter", "render": local_hostname, "defaultContent": "<i>No hostname</i>" },
       { "data": null, "render": local_banuser, "orderable": false },
+      { "data": "bandwidth", "className": "text-center", "defaultContent": "0", "render": fmt_human },
+      { "data": "idletime", "className": "text-center", "defaultContent": "0" },
       { "data": "username", "className": "text-center select-filter", "defaultContent": "", "render": local_username },
       { "data": "usernote", "className": "text-center select-filter", "defaultContent": "", "render": local_usernote },
       { "data": "bytes", "className": "text-center", "defaultContent": "0", "render": fmt_human },
       { "data": "end", "className": "text-center", "render": fmt_datetime }
     ],
-    "order": [[ 7, "desc" ]]
+    "order": [[ 5, "desc" ]]
   });
-
-  // global variables
-  var expired = false;
 
   function local_wificode(val, type, row) {
     if (!val) return "-";
@@ -192,6 +190,7 @@ $(document).ready(function(){
   }
 
   function CheckActions() {
+    //log("CheckActions()");
     var font = '<label class="btn btn-default btn-sm"><i class="fa fa-pencil"></i></span></label>';
 
     // catch the editing fields
@@ -236,16 +235,6 @@ $(document).ready(function(){
   /* https://datatables.net/reference/api/ajax.reload() */
   $("#reload").click(function(){
     myTable.ajax.reload(fnInitComplete, false);
-  });
-
-  $("#expired").click(function(){
-    expired = !expired;
-    $(this).find('span:first').toggleClass('fa-check-square-o fa-square-o')
-    if (expired) {
-      myTable.ajax.url("?get_data=list_guests_expired").load(fnInitComplete, true);
-    } else {
-      myTable.ajax.url("?get_data=list_guests").load(fnInitComplete, true);
-    }
   });
 
   // render html tooltips

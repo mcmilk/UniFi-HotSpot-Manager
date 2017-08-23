@@ -41,94 +41,101 @@ function is_prefix(&$prefix) {
 $time_start = microtime(true);
 
 /**
- * ?get_data=function&p1=parameter1&p2=x2&...
+ * ?get_data=function
  */
 $func = $_GET["get_data"];
 $data = array();
 switch ($func) {
+
+// list online clients
+case "list_online":
+  $hours = 1;
+  $guests = unifi_cmd("list_guests", $cachetime, $hours);
+  $online = unifi_cmd("list_clients");
+  $users = unifi_cmd("list_users");
+  foreach ($guests as $guest) {
+    if (!isset($guest->name)) continue;
+    if (!isset($guest->user_id)) continue;
+    if (!isset($guest->expired)) continue;
+    if ($guest->expired) continue;
+    // remove entries, with other prefix
+    if (!is_prefix($guest->name)) continue;
+    foreach ($users as $u) {
+      if ($u->_id != $guest->user_id) continue;
+      foreach ($online as $o) {
+        // remove ubi-ck device
+        if (!isset($o->idletime)) continue;
+        if (!isset($o->guest_id)) continue;
+        if ($o->guest_id != $guest->{'_id'}) continue;
+        $new = $guest;
+        $new->idletime = $o->idletime;
+        $new->bandwidth = $o->{'bytes-r'} * 8;
+        $new->username = "";
+        $new->usernote = "";
+        $new->blocked = "";
+        if (isset($u->name)) $new->username = $u->name;
+        if (isset($u->note)) $new->usernote = $u->note;
+        if (isset($u->blocked)) $new->blocked = $u->blocked;
+        $data[] = $new;
+      }
+    }
+  }
+  break;
 
 // no expired entries
 case "list_guests_expired":
   // fall through
 case "list_guests":
   /* list_guests($within = 8760) */
-  $guests = unifi_cmd("list_guests");
+  $hours = 24 * 7;
+  $guests = unifi_cmd("list_guests", $cachetime, $hours);
   $users = unifi_cmd("list_users");
-  foreach ($guests as $entry) {
-    if (!isset($entry->name)) continue;
-    if (!isset($entry->user_id)) continue;
-    if (!isset($entry->expired)) continue;
-    if ($func === "list_guests" && $entry->expired) continue;
+  foreach ($guests as $guest) {
+    if (!isset($guest->name)) continue;
+    if (!isset($guest->user_id)) continue;
+    if (!isset($guest->expired)) continue;
+    if ($func === "list_guests" && $guest->expired) continue;
     // remove entries, with other prefix
-    if (!is_prefix($entry->name)) continue;
-    $entry->username = "";
-    $entry->usernote = "";
-    $entry->blocked = "";
+    if (!is_prefix($guest->name)) continue;
+    $guest->username = "";
+    $guest->usernote = "";
+    $guest->blocked = "";
     foreach ($users as $u) {
-      if ($u->_id === $entry->user_id) {
-        if (isset($u->name)) $entry->username = $u->name;
-        if (isset($u->note)) $entry->usernote = $u->note;
-        if (isset($u->blocked)) $entry->blocked = $u->blocked;
+      if ($u->_id === $guest->user_id) {
+        if (isset($u->name)) $guest->username = $u->name;
+        if (isset($u->note)) $guest->usernote = $u->note;
+        if (isset($u->blocked)) $guest->blocked = $u->blocked;
       }
     }
-    $data[] = $entry;
+    $data[] = $guest;
   }
-  break;
-
-// list online clients
-case "list_clients":
-  // 1) list_guests
-  $data = unifi_cmd("list_guests");
-  $gids = array();
-  foreach ($data as $entry) {
-    if (!isset($entry->name)) continue;
-    if (!isset($entry->expired)) continue;
-    if ($entry->expired) continue;
-    // remove entries, with other prefix
-    if (!is_prefix($entry->name)) continue;
-    $gids[] = $entry->_id;
-  }
-  // 2) list_guests
-  $data = unifi_cmd("list_clients");
-  $a = array();
-  foreach ($data as $entry) {
-    // remove ubi-ck device
-    if (!isset($entry->idletime)) continue;
-    // check if the guest_id has the prefix
-    if (!isset($entry->guest_id)) continue;
-    if (in_array($entry->guest_id, $gids)) {
-      $a[] = $entry;
-    }
-  }
-  $x = count($a);
-  //log_msg("number of guests filtered: $x!");
-  $data = $a;
   break;
 
 case "list_guest_aps":
   // 1a) via list_users
   $users = unifi_cmd("list_users");
   $macs = array();
-  foreach ($users as $entry) {
-    $macs[] = $entry->mac;
+  foreach ($users as $user) {
+    $macs[] = $user->mac;
   }
 
   // 1b) list_guests (mit prefix!)
-  $guests = unifi_cmd("list_guests");
-  foreach ($guests as $entry) {
-    if (!isset($entry->name)) continue;
-    if (!isset($entry->expired)) continue;
-    if ($entry->expired) continue;
+  $hours = 24 * 2;
+  $guests = unifi_cmd("list_guests", $cachetime, $hours);
+  foreach ($guests as $guest) {
+    if (!isset($guest->name)) continue;
+    if (!isset($guest->expired)) continue;
+    if ($guest->expired) continue;
     // remove entries, with other prefix
-    if (!is_prefix($entry->name)) continue;
-    $macs[] = $entry->mac;
+    if (!is_prefix($guest->name)) continue;
+    $macs[] = $guest->mac;
   }
 
   $aps = unifi_cmd("list_rogueaps", $cachetime, 48);
-  foreach ($aps as $entry) {
-    if (!$entry->bssid) continue;
-    if (in_array($entry->bssid, $macs)) {
-      $data[] = $entry;
+  foreach ($aps as $ap) {
+    if (!$ap->bssid) continue;
+    if (in_array($ap->bssid, $macs)) {
+      $data[] = $ap;
     }
   }
   break;
@@ -139,10 +146,10 @@ case "list_rogueaps":
   break;
 
 case "stat_voucher":
-  $stat = unifi_cmd("stat_voucher");
-  foreach ($stat as $entry) {
-    if (!is_prefix($entry->note)) continue;
-    $data[] = $entry;
+  $vouchers = unifi_cmd("stat_voucher");
+  foreach ($vouchers as $voucher) {
+    if (!is_prefix($voucher->note)) continue;
+    $data[] = $voucher;
   }
   break;
 

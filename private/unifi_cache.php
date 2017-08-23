@@ -15,13 +15,13 @@
 if (!defined('HOTSPOT')) { exit; }
 
 /* read response from server, no cache here */
-function unifi_read($command, $p1 = null, $p2 = null, $p3 = null, $p4 = null, $p5 = null, $p6 = null) {
+function unifi_read($command, $p1 = "", $p2 = "", $p3 = "") {
   global $unifidata;
 
   $data = "";
   switch ($command) {
   case "list_clients":
-    // list_clients($client_mac = null)
+    // list_clients($client_mac = "")
     $data = $unifidata->list_clients($p1);
     break;
   case "list_guests":
@@ -34,7 +34,7 @@ function unifi_read($command, $p1 = null, $p2 = null, $p3 = null, $p4 = null, $p
     $data = $unifidata->list_users();
     break;
   case "list_devices":
-    // list_devices($device_mac = null
+    // list_devices($device_mac = ""
     $data = $unifidata->list_devices($p1);
     break;
   case "list_rogueaps":
@@ -43,15 +43,15 @@ function unifi_read($command, $p1 = null, $p2 = null, $p3 = null, $p4 = null, $p
     $data = $unifidata->list_rogueaps($p1);
     break;
   case "stat_voucher":
-    // stat_voucher($create_time = null)
+    // stat_voucher($create_time = "")
     $data = $unifidata->stat_voucher($p1);
     break;
   case "stat_auths":
-    // stat_auths($start = null, $end = null)
+    // stat_auths($start = "", $end = "")
     $data = $unifidata->stat_auths($p1, $p2);
     break;
   case "stat_sessions":
-    // stat_sessions($start = null, $end = null, $mac = null)
+    // stat_sessions($start = "", $end = "", $mac = "")
     $data = $unifidata->stat_sessions($p1, $p2, $p3);
     break;
   case "stat_allusers":
@@ -81,10 +81,10 @@ function unifi_uncache($command) {
 }
 
 /* read cached data */
-function unifi_cmd($command, $seconds = 15, $p1 = null, $p2 = null, $p3 = null, $p4 = null, $p5 = null, $p6 = null) {
+function unifi_cmd($command, $seconds = 15, $p1 = "", $p2 = "", $p3 = "") {
   global $cachedir;
-  $filename = "$cachedir/$command.dump";
 
+  $filename = "$cachedir/$command-$p1-$p2-$p3.dump";
   if (is_file($filename)) {
     $ts_cache = filemtime($filename);
     $ts_now   = time();
@@ -93,7 +93,7 @@ function unifi_cmd($command, $seconds = 15, $p1 = null, $p2 = null, $p3 = null, 
     }
   }
 
-  $resp = unifi_read($command, $p1, $p2, $p3, $p4, $p5, $p6);
+  $resp = unifi_read($command, $p1, $p2, $p3);
   file_put_contents($filename, serialize($resp));
 
   // extra infos, XXX, debugging

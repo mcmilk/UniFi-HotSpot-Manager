@@ -19,7 +19,7 @@ if (!defined('HOTSPOT')) { exit; }
 <div class="row">
   <div class="col-md-6">
     <h2><?php echo __("User list"); ?></h2>
-    <p><?php echo __("List of all user, which are connected to our wireless network."); ?></p>
+    <p><?php echo __("List of all users connected to our wireless network."); ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
@@ -69,8 +69,8 @@ $(document).ready(function(){
     },
     "columns": [
       { "data": "oui", "className": "text-center select-filter" },
-      { "data": "hostname", "defaultContent": "<i>No hostname</i>", "className": "text-center" },
-      { "data": "mac", "className": "text-center" },
+      { "data": "hostname", "defaultContent": "<i>No hostname</i>", "className": "text-center input-filter" },
+      { "data": "mac", "className": "text-center input-filter" },
       { "data": "first_seen", "render": fmt_datetime, "className": "text-center" },
       { "data": "last_seen", "render": fmt_datetime, "className": "text-center" },
       { "data": null, "render": fmt_list_users_connection }

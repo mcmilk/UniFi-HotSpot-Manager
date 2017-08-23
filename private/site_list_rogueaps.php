@@ -64,7 +64,7 @@ $(document).ready(function(){
   myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
-      "url": "?get_data=<?php echo $todo; ?>",
+      "url": "?get_data=list_rogueaps",
       "type": "POST",
     },
     "columns": [

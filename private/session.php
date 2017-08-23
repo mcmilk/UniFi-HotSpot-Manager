@@ -174,38 +174,36 @@ if ($is_user) {
 
   switch ($action) {
 
-  /* menu1: vouchers */
+  /* voucher menu */
+  case 'stat_voucher':
+    // this is also the default site...
+    $includefile = "site_stat_voucher.php";
+    break;
   case 'create_voucher':
     $includefile = "site_create_voucher.php";
     break;
 
-  /* menu2: guests */
+  /* guest menu */
   case 'list_guests':
     $includefile = "site_list_guests.php";
     break;
-  case 'list_clients':
-    $includefile = "site_list_clients.php";
+  case 'list_online':
+    $includefile = "site_list_online.php";
     break;
   case 'list_guest_aps':
     $todo = "list_guest_aps";
     $includefile = "site_list_rogueaps.php";
     break;
-
-  /* menu3: statistic */
-  case 'list_rogueaps':
-    $todo = "list_rogueaps";
-    $includefile = "site_list_rogueaps.php";
-    break;
   }
 
-  /* menu4: admin stuff */
+  /* admin menu and translation */
   if ($is_admin) {
     switch ($action) {
-    case 'list_rogueaps':
-      $includefile = "site_list_rogueaps.php";
-      break;
     case 'list_users':
       $includefile = "site_list_users.php";
+      break;
+    case 'list_rogueaps':
+      $includefile = "site_list_rogueaps.php";
       break;
     case 'usermgnt':
       $includefile = "site_usermgnt.php";
