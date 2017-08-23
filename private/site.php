@@ -197,7 +197,7 @@ if (!defined('HOTSPOT')) { exit; }
   function fmt_datetime(val, type) {
     //log("fmt_datetime() val="+val+" type="+type);
     if (type === 'display' || type === 'filter') {
-      return (moment(val*1000).format("YYYY-MM-DD")) + " um " + (moment(val*1000).format("HH:mm"));
+      return (moment(val*1000).format("YYYY-MM-DD @ HH:mm"));
     }
     return val;
   }
