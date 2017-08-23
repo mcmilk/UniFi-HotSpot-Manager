@@ -270,7 +270,6 @@ function dataTablesDefaults() {
     },
     "processing": true,
     "responsive": true,
-    "stateSave": true,
     "lengthMenu": [ [ 8, 16, 40, -1], [ 8, 16, 40, "$sAll" ] ],
 EOT;
   return $text;

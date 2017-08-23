@@ -81,13 +81,13 @@ $(document).ready(function(){
     "columns": [
       { "data": "voucher_code", "className": "text-center", "render": local_wificode, "orderable": false },
       { "data": null, "render": local_banguest, "orderable": false },
-      { "data": "name", "className": "text-center select-filter" },
-      { "data": "hostname", "className": "text-center select-filter", "render": local_hostname, "defaultContent": "<i>No hostname</i>" },
+      { "data": "name", "className": "text-center input-filter" },
+      { "data": "hostname", "className": "text-center input-filter", "render": local_hostname, "defaultContent": "<i>No hostname</i>" },
       { "data": null, "render": local_banuser, "orderable": false },
       { "data": "bandwidth", "className": "text-center", "defaultContent": "0", "render": fmt_human },
       { "data": "idletime", "className": "text-center", "defaultContent": "0" },
       { "data": "username", "className": "text-center select-filter", "defaultContent": "", "render": local_username },
-      { "data": "usernote", "className": "text-center select-filter", "defaultContent": "", "render": local_usernote },
+      { "data": "usernote", "className": "text-center input-filter", "defaultContent": "", "render": local_usernote },
       { "data": "bytes", "className": "text-center", "defaultContent": "0", "render": fmt_human },
       { "data": "end", "className": "text-center", "render": fmt_datetime }
     ],

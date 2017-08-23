@@ -68,7 +68,7 @@ $(document).ready(function(){
       "type": "POST",
     },
     "columns": [
-      { "data": "essid", "className": "text-center select-filter" },
+      { "data": "essid", "className": "text-center input-filter" },
       { "data": "security", "className": "text-center select-filter" },
       { "data": "oui", "className": "text-center select-filter" },
       { "data": "bssid", "className": "text-center" },
