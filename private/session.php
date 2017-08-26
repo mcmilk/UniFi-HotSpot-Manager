@@ -188,10 +188,10 @@ if ($is_user) {
     $includefile = "site_list_guests.php";
     break;
   case 'list_online':
-    $includefile = "site_list_online.php";
+    $includefile = "site_list_guests.php";
+    //$includefile = "site_list_online.php";
     break;
   case 'list_guest_aps':
-    $todo = "list_guest_aps";
     $includefile = "site_list_rogueaps.php";
     break;
   }

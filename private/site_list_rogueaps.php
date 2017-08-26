@@ -32,10 +32,10 @@ if (!defined('HOTSPOT')) { exit; }
   <table id="myTable" class="table table-hover table-responsive table-bordered" width="100%">
     <thead>
       <tr class="info">
-        <th class="text-center"><?php echo __("ESSID"); ?></th>
+        <th class="text-center">ESSID</th>
         <th class="text-center"><?php echo __("Security"); ?></th>
-        <th class="text-center"><?php echo __("OUI"); ?></th>
-        <th class="text-center"><?php echo __("BSSID"); ?></th>
+        <th class="text-center">OUI</th>
+        <th class="text-center">BSSID</th>
         <th class="text-center"><?php echo __("Last Seen"); ?></th>
         <th class="text-center"><?php echo __("Report time"); ?></th>
         <th class="text-center"><?php echo __("Age"); ?></th>

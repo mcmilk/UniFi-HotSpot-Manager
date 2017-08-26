@@ -96,7 +96,7 @@ case "list_guests":
     if (!isset($guest->expired)) continue;
     if ($func === "list_guests" && $guest->expired) continue;
     // remove entries, with other prefix
-    if (!is_prefix($guest->name)) continue;
+    //if (!is_prefix($guest->name)) continue;
     $guest->username = "";
     $guest->usernote = "";
     $guest->blocked = "";
@@ -105,13 +105,13 @@ case "list_guests":
         if (isset($u->name)) $guest->username = $u->name;
         if (isset($u->note)) $guest->usernote = $u->note;
         if (isset($u->blocked)) $guest->blocked = $u->blocked;
+        $data[] = $guest;
       }
     }
-    $data[] = $guest;
   }
   break;
 
-case "list_guest_aps":
+case "list_rogueaps":
   // 1a) via list_users
   $users = unifi_cmd("list_users");
   $macs = array();
@@ -138,11 +138,6 @@ case "list_guest_aps":
       $data[] = $ap;
     }
   }
-  break;
-
-case "list_rogueaps":
-  /* list_rogueaps($within = '24') */
-  $data = unifi_cmd("list_rogueaps", $cachetime, 48);
   break;
 
 case "stat_voucher":

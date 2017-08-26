@@ -17,14 +17,6 @@
 if (!defined('HOTSPOT')) { exit; }
 
 /**
- * file format of userdb.txt
- *
- * multiple lines with this definition:
- * username:password:prefix:options:headline
- * - each line defines one user, like /etc/passwd
- * - lines beginning with '#' are comments
- * - lines with more then 4 ':' are skipped also
- *
  * username: the name of some user
  * password: hash of user password (PASSWORD_BCRYPT)
  * prefix:   voucher prefix, used for filtering

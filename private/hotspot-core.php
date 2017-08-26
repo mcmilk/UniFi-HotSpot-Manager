@@ -18,10 +18,11 @@ if (!defined('HOTSPOT')) { exit; }
  * some debug logging to logfile
  */
 function log_msg($msg) {
-  global $logfile;
+  global $datadir;
   static $rv = TRUE;
 
-  if (!isset($logfile)) return;
+  $logfile = "$datadir/unifi.log";
+  if (!is_writeable($logfile)) return;
   if (!$logfile) return;
   if ($rv == FALSE) return;
 

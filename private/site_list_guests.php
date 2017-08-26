@@ -12,23 +12,33 @@
 
 if (!defined('HOTSPOT')) { exit; }
 
+if ($action === "list_online") {
+  /* list online */
+  $headline = __("List of online clients");
+  $textline = __("Displays all currently active devices or users on the network.");
+} else {
+  /* list guests */
+  $headline = __("List of guests");
+  $textline = __("All guests who currently have a valid voucher in the network are shown here.");
+}
 ?>
 
 <form method="POST" action="">
-<input type="text" name="MacIDs" id="idMac" value="" style="display:none;" />
 
 <div class="row">
   <div class="col-md-6">
-    <h2><?php echo __("List of guests"); ?></h2>
-    <p><?php echo __("All guests who currently have a valid voucher in the network are shown here."); ?></p>
+    <h2><?php echo $headline; ?></h2>
+    <p><?php echo $textline;  ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
     <p>
+    <?php if ($action === "list_guests") { ?>
     <label id="expired" class="btn btn-primary">
       <span class="fa fa-square-o fa-lg"></span>
       <span class="content"><?php echo __("Show expired vouchers"); ?></span>
     </label>
+    <?php } ?>
     <button type="button" id="reload" class="btn btn-primary"><i class="fa fa-refresh"></i> <?php echo __("Reload Now"); ?></button>
   </div>
 </div>
@@ -43,6 +53,10 @@ if (!defined('HOTSPOT')) { exit; }
         <th class="text-center"><?php echo __("Voucher comment"); ?></th>
         <th class="text-center"><?php echo __("Hostname"); ?></th>
         <th class="text-center"></th>
+        <?php if ($action === "list_online") { ?>
+        <th class="text-center"><?php echo __("Bandwidth"); ?></th>
+        <th class="text-center"><?php echo __("Idle"); ?></th>
+        <?php } ?>
         <th class="text-center"><?php echo __("Username"); ?></th>
         <th class="text-center"><?php echo __("Comment"); ?></th>
         <th class="text-center"><?php echo __("Traffic"); ?></th>
@@ -62,6 +76,10 @@ if (!defined('HOTSPOT')) { exit; }
         <th class="text-center"></th>
         <th class="text-center"></th>
         <th class="text-center"></th>
+        <?php if ($action === "list_online") { ?>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+        <?php } ?>
       </tr>
     </tfoot>
   </table>
@@ -76,21 +94,33 @@ $(document).ready(function(){
   myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
+      <?php if ($action === "list_online") { ?>
+      "url": "?get_data=list_online",
+      <?php } else { ?>
       "url": "?get_data=list_guests",
+      <?php } ?>
       "type": "POST",
     },
     "columns": [
       { "data": "voucher_code", "className": "text-center", "render": local_wificode, "orderable": false },
       { "data": null, "render": local_banguest, "orderable": false },
       { "data": "name", "className": "text-center input-filter" },
-      { "data": "hostname", "className": "text-center input-filter", "render": local_hostname, "defaultContent": "<i>No hostname</i>" },
+      { "data": "hostname", "className": "text-center input-filter", "render": local_hostname, "defaultContent": "<i><?php echo __("No hostname"); ?></i>" },
       { "data": null, "render": local_banuser, "orderable": false },
+      <?php if ($action === "list_online") { ?>
+      { "data": "bandwidth", "className": "text-center", "defaultContent": "0", "render": fmt_human },
+      { "data": "idletime", "className": "text-center", "defaultContent": "0" },
+      <?php } ?>
       { "data": "username", "className": "text-center select-filter", "defaultContent": "", "render": local_username },
       { "data": "usernote", "className": "text-center input-filter", "defaultContent": "", "render": local_usernote },
       { "data": "bytes", "className": "text-center", "defaultContent": "0", "render": fmt_human },
       { "data": "end", "className": "text-center", "render": fmt_datetime }
     ],
+    <?php if ($action === "list_online") { ?>
+    "order": [[ 5, "desc" ]]
+    <?php } else { ?>
     "order": [[ 7, "desc" ]]
+    <?php } ?>
   });
 
   // global variables
@@ -129,7 +159,7 @@ $(document).ready(function(){
       ttip += "<br><?php echo __("Data Total"); ?>: " + fmt_human(row.bytes, type);
       if (row.radio) {
         ttip += "<p><b><?php echo __("Wireless information"); ?></b>";
-        ttip += "<br><?php echo __("Last access point"); ?>: " + row.ap_mac;
+        ttip += "<br>AP: " + row.ap_mac;
         ttip += "<br><?php echo __("Channel"); ?>: " + row.channel;
         ttip += "<br><?php echo __("Radio"); ?>: " + row.radio;
         ttip += "<br><?php echo __("Roaming"); ?>: " + row.roam_count;

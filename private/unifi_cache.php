@@ -71,10 +71,10 @@ function unifi_read($command, $p1 = "", $p2 = "", $p3 = "") {
 }
 
 /* remove cache for some command */
-function unifi_uncache($command) {
-  global $cachedir;
-  $filename = "$cachedir/$command.dump";
+function unifi_uncache($command, $p1 = "", $p2 = "", $p3 = "") {
+  global $datadir;
 
+  $filename = "$datadir/cache/$command-$p1-$p2-$p3.dump";
   if (is_file($filename)) {
     unlink($filename);
   }
@@ -82,9 +82,9 @@ function unifi_uncache($command) {
 
 /* read cached data */
 function unifi_cmd($command, $seconds = 15, $p1 = "", $p2 = "", $p3 = "") {
-  global $cachedir;
+  global $datadir;
 
-  $filename = "$cachedir/$command-$p1-$p2-$p3.dump";
+  $filename = "$datadir/cache/$command-$p1-$p2-$p3.dump";
   if (is_file($filename)) {
     $ts_cache = filemtime($filename);
     $ts_now   = time();
@@ -96,8 +96,7 @@ function unifi_cmd($command, $seconds = 15, $p1 = "", $p2 = "", $p3 = "") {
   $resp = unifi_read($command, $p1, $p2, $p3);
   file_put_contents($filename, serialize($resp));
 
-  // extra infos, XXX, debugging
-  $filename2 = "$cachedir/$command.txt";
+  $filename2 = "$filename" . ".txt";
   file_put_contents($filename2, print_r($resp, true));
 
   return $resp;

@@ -8,11 +8,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-// the user name for access to the UniFi Controller (super admin not needed!)
-$controller_user     = 'adminname';
+// the user name for access to the UniFi Controller
+$controller_user     = 'username';
 
 // the password for access to the UniFi Controller
-$controller_password = 'adminpassword';
+$controller_password = 'password';
 
 // full url to the UniFi Controller
 $controller_url      = 'https://192.168.1.3:8443';
@@ -31,17 +31,11 @@ $language            = 'en';
 // readable, sandstone, simplex, slate, spacelab, superhero, united, yeti
 $theme               = 'bootstrap';
 
-// directory, which must have read/write permission to the http user or group
+// directory, which must have read write permission to the http user or group
+// - relative to $PATH_PRIVATE
 $datadir             = "db";
 
-// directory, which hold i18n files
-$i18ndir             = "$datadir/i18n";
-
-// set to path of logfile (set to false for disabling)
-$logfile             = "$datadir/unifi.log";
-
 // default caching time, for responses from the unifi controller, -1 disables caching
-$cachedir            = "$datadir/cache";
 $cachetime           = 30;
 
 ?>

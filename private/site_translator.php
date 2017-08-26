@@ -46,7 +46,7 @@ if (!defined('HOTSPOT')) { exit; }
       <tr class="info">
         <th class="text-center"><?php echo __("References"); ?></th>
         <th class="text-center"><?php echo __("Source"); ?></th>
-        <th class="text-center"><?php echo __("Target Language"); i18n_table_destlang(); ?></th>
+        <th class="text-center"><?php echo __("Target language"); i18n_table_destlang(); ?></th>
       </tr>
     </thead>
     <tfoot>

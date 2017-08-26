@@ -21,10 +21,10 @@ if (!defined('HOTSPOT')) { exit; }
 
     <div class="form-group has-feedback">
       <div class="input-group">
-        <span class="input-group-addon"><?php echo __("Please select at least one authorization method."); ?>:</span>
+        <span class="input-group-addon"><?php echo __("Please select the permission level."); ?>:</span>
         <select name="options" class="form-control" placeholder="<?php echo __("Usergroup"); ?>" value="" required>
           <option value="a"><?php echo __("Administrator"); ?></option>
-          <option value="u"><?php echo __("Username"); ?></option>
+          <option value="u"><?php echo __("Default"); ?></option>
           <option value="d"><?php echo __("Disabled"); ?></option>
         </select>
       </div>

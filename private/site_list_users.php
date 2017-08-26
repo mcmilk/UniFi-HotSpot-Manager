@@ -32,7 +32,7 @@ if (!defined('HOTSPOT')) { exit; }
   <table id="myTable" class="table table-hover table-responsive table-bordered" width="100%">
     <thead>
       <tr class="info">
-        <th class="text-center"><?php echo __("OUI"); ?></th>
+        <th class="text-center">OUI</th>
         <th class="text-center"><?php echo __("Hostname"); ?></th>
         <th class="text-center"><?php echo __("MAC address"); ?></th>
         <th class="text-center"><?php echo __("First Seen"); ?></th>
@@ -69,7 +69,7 @@ $(document).ready(function(){
     },
     "columns": [
       { "data": "oui", "className": "text-center select-filter" },
-      { "data": "hostname", "defaultContent": "<i>No hostname</i>", "className": "text-center input-filter" },
+      { "data": "hostname", "defaultContent": "<i><?php echo __("No hostname"); ?></i>", "className": "text-center input-filter" },
       { "data": "mac", "className": "text-center input-filter" },
       { "data": "first_seen", "render": fmt_datetime, "className": "text-center" },
       { "data": "last_seen", "render": fmt_datetime, "className": "text-center" },

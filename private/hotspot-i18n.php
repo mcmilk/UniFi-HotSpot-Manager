@@ -65,8 +65,7 @@ function i18n_getbrowser() {
  * initialize i18n
  */
 function i18n_init() {
-  global $PATH_PRIVATE, $datadir, $i18ndir;
-  global $languages, $language, $i18n;
+  global $PATH_PRIVATE, $datadir, $languages, $language, $i18n;
 
   // create 'mini' json language definition
   $file = "$datadir/languages.json";
@@ -112,12 +111,12 @@ function i18n_init() {
 
   // can happen, if session has wrong lang set, or get is wrong
   $file = $userlang . '.json';
-  if (!is_file("$i18ndir/$file")) {
+  if (!is_file("$datadir/i18n/$file")) {
     $userlang = $language;
   }
 
   $i18n = new Translator();
-  $tl = Gettext\Translations::fromJsonFile("$i18ndir/$userlang" . '.json');
+  $tl = Gettext\Translations::fromJsonFile("$datadir/i18n/$userlang" . '.json');
   $i18n->loadTranslations($tl);
   $i18n->register();
 
@@ -137,7 +136,7 @@ function i18n_init() {
  * update all json files, needed when some code changed
  */
 function i18n_update_json() {
-  global $PATH_PRIVATE, $languages, $i18ndir, $datadir;
+  global $PATH_PRIVATE, $languages, $datadir;
 
   // get template from source code
   $files = glob('*.php');
@@ -145,7 +144,7 @@ function i18n_update_json() {
   $tlc->toPoFile("$datadir/source.po");
 
   // export to csv for automatic translation via Bing/Google
-  //$tlc->toCsvFile("$datadir/source.csv");
+  $tlc->toCsvFile("$datadir/source.csv");
 
   // write json for each defined language
   foreach($languages as $lang) {
@@ -159,15 +158,15 @@ function i18n_update_json() {
       unlink($file);
     }
 
-    $file = "$i18ndir/" . $lang->id . '.json';
+    $file = "$datadir/i18n/" . $lang->id . '.json';
     if (is_file($file)) {
       $tlx = Translations::fromJsonFile($file);
       $tlc->mergeWith($tlx, Merge::REFERENCES_OURS);
     }
     $tlc->toJsonFile($file);
     // generate po files for re-viewing
-    //$file2 = "$i18ndir/" . $lang->id . '.po';
-    //$tlc->toPoFile($file2);
+    $file2 = "$datadir/i18n/" . $lang->id . '.po';
+    $tlc->toPoFile($file2);
   }
 }
 
@@ -175,10 +174,10 @@ function i18n_update_json() {
  * build <li>'s for the destlang dropdown
  */
 function i18n_menu_destlang() {
-  global $languages, $i18ndir;
+  global $languages;
 
   foreach($languages as $lang) {
-    $file = "$i18ndir/".$lang->id.".json";
+    $file = "$datadir/i18n/".$lang->id.".json";
     if (!is_file($file)) continue;
 
     $tls = Translations::fromJsonFile($file);
@@ -239,7 +238,7 @@ function i18n_langlist() {
  * update language in json database
  */
 function i18n_langmod() {
-  global $languages, $datadir, $i18ndir;
+  global $languages, $datadir;
 
   /**
    * POST(name)  -> id|name|browser|delete
@@ -277,8 +276,8 @@ function i18n_langmod() {
       break;
     case "delete":
       $file = $lang->id . '.json';
-      if (is_file("$i18ndir/$file")) {
-        unlink("$i18ndir/$file");
+      if (is_file("$datadir/i18n/$file")) {
+        unlink("$datadir/i18n/$file");
       }
       break;
     }
@@ -332,7 +331,7 @@ function i18n_langadd() {
  * return array with different languages for translating
  */
 function i18n_tlist() {
-  global $datadir, $i18ndir, $language;
+  global $datadir, $language;
 
   $tls = Translations::fromPoFile("$datadir/source.po");
   $tls_o = $tls->getOriginals();
@@ -341,7 +340,7 @@ function i18n_tlist() {
   if (!isset($_SESSION['destlang']))
     return HeaderDie("HTTP/1.0 400 incorrect POST values!");
 
-  $file = "$i18ndir/".$_SESSION['destlang'].".json";
+  $file = "$datadir/i18n/".$_SESSION['destlang'].".json";
   if (!is_file($file))
     HeaderDie("HTTP/1.0 400 incorrect SESSION!");
 
@@ -360,7 +359,7 @@ function i18n_tlist() {
  * update translation in json database
  */
 function i18n_tmod() {
-  global $languages, $datadir, $i18ndir;
+  global $languages, $datadir;
 
   /**
    * POST(name)  -> destlang (static word)
@@ -374,7 +373,7 @@ function i18n_tmod() {
   if (!isset($_SESSION['destlang']))
     return HeaderDie("HTTP/1.0 400 incorrect SESSION values!");
 
-  $file = "$i18ndir/".$_SESSION['destlang'].".json";
+  $file = "$datadir/i18n/".$_SESSION['destlang'].".json";
   if (!is_file($file))
     HeaderDie("HTTP/1.0 400 incorrect SESSION!");
 
@@ -387,10 +386,6 @@ function i18n_tmod() {
   }
   $tle->toJsonFile($file);
   http_204();
-}
-
-function ___($text) {
-  return addslashes(__($text));
 }
 
 ?>
