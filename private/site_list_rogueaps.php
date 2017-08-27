@@ -14,10 +14,10 @@ if (!defined('HOTSPOT')) { exit; }
 
 if ($action === "list_guest_aps") {
     $head = __("Guest WLANs");
-    $text = __("Here, wireless networks are displayed, which according to MAC address also have vouchers.");
+    $text = __("This is where wireless networks are displayed, which, according to the MAC address, also have tickets.");
 } else {
     $head = __("Wireless networks nearby");
-    $text = __("Here, wireless networks are displayed, which according to MAC address also have vouchers.");
+    $text = __("List of wireless networks nearby.");
 }
 
 ?>
