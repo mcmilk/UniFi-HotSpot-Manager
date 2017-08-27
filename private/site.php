@@ -103,6 +103,7 @@ if (!defined('HOTSPOT')) { exit; }
                 <li><a href="?action=list_guests"><?php echo __("Overview"); ?></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="?action=list_online"><?php echo __("Guests online"); ?></a></li>
+                <li><a href="?action=list_blocked"><?php echo __("Guests blocked"); ?></a></li>
                 <li><a href="?action=list_guest_aps"><?php echo __("Guest WLANs"); ?></a></li>
             </ul>
         </li>

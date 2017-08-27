@@ -71,6 +71,7 @@ function hotspot_login($username, $password) {
     } else if ($user->options === "u") {
       $is_user = true;
     }
+
     // setup session
     $_SESSION['is_user'] = $is_user;
     $_SESSION['is_admin'] = $is_admin;
@@ -154,6 +155,23 @@ function hotspot_usermod() {
       $user->headline = $value;
       $r[] = $user;
       break;
+    }
+
+    // if some value of current user has changed, update the session
+    if ($_SESSION['username'] == $pk) {
+      if ($user->options === "a") {
+        $is_user = true;
+        $is_admin = true;
+      } else if ($user->options === "u") {
+        $is_user = true;
+      }
+
+      $_SESSION['is_user'] = $is_user;
+      $_SESSION['is_admin'] = $is_admin;
+      $_SESSION['username'] = $user->username;
+      $_SESSION['headline'] = $user->headline;
+      $_SESSION['note_prefix'] = $user->prefix;
+      log_msg("anpassen der session!");
     }
   }
 

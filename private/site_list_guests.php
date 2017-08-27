@@ -14,12 +14,16 @@ if (!defined('HOTSPOT')) { exit; }
 
 if ($action === "list_online") {
   /* list online */
-  $headline = __("List of online clients");
-  $textline = __("Displays all currently active devices or users on the network.");
+  $head = __("List of online clients");
+  $text = __("Displays all currently active devices or users on the network.");
+} else if ($action === "list_blocked") {
+  /* list guests */
+  $head = __("List of blocked guests");
+  $text = __("All guests who are currently blocked on the network.");
 } else {
   /* list guests */
-  $headline = __("List of guests");
-  $textline = __("All guests who currently have a valid voucher on the network will be shown here.");
+  $head = __("List of guests");
+  $text = __("All guests who currently have a valid voucher on the network.");
 }
 ?>
 
@@ -27,8 +31,8 @@ if ($action === "list_online") {
 
 <div class="row">
   <div class="col-md-6">
-    <h2><?php echo $headline; ?></h2>
-    <p><?php echo $textline;  ?></p>
+    <h2><?php echo $head; ?></h2>
+    <p><?php echo $text;  ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2>
@@ -94,11 +98,7 @@ $(document).ready(function(){
   myTable = $('.table').DataTable({
     <?php echo dataTablesDefaults(); ?>
     "ajax": {
-      <?php if ($action === "list_online") { ?>
-      "url": "?get_data=list_online",
-      <?php } else { ?>
-      "url": "?get_data=list_guests",
-      <?php } ?>
+      "url": "?get_data=<?php echo $action; ?>",
       "type": "POST",
     },
     "columns": [

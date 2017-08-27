@@ -189,7 +189,9 @@ if ($is_user) {
     break;
   case 'list_online':
     $includefile = "site_list_guests.php";
-    //$includefile = "site_list_online.php";
+    break;
+  case 'list_blocked':
+    $includefile = "site_list_guests.php";
     break;
   case 'list_guest_aps':
     $includefile = "site_list_rogueaps.php";

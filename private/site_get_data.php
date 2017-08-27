@@ -96,7 +96,7 @@ case "list_guests":
     if (!isset($guest->expired)) continue;
     if ($func === "list_guests" && $guest->expired) continue;
     // remove entries, with other prefix
-    //if (!is_prefix($guest->name)) continue;
+    if (!is_prefix($guest->name)) continue;
     $guest->username = "";
     $guest->usernote = "";
     $guest->blocked = "";
@@ -106,6 +106,32 @@ case "list_guests":
         if (isset($u->note)) $guest->usernote = $u->note;
         if (isset($u->blocked)) $guest->blocked = $u->blocked;
         $data[] = $guest;
+      }
+    }
+  }
+  break;
+
+case "list_blocked":
+  /* list_guests($within = 8760) */
+  $hours = 24 * 7;
+  $guests = unifi_cmd("list_guests", $cachetime, $hours);
+  $users = unifi_cmd("list_users");
+  foreach ($guests as $guest) {
+    if (!isset($guest->name)) continue;
+    if (!isset($guest->user_id)) continue;
+    // remove entries, with other prefix
+    if (!is_prefix($guest->name)) continue;
+    $guest->username = "";
+    $guest->usernote = "";
+    $guest->blocked = "";
+    foreach ($users as $u) {
+      if ($u->_id === $guest->user_id) {
+        if (isset($u->name)) $guest->username = $u->name;
+        if (isset($u->note)) $guest->usernote = $u->note;
+        if (isset($u->blocked)) {
+          $guest->blocked = $u->blocked;
+          if ($guest->blocked) { $data[] = $guest; }
+        }
       }
     }
   }

@@ -264,7 +264,7 @@ $(document).ready(function(){
       $("form").validator('update');
       me.getButton('btn-1').disable();
       $("form").on('validate.bs.validator', function (e) {
-        if ($("form").find('.has-success').length == 5) {
+        if ($("form").find('.has-success').length >= 5) {
           me.getButton('btn-1').enable();
         } else {
           me.getButton('btn-1').disable();
