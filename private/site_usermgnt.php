@@ -245,9 +245,10 @@ $(document).ready(function(){
       action: function(me) {
         var username = $("input[name=username]").val();
         $.ajax({
-         url: "?get_data=hotspot_userdel",
+         url: "?get_data=hotspot_usermod",
          method: "POST",
          data: { "username":username },
+         data: { "name":"delete", "pk":username, "value":"nix ;)" },
         }).done(function(data){
           me.close();
           $("#reload").click();
