@@ -137,27 +137,18 @@ case "list_blocked":
   }
   break;
 
-case "list_rogueaps":
-  // 1a) via list_users
-  $users = unifi_cmd("list_users");
-  $macs = array();
-  foreach ($users as $user) {
-    $macs[] = $user->mac;
-  }
-
+case "list_guest_aps":
   // 1b) list_guests (mit prefix!)
-  $hours = 24 * 2;
+  $hours = 24 * 7;
   $guests = unifi_cmd("list_guests", $cachetime, $hours);
   foreach ($guests as $guest) {
     if (!isset($guest->name)) continue;
-    if (!isset($guest->expired)) continue;
-    if ($guest->expired) continue;
     // remove entries, with other prefix
     if (!is_prefix($guest->name)) continue;
     $macs[] = $guest->mac;
   }
 
-  $aps = unifi_cmd("list_rogueaps", $cachetime, 48);
+  $aps = unifi_cmd("list_rogueaps", $cachetime, $hours);
   foreach ($aps as $ap) {
     if (!$ap->bssid) continue;
     if (in_array($ap->bssid, $macs)) {
@@ -165,6 +156,16 @@ case "list_rogueaps":
     }
   }
   break;
+
+case "list_rogueaps":
+  $hours = 24 * 7;
+  $aps = unifi_cmd("list_rogueaps", $cachetime, $hours);
+  foreach ($aps as $ap) {
+    if (!$ap->bssid) continue;
+    $data[] = $ap;
+  }
+  break;
+
 
 case "stat_voucher":
   $vouchers = unifi_cmd("stat_voucher");

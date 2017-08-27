@@ -119,7 +119,7 @@ if (!defined('HOTSPOT')) { exit; }
             <ul class="dropdown-menu">
                 <li class="dropdown-header"><?php echo __("Admin menu"); ?></li>
                 <li><a href="?action=list_users"><?php echo __("Wireless user"); ?></a></li>
-                <li><a href="?action=list_rogueaps"><?php echo __("Other wireless networks"); ?></a></li>
+                <li><a href="?action=list_rogueaps"><?php echo __("Wireless networks nearby"); ?></a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="?action=usermgnt"><?php echo __("User management"); ?></a></li>
             </ul>

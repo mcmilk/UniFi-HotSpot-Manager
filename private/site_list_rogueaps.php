@@ -12,14 +12,22 @@
 
 if (!defined('HOTSPOT')) { exit; }
 
+if ($action === "list_guest_aps") {
+    $head = __("Guest WLANs");
+    $text = __("Here, wireless networks are displayed, which according to MAC address also have vouchers.");
+} else {
+    $head = __("Wireless networks nearby");
+    $text = __("Here, wireless networks are displayed, which according to MAC address also have vouchers.");
+}
+
 ?>
 
 <form method="POST" action="">
 
 <div class="row">
   <div class="col-md-6">
-    <h2><?php echo __("Wireless networks nearby"); ?></h2>
-    <p><?php echo __("Here, wireless networks are displayed, which according to MAC address also have vouchers."); ?></p>
+    <h2><?php echo $head; ?></h2>
+    <p><?php echo $text;  ?></p>
   </div>
   <div class="col-md-6 text-right">
     <h2></h2><p>
