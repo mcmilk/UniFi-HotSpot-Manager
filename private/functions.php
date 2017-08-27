@@ -28,15 +28,15 @@ function fmt_human($bytes, $dec = 2) {
  * eg: 10 Tage 21 Stunden 2 Minuten
  */
 function fmt_duration($seconds) {
-  $years = intval($seconds/60/60/24/365);
+  $years = intval($seconds / 60 / 60 / 24 /365);
   $seconds -= $years * 60 * 60 * 24 * 365;
-  $weeks = intval($seconds/60/60/24/7);
+  $weeks = intval($seconds / 60 / 60 / 24 / 7);
   $seconds -= $weeks * 60 * 60 * 24 * 7;
-  $days = intval($seconds/60/60/24);
+  $days = intval($seconds / 60 / 60 / 24);
   $seconds -= $days * 60 * 60 * 24;
-  $hours = intval($seconds/60/60);
+  $hours = intval($seconds / 60 / 60);
   $seconds -= $hours * 60 * 60;
-  $minutes = intval($seconds/60);
+  $minutes = intval($seconds / 60);
   $seconds -= $minutes * 60;
   $r = "";
   if ($years)   { if ($years == 1)   { $r .= __("1 year")   ." "; } else { $r .= "$years "  .__("years")   ." "; } }
@@ -70,6 +70,9 @@ function get_getparam($name, $default) {
  * - check some POST parameter, if not set, take default
  */
 function get_postparam($name, $default) {
+  //$data = trim($data);
+  //$data = stripslashes($data);
+  //$data = htmlspecialchars($data);
   if (isset($_POST["$name"])) return $_POST["$name"];
   return $default;
 }
@@ -79,18 +82,6 @@ function get_postparam($name, $default) {
  */
 function fmt_wificode($code) {
   return substr($code, 0, 5) . "-" . substr($code, 5, 5);
-}
-
-/**
- * validate_input()
- * - check for bad stuff in input variables
- */
-function validate_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  $data = str_replace(":", "", $data);
-  return $data;
 }
 
 /**
@@ -273,6 +264,20 @@ function dataTablesDefaults() {
     "lengthMenu": [ [ 8, 16, 40, -1], [ 8, 16, 40, "$sAll" ] ],
 EOT;
   return $text;
+}
+
+/**
+ * random_str() - generate random password for first time use
+ */
+function random_str($length)
+{
+  $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!?()/-_*+#';
+  $str = '';
+  $max = mb_strlen($keyspace, '8bit') - 1;
+  for ($i = 0; $i < $length; ++$i) {
+      $str .= $keyspace[mt_rand(0, $max)];
+  }
+  return $str;
 }
 
 ?>

@@ -12,15 +12,14 @@ if (!defined('HOTSPOT')) { exit; }
 
 /**
  * create vouchers, todo: check for correct input
- * - the form does some pre handling, but security! XXX
  */
-$count    = validate_input($_POST["count"]);
-$duration = validate_input($_POST["duration"]);
-$dmulti   = validate_input($_POST["dmulti"]);
-$note     = validate_input($_POST["note"]);
-$up       = null;
-$down     = null;
-$limit    = validate_input($_POST["limit"]);
+$count    = get_postparam("count", "1");
+$duration = get_postparam("duration", "1");
+$dmulti   = get_postparam("dmulti", "1");
+$note     = get_postparam("note", null);
+$up       = get_postparam("up", null);
+$down     = get_postparam("down", null);
+$limit    = get_postparam("limit", null);
 
 /**
  * public function create_voucher($minutes, $count = 1, $quota = '1', $note = null, $up = null, $down = null, $MBytes = null)
