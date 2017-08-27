@@ -171,13 +171,22 @@ $(document).ready(function(){
   var langaddDialog = new BootstrapDialog({
     title: "<?php echo __("Add language"); ?>",
     message: $('<div></div>').load('?get_form=langadd'),
-    onshown: function(){
+    onshown: function(me){
       $("form").validator('update');
+      me.getButton('btn-1').disable();
+      $("form").on('validate.bs.validator', function (e) {
+        if ($("form").find('.has-success').length == 3) {
+          me.getButton('btn-1').enable();
+        } else {
+          me.getButton('btn-1').disable();
+        }
+      });
     },
     buttons: [{
       label: "<?php echo __("Cancel"); ?>",
       action: function(me) { me.close(); }
     }, {
+      id: 'btn-1',
       label: '<i class="fa fa-plus"></i> <?php echo __("Add language"); ?>',
       cssClass: 'btn-primary',
       action: function(me) {

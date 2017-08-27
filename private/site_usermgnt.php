@@ -198,8 +198,16 @@ $(document).ready(function(){
   var userpassDialog = new BootstrapDialog({
     title: "<?php echo __("Change password"); ?>",
     message: $('<div></div>').load('?get_form=userpass'),
-    onshown: function(){
+    onshown: function(me){
       $("form").validator('update');
+      me.getButton('btn-1').disable();
+      $("form").on('validate.bs.validator', function (e) {
+        if ($("form").find('.has-success').length == 2) {
+          me.getButton('btn-1').enable();
+        } else {
+          me.getButton('btn-1').disable();
+        }
+      });
     },
     buttons: [{
       label: "<?php echo __("Cancel"); ?>",
@@ -207,6 +215,7 @@ $(document).ready(function(){
        me.close();
       }
     }, {
+      id: 'btn-1',
       label: '<i class="fa fa-key"></i> '+"<?php echo __("Change password"); ?>",
       cssClass: 'btn-primary',
       action: function(me) {
@@ -250,13 +259,22 @@ $(document).ready(function(){
   var useraddDialog = new BootstrapDialog({
     title: "<?php echo __("Add user"); ?>",
     message: $('<div></div>').load('?get_form=useradd'),
-    onshown: function(){
+    onshown: function(me){
       $("form").validator('update');
+      me.getButton('btn-1').disable();
+      $("form").on('validate.bs.validator', function (e) {
+        if ($("form").find('.has-success').length == 5) {
+          me.getButton('btn-1').enable();
+        } else {
+          me.getButton('btn-1').disable();
+        }
+      });
     },
     buttons: [{
       label: "<?php echo __("Cancel"); ?>",
       action: function(me) { me.close(); }
     }, {
+      id: 'btn-1',
       label: '<i class="fa fa-user-plus"></i> '+"<?php echo __("Add user"); ?>",
       cssClass: 'btn-primary',
       action: function(me) {
