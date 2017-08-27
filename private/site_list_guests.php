@@ -19,7 +19,7 @@ if ($action === "list_online") {
 } else {
   /* list guests */
   $headline = __("List of guests");
-  $textline = __("All guests who currently have a valid voucher in the network are shown here.");
+  $textline = __("All guests who currently have a valid voucher on the network will be shown here.");
 }
 ?>
 
@@ -59,7 +59,7 @@ if ($action === "list_online") {
         <?php } ?>
         <th class="text-center"><?php echo __("Username"); ?></th>
         <th class="text-center"><?php echo __("Comment"); ?></th>
-        <th class="text-center"><?php echo __("Traffic"); ?></th>
+        <th class="text-center"><?php echo __("Data Traffic"); ?></th>
         <th class="text-center"><?php echo __("Valid until"); ?></th>
       </tr>
     </thead>

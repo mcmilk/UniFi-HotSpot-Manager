@@ -20,7 +20,7 @@ if (!defined('HOTSPOT')) { exit; }
 
 <div class="row">
   <div class="col-xs-12 col-md-6">
-    <h2><?php echo __("Translation Management"); ?></h2>
+    <h2><?php echo __("Translation Tools"); ?></h2>
     <p><?php echo __("If you want, you can help translate the entire HotSpot Manager into your native language."); ?></p>
   </div>
 

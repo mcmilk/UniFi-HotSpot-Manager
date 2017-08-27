@@ -174,7 +174,7 @@ function i18n_update_json() {
  * build <li>'s for the destlang dropdown
  */
 function i18n_menu_destlang() {
-  global $languages;
+  global $languages, $datadir;
 
   foreach($languages as $lang) {
     $file = "$datadir/i18n/".$lang->id.".json";

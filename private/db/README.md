@@ -1,15 +1,16 @@
 
 ## UniFi HotSpot Manager DataBase Directory
-This is the directory, where the HotSpot manager will store some needed data ...
+This is the directory, where the HotSpot manager will store some needed data.
 
 Here is a small list of it:
 
 #### languages.json
 - the file defines the currently languages, which should be supported
-- will be created with some defaults, when it's not there
+- will be created with some default languagess, when needed
 
 #### userdb.json
 - user database, which is used for authentication
+- will be created with one admin account, when the file is not there
 
 #### source.po and source.csv
 - these files can be used for translating
