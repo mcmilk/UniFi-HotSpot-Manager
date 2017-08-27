@@ -31,7 +31,6 @@ function userdb_init() {
   $file = "$datadir/userdb.json";
   if (!is_file($file)) {
     $pwtemp = random_str(10);
-    $pwtemp = "123"; // random_str(10);
     $pwhash = password_hash($pwtemp, PASSWORD_BCRYPT);
     $a = [];
     $a[] = array("username" => "admin", "password" => "$pwhash", "prefix" => "", "options" => "a", "headline" => "pass = [$pwtemp]");

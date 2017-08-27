@@ -40,12 +40,11 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - edit the file then, and set up the private path
 - then go to your `private` path an take a look into the file `config.sample.php`
 - modify that file and rename it to `config.php`
-- take a look into the file `userdb.sample.txt` ... then rename it to `userdb.txt`
-- start your browser and modify the user data...
+- start your browser and you should get the login form
+- take a look into the file `userdb.json`, search for `pass = [` and use this password together with the username `admin` 
 - for creating an own qr-code of the WiFi settings for your network on the vouchers, just use the script provided here: `contrib/qr-gen.sh`
 
 ## Todo
-- move userdb.txt to json format (like languages.json)
 - show some more information on the "list_clients" action
 - the same for the "list_guest_aps" site
 
