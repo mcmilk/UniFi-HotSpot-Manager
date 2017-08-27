@@ -45,6 +45,17 @@ function userdb_init() {
 }
 
 /**
+ * flush password database
+ */
+function userdb_flush(&$array) {
+  global $datadir;
+
+  $file = "$datadir/userdb.json";
+  file_put_contents($file, json_encode($array));
+  http_204();
+}
+
+/**
  * hotspot_login()
  * - check for valid username and password
  * - setup session (is_user, is_admin, ...)
@@ -102,7 +113,6 @@ function hotspot_userlist() {
  * - update settings in userdb.txt file
  */
 function hotspot_usermod() {
-  global $datadir;
 
   /**
    * POST(name)  -> username|password|prefix|options|headline|delete
@@ -175,9 +185,7 @@ function hotspot_usermod() {
     }
   }
 
-  $file = "$datadir/userdb.json";
-  file_put_contents($file, json_encode($r));
-  http_204();
+  userdb_flush($r);
 }
 
 /**
@@ -185,7 +193,6 @@ function hotspot_usermod() {
  * - add user to userdb.txt file
  */
 function hotspot_useradd() {
-  global $datadir;
 
   /**
    * POST(username)  -> username
@@ -220,9 +227,7 @@ function hotspot_useradd() {
   $hash = password_hash($password, PASSWORD_BCRYPT);
   $r[] = array('username' => $username, 'password' => $hash, 'prefix' => $prefix, 'options' => $options, 'headline' => $headline);
 
-  $file = "$datadir/userdb.json";
-  file_put_contents($file, json_encode($r));
-  http_204();
+  userdb_flush($r);
 }
 
 ?>
