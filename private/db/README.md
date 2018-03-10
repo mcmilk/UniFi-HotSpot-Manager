@@ -11,6 +11,7 @@ Here is a small list of it:
 #### userdb.json
 - user database, which is used for authentication
 - will be created with one admin account, when the file is not there
+- default login is: admin/cz8xJOhQWU
 
 #### source.po and source.csv
 - these files can be used for translating
