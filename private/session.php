@@ -34,7 +34,7 @@ header('Content-Encoding: gzip');
 if (isset($_GET['logout'])) {
   if (isset($_SESSION['unificookie'])) {
     /* logout from unifi controller, when user has some cookie */
-    $unifidata = new UnifiApi($controller_user, $controller_password, $controller_url, $controller_siteid);
+    $unifidata = new UniFi_API\Client($controller_user, $controller_password, $controller_url, $controller_siteid);
     $unifidata->logout();
   }
   session_destroy();

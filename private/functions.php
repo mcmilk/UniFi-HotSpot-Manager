@@ -90,12 +90,12 @@ function fmt_wificode($code) {
 function unifi_login() {
   global $controller_user, $controller_password, $controller_url, $controller_siteid;
 
-  $unifidata = new UnifiApi($controller_user, $controller_password, $controller_url, $controller_siteid);
+  $unifidata = new UniFi_API\Client($controller_user, $controller_password, $controller_url, $controller_siteid);
   if ($unifidata->login() == false) {
     HeaderDie("HTTP/1.0 504 No connection to UniFi controller :/");
   } else {
     /* remember cookie in session */
-    $_SESSION['unificookie'] = $unifidata->getcookie();
+    $_SESSION['unificookie'] = $unifidata->get_cookie();
   }
 
   return $unifidata;

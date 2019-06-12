@@ -14,7 +14,7 @@ This is a HotSpot Manager like the default one of [UniFi Ubiquiti](https://unifi
 - ... a lot more, this is just the first writing of that README
 
 ## Included libraries
-- [UniFi PHP API](https://github.com/Art-of-WiFi/UniFi-API-browser/tree/master/phpapi), by [Erik Slooff](https://github.com/malle-pietje)
+- [UniFi PHP API](https://github.com/Art-of-WiFi/UniFi-API-client), by [Erik Slooff](https://github.com/malle-pietje)
 - [Gettext PHP](https://github.com/oscarotero/Gettext) by [Oscar Otero](https://github.com/oscarotero/)
 - [FPDF](http://www.fpdf.org/) for voucher creation
 
