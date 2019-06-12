@@ -84,6 +84,10 @@ function unifi_uncache($command, $p1 = "", $p2 = "", $p3 = "") {
 function unifi_cmd($command, $seconds = 15, $p1 = "", $p2 = "", $p3 = "") {
   global $datadir;
 
+  if (!is_dir("$datadir/cache")) {
+    mkdir("$datadir/cache");
+  }
+
   $filename = "$datadir/cache/$command-$p1-$p2-$p3.dump";
   if (is_file($filename)) {
     $ts_cache = filemtime($filename);
