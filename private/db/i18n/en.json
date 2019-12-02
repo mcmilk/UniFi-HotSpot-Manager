@@ -31,7 +31,7 @@
                 ""
             ],
             "Administrator": [
-                ": activate to sort column ascending"
+                ""
             ],
             "Default": [
                 ""
@@ -49,37 +49,37 @@
                 ""
             ],
             "1 year": [
-                "Loading..."
+                ""
             ],
             "years": [
                 ""
             ],
             "1 week": [
-                "Show _MENU_ entries"
+                ""
             ],
             "weeks": [
                 ""
             ],
             "1 day": [
-                "No data available in table"
+                ""
             ],
             "days": [
                 ""
             ],
             "1 hour": [
-                "Showing _START_ to _END_ of _TOTAL_ entries"
+                ""
             ],
             "hours": [
                 ""
             ],
             "1 minute": [
-                "Showing 0 to 0 of 0 entries"
+                ""
             ],
             "minutes": [
                 ""
             ],
             "1 second": [
-                "(filtered from _MAX_ total entries)"
+                ""
             ],
             "seconds": [
                 ""
@@ -154,7 +154,7 @@
                 ""
             ],
             "Activated vouchers": [
-                "First"
+                ""
             ],
             "Guests online": [
                 ""
@@ -163,10 +163,10 @@
                 ""
             ],
             "Admin": [
-                "Previous"
+                ""
             ],
             "Admin menu": [
-                ": activate to sort column descending"
+                ""
             ],
             "Wireless user": [
                 ""
@@ -193,7 +193,7 @@
                 ""
             ],
             "About": [
-                "Processing..."
+                ""
             ],
             "Themes": [
                 ""
@@ -217,7 +217,7 @@
                 ""
             ],
             "Add language": [
-                "Last"
+                ""
             ],
             "Reload Now": [
                 ""
@@ -232,7 +232,7 @@
                 ""
             ],
             "Action": [
-                "Search:"
+                ""
             ],
             "Delete language": [
                 ""
@@ -397,7 +397,7 @@
                 ""
             ],
             "Actions": [
-                "No matching records found"
+                ""
             ],
             "Change password": [
                 ""
@@ -409,7 +409,7 @@
                 ""
             ],
             "Add user": [
-                "Next"
+                ""
             ]
         }
     }
