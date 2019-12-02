@@ -1,1 +1,416 @@
-{"domain":null,"plural-forms":null,"messages":{"":{"Username":[""],"License":[""],"Code":[""],"Language":[""],"Browser":[""],"Sign In":[""],"Password":[""],"Please select the permission level.":[""],"Usergroup":[""],"Administrator":[": activate to sort column ascending"],"Default":[""],"Disabled":[""],"Confirm Password":[""],"Voucher prefix":[""],"Voucher headline":[""],"1 year":["Loading..."],"years":[""],"1 week":["Show _MENU_ entries"],"weeks":[""],"1 day":["No data available in table"],"days":[""],"1 hour":["Showing _START_ to _END_ of _TOTAL_ entries"],"hours":[""],"1 minute":["Showing 0 to 0 of 0 entries"],"minutes":[""],"1 second":["(filtered from _MAX_ total entries)"],"seconds":[""],"Download":[""],"Upload":[""],"Time":[""],"Limit":[""],"No data available in table":[""],"Showing _START_ to _END_ of _TOTAL_ entries":[""],"Showing 0 to 0 of 0 entries":[""],"(filtered from _MAX_ total entries)":[""],"Show _MENU_ entries":[""],"Loading...":[""],"Processing...":[""],"Search":[""],"No matching records found":[""],"First":[""],"Previous":[""],"Next":[""],"Last":[""],"All":[""],"Vouchers":[""],"Voucher menu":[""],"Overview":[""],"Create vouchers":[""],"Guests":[""],"Activated vouchers":["First"],"Guests online":[""],"Guest WLANs":[""],"Admin":["Previous"],"Admin menu":[": activate to sort column descending"],"Wireless user":[""],"Other wireless networks":[""],"User management":[""],"Translation":[""],"Translation Tools":[""],"Languages":[""],"Translations":[""],"Logout":[""],"About":["Processing..."],"Themes":[""],"Number of vouchers":[""],"Validity":[""],"Comment":[""],"Create":[""],"Language Management":[""],"You can define here new languages for the HotSpot Manager.":[""],"Add language":["Last"],"Reload Now":[""],"Language ID":[""],"Name in menu":[""],"Browser language":[""],"Action":["Search:"],"Delete language":[""],"Warning, do you really want to delete this translation?":[""],"Cancel":[""],"List of online clients":[""],"Displays all currently active devices or users on the network.":[""],"List of guests":[""],"All guests who currently have a valid voucher on the network will be shown here.":[""],"Show expired vouchers":[""],"Voucher comment":[""],"Hostname":[""],"Bandwidth":[""],"Idle":[""],"Data Traffic":[""],"Valid until":[""],"No hostname":[""],"Limits":[""],"Client information":[""],"IP address":[""],"MAC address":[""],"Data Sent":[""],"Data Received":[""],"Data Total":[""],"Wireless information":[""],"Channel":[""],"Radio":[""],"Roaming":[""],"Discard voucher":[""],"Enable user":[""],"Block user":[""],"Reset user device":[""],"Wireless networks nearby":[""],"Here, wireless networks are displayed, which according to MAC address also have vouchers.":[""],"Security":[""],"Last Seen":[""],"Report time":[""],"Age":[""],"User list":[""],"List of all users connected to our wireless network.":[""],"First Seen":[""],"Connection":[""],"Available vouchers":[""],"Overview of all vouchers that have not been activated at the moment.":[""],"Print selection":[""],"Delete selection":[""],"Created on":[""],"Working. Please wait.":[""],"If you want, you can help translate the entire HotSpot Manager into your native language.":[""],"Target language":[""],"References":[""],"Source":[""],"empty":[""],"Lets you create, modify, or delete the Hotspot Manager users.":[""],"New user":[""],"Permissions":[""],"Actions":["No matching records found"],"Change password":[""],"Delete user":[""],"Are you sure you want to delete the user?":[""],"Add user":["Next"]}}}
+{
+    "domain": null,
+    "plural-forms": null,
+    "messages": {
+        "": {
+            "Username": [
+                ""
+            ],
+            "License": [
+                ""
+            ],
+            "Code": [
+                ""
+            ],
+            "Language": [
+                ""
+            ],
+            "Browser": [
+                ""
+            ],
+            "Sign In": [
+                ""
+            ],
+            "Password": [
+                ""
+            ],
+            "Please select the permission level.": [
+                ""
+            ],
+            "Usergroup": [
+                ""
+            ],
+            "Administrator": [
+                ": activate to sort column ascending"
+            ],
+            "Default": [
+                ""
+            ],
+            "Disabled": [
+                ""
+            ],
+            "Confirm Password": [
+                ""
+            ],
+            "Voucher prefix": [
+                ""
+            ],
+            "Voucher headline": [
+                ""
+            ],
+            "1 year": [
+                "Loading..."
+            ],
+            "years": [
+                ""
+            ],
+            "1 week": [
+                "Show _MENU_ entries"
+            ],
+            "weeks": [
+                ""
+            ],
+            "1 day": [
+                "No data available in table"
+            ],
+            "days": [
+                ""
+            ],
+            "1 hour": [
+                "Showing _START_ to _END_ of _TOTAL_ entries"
+            ],
+            "hours": [
+                ""
+            ],
+            "1 minute": [
+                "Showing 0 to 0 of 0 entries"
+            ],
+            "minutes": [
+                ""
+            ],
+            "1 second": [
+                "(filtered from _MAX_ total entries)"
+            ],
+            "seconds": [
+                ""
+            ],
+            "Download": [
+                ""
+            ],
+            "Upload": [
+                ""
+            ],
+            "Time": [
+                ""
+            ],
+            "Limit": [
+                ""
+            ],
+            "No data available in table": [
+                ""
+            ],
+            "Showing _START_ to _END_ of _TOTAL_ entries": [
+                ""
+            ],
+            "Showing 0 to 0 of 0 entries": [
+                ""
+            ],
+            "(filtered from _MAX_ total entries)": [
+                ""
+            ],
+            "Show _MENU_ entries": [
+                ""
+            ],
+            "Loading...": [
+                ""
+            ],
+            "Processing...": [
+                ""
+            ],
+            "Search": [
+                ""
+            ],
+            "No matching records found": [
+                ""
+            ],
+            "First": [
+                ""
+            ],
+            "Previous": [
+                ""
+            ],
+            "Next": [
+                ""
+            ],
+            "Last": [
+                ""
+            ],
+            "All": [
+                ""
+            ],
+            "Vouchers": [
+                ""
+            ],
+            "Voucher menu": [
+                ""
+            ],
+            "Overview": [
+                ""
+            ],
+            "Create vouchers": [
+                ""
+            ],
+            "Guests": [
+                ""
+            ],
+            "Activated vouchers": [
+                "First"
+            ],
+            "Guests online": [
+                ""
+            ],
+            "Guest WLANs": [
+                ""
+            ],
+            "Admin": [
+                "Previous"
+            ],
+            "Admin menu": [
+                ": activate to sort column descending"
+            ],
+            "Wireless user": [
+                ""
+            ],
+            "Other wireless networks": [
+                ""
+            ],
+            "User management": [
+                ""
+            ],
+            "Translation": [
+                ""
+            ],
+            "Translation Tools": [
+                ""
+            ],
+            "Languages": [
+                ""
+            ],
+            "Translations": [
+                ""
+            ],
+            "Logout": [
+                ""
+            ],
+            "About": [
+                "Processing..."
+            ],
+            "Themes": [
+                ""
+            ],
+            "Number of vouchers": [
+                ""
+            ],
+            "Validity": [
+                ""
+            ],
+            "Comment": [
+                ""
+            ],
+            "Create": [
+                ""
+            ],
+            "Language Management": [
+                ""
+            ],
+            "You can define here new languages for the HotSpot Manager.": [
+                ""
+            ],
+            "Add language": [
+                "Last"
+            ],
+            "Reload Now": [
+                ""
+            ],
+            "Language ID": [
+                ""
+            ],
+            "Name in menu": [
+                ""
+            ],
+            "Browser language": [
+                ""
+            ],
+            "Action": [
+                "Search:"
+            ],
+            "Delete language": [
+                ""
+            ],
+            "Warning, do you really want to delete this translation?": [
+                ""
+            ],
+            "Cancel": [
+                ""
+            ],
+            "List of online clients": [
+                ""
+            ],
+            "Displays all currently active devices or users on the network.": [
+                ""
+            ],
+            "List of guests": [
+                ""
+            ],
+            "All guests who currently have a valid voucher on the network will be shown here.": [
+                ""
+            ],
+            "Show expired vouchers": [
+                ""
+            ],
+            "Voucher comment": [
+                ""
+            ],
+            "Hostname": [
+                ""
+            ],
+            "Bandwidth": [
+                ""
+            ],
+            "Idle": [
+                ""
+            ],
+            "Data Traffic": [
+                ""
+            ],
+            "Valid until": [
+                ""
+            ],
+            "No hostname": [
+                ""
+            ],
+            "Limits": [
+                ""
+            ],
+            "Client information": [
+                ""
+            ],
+            "IP address": [
+                ""
+            ],
+            "MAC address": [
+                ""
+            ],
+            "Data Sent": [
+                ""
+            ],
+            "Data Received": [
+                ""
+            ],
+            "Data Total": [
+                ""
+            ],
+            "Wireless information": [
+                ""
+            ],
+            "Channel": [
+                ""
+            ],
+            "Radio": [
+                ""
+            ],
+            "Roaming": [
+                ""
+            ],
+            "Discard voucher": [
+                ""
+            ],
+            "Enable user": [
+                ""
+            ],
+            "Block user": [
+                ""
+            ],
+            "Reset user device": [
+                ""
+            ],
+            "Wireless networks nearby": [
+                ""
+            ],
+            "Here, wireless networks are displayed, which according to MAC address also have vouchers.": [
+                ""
+            ],
+            "Security": [
+                ""
+            ],
+            "Last Seen": [
+                ""
+            ],
+            "Report time": [
+                ""
+            ],
+            "Age": [
+                ""
+            ],
+            "User list": [
+                ""
+            ],
+            "List of all users connected to our wireless network.": [
+                ""
+            ],
+            "First Seen": [
+                ""
+            ],
+            "Connection": [
+                ""
+            ],
+            "Available vouchers": [
+                ""
+            ],
+            "Overview of all vouchers that have not been activated at the moment.": [
+                ""
+            ],
+            "Print selection": [
+                ""
+            ],
+            "Delete selection": [
+                ""
+            ],
+            "Created on": [
+                ""
+            ],
+            "Working. Please wait.": [
+                ""
+            ],
+            "If you want, you can help translate the entire HotSpot Manager into your native language.": [
+                ""
+            ],
+            "Target language": [
+                ""
+            ],
+            "References": [
+                ""
+            ],
+            "Source": [
+                ""
+            ],
+            "empty": [
+                ""
+            ],
+            "Lets you create, modify, or delete the Hotspot Manager users.": [
+                ""
+            ],
+            "New user": [
+                ""
+            ],
+            "Permissions": [
+                ""
+            ],
+            "Actions": [
+                "No matching records found"
+            ],
+            "Change password": [
+                ""
+            ],
+            "Delete user": [
+                ""
+            ],
+            "Are you sure you want to delete the user?": [
+                ""
+            ],
+            "Add user": [
+                "Next"
+            ]
+        }
+    }
+}

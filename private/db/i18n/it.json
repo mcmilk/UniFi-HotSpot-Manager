@@ -1,1 +1,416 @@
-{"domain":null,"plural-forms":null,"messages":{"":{"Username":["Nome"],"License":["Licenza"],"Code":["Codice"],"Language":["Lingua"],"Browser":["Browser"],"Sign In":["Accedi"],"Password":["Password"],"Please select the permission level.":["Selezionare il livello di autorizzazione."],"Usergroup":["UserGroup"],"Administrator":["Amministratore"],"Default":["Predefinita"],"Disabled":["Disabili"],"Confirm Password":["Conferma password"],"Voucher prefix":["Prefisso voucher"],"Voucher headline":["Titolo voucher"],"1 year":["1 anno"],"years":["anni"],"1 week":["1 settimana"],"weeks":["settimane"],"1 day":["1 giorno"],"days":["giorni"],"1 hour":["1 ora"],"hours":["ore"],"1 minute":["1 minuto"],"minutes":["minuti"],"1 second":["1 secondo"],"seconds":["secondi"],"Download":["Scaricare"],"Upload":["Caricare"],"Time":["Tempo"],"Limit":["Limite"],"No data available in table":["Nessun dato presente nella tabella"],"Showing _START_ to _END_ of _TOTAL_ entries":["Vista da _START_ a _END_ di _TOTAL_ elementi"],"Showing 0 to 0 of 0 entries":["Vista da 0 a 0 di 0 elementi"],"(filtered from _MAX_ total entries)":["(filtrati da _MAX_ elementi totali)"],"Show _MENU_ entries":["Visualizza _MENU_ elementi"],"Loading...":["Caricamento..."],"Processing...":["Elaborazione..."],"Search":["Ricerca"],"No matching records found":["La ricerca non ha portato alcun risultato."],"First":["Inizio"],"Previous":["Precedente"],"Next":["Successivo"],"Last":["Fine"],"All":["Tutti"],"Vouchers":["Buoni"],"Voucher menu":["Menu voucher"],"Overview":["Panoramica"],"Create vouchers":["Crea voucher"],"Guests":["Ospiti"],"Activated vouchers":["Voucher attivati"],"Guests online":["Ospiti online"],"Guest WLANs":["Guest WLAN"],"Admin":["Admin"],"Admin menu":["Menu di amministrazione"],"Wireless user":["Utente wireless"],"Other wireless networks":["Altre reti wireless"],"User management":["Gestione utenti"],"Translation":["Traduzione"],"Translation Tools":["Strumenti di traduzione"],"Languages":["Lingue"],"Translations":["Traduzioni"],"Logout":["Logout"],"About":["Circa"],"Themes":["Temi"],"Number of vouchers":["Numero di voucher"],"Validity":["Validit\u00e0"],"Comment":["Commento"],"Create":["Creare"],"Language Management":["Gestione delle lingue"],"You can define here new languages for the HotSpot Manager.":["\u00c8 possibile definire qui nuovi linguaggi per Hotspot Manager."],"Add language":["Aggiungi lingua"],"Reload Now":["Ricarica ora"],"Language ID":["ID lingua"],"Name in menu":["Nome nel menu"],"Browser language":["Lingua del browser"],"Action":["Azione"],"Delete language":["Elimina lingua"],"Warning, do you really want to delete this translation?":["Attenzione, vuoi davvero cancellare questa traduzione?"],"Cancel":["Annulla"],"List of online clients":["Lista dei clienti online"],"Displays all currently active devices or users on the network.":["Visualizza tutti i dispositivi o gli utenti attualmente attivi sulla rete."],"List of guests":["Lista degli ospiti"],"All guests who currently have a valid voucher on the network will be shown here.":["Tutti gli ospiti che attualmente hanno un buono valido sulla rete saranno mostrati qui."],"Show expired vouchers":["Mostra i voucher scaduti"],"Voucher comment":["Voucher commento"],"Hostname":["Hostname"],"Bandwidth":["Banda"],"Idle":["Inattivo"],"Data Traffic":["Traffico dati"],"Valid until":["Valido fino al"],"No hostname":["Nessun hostname"],"Limits":["Limiti"],"Client information":["Informazioni client"],"IP address":["Indirizzo IP"],"MAC address":["Indirizzo Mac"],"Data Sent":["Dati inviati"],"Data Received":["Dati ricevuti"],"Data Total":["Totale dati"],"Wireless information":["Informazioni wireless"],"Channel":["Canale"],"Radio":["Radio"],"Roaming":["Roaming"],"Discard voucher":["Scartare voucher"],"Enable user":["Abilita utente"],"Block user":["Blocco utente"],"Reset user device":["Reimposta dispositivo utente"],"Wireless networks nearby":["Reti wireless nelle vicinanze"],"Here, wireless networks are displayed, which according to MAC address also have vouchers.":["Qui, le reti wireless sono visualizzati, che secondo l'indirizzo Mac hanno anche buoni."],"Security":["Sicurezza"],"Last Seen":["Ultimo visto"],"Report time":["Tempo di rapporto"],"Age":["Et\u00e0"],"User list":["Elenco utenti"],"List of all users connected to our wireless network.":["Elenco di tutti gli utenti connessi alla nostra rete wireless."],"First Seen":["Prima vista"],"Connection":["Connessione"],"Available vouchers":["Voucher disponibili"],"Overview of all vouchers that have not been activated at the moment.":["Panoramica di tutti i voucher che non sono stati attivati al momento."],"Print selection":["Selezione stampa"],"Delete selection":["Elimina selezione"],"Created on":["Creato su"],"Working. Please wait.":["Lavoro. Attendere prego."],"If you want, you can help translate the entire HotSpot Manager into your native language.":["Se vuoi, puoi aiutare a tradurre l'intero Hotspot Manager nella tua lingua nativa."],"Target language":["Lingua di destinazione"],"References":["Riferimenti"],"Source":["Fonte"],"empty":["vuoto"],"Lets you create, modify, or delete the Hotspot Manager users.":["Consente di creare, modificare o eliminare gli utenti di Hotspot Manager."],"New user":["Nuovo utente"],"Permissions":["Autorizzazioni"],"Actions":["Azioni"],"Change password":["Cambiare la password"],"Delete user":["Elimina utente"],"Are you sure you want to delete the user?":["Sei sicuro di voler eliminare l'utente?"],"Add user":["Aggiungi utente"]}}}
+{
+    "domain": null,
+    "plural-forms": null,
+    "messages": {
+        "": {
+            "Username": [
+                "Nome"
+            ],
+            "License": [
+                "Licenza"
+            ],
+            "Code": [
+                "Codice"
+            ],
+            "Language": [
+                "Lingua"
+            ],
+            "Browser": [
+                "Browser"
+            ],
+            "Sign In": [
+                "Accedi"
+            ],
+            "Password": [
+                "Password"
+            ],
+            "Please select the permission level.": [
+                "Selezionare il livello di autorizzazione."
+            ],
+            "Usergroup": [
+                "UserGroup"
+            ],
+            "Administrator": [
+                "Amministratore"
+            ],
+            "Default": [
+                "Predefinita"
+            ],
+            "Disabled": [
+                "Disabili"
+            ],
+            "Confirm Password": [
+                "Conferma password"
+            ],
+            "Voucher prefix": [
+                "Prefisso voucher"
+            ],
+            "Voucher headline": [
+                "Titolo voucher"
+            ],
+            "1 year": [
+                "1 anno"
+            ],
+            "years": [
+                "anni"
+            ],
+            "1 week": [
+                "1 settimana"
+            ],
+            "weeks": [
+                "settimane"
+            ],
+            "1 day": [
+                "1 giorno"
+            ],
+            "days": [
+                "giorni"
+            ],
+            "1 hour": [
+                "1 ora"
+            ],
+            "hours": [
+                "ore"
+            ],
+            "1 minute": [
+                "1 minuto"
+            ],
+            "minutes": [
+                "minuti"
+            ],
+            "1 second": [
+                "1 secondo"
+            ],
+            "seconds": [
+                "secondi"
+            ],
+            "Download": [
+                "Scaricare"
+            ],
+            "Upload": [
+                "Caricare"
+            ],
+            "Time": [
+                "Tempo"
+            ],
+            "Limit": [
+                "Limite"
+            ],
+            "No data available in table": [
+                "Nessun dato presente nella tabella"
+            ],
+            "Showing _START_ to _END_ of _TOTAL_ entries": [
+                "Vista da _START_ a _END_ di _TOTAL_ elementi"
+            ],
+            "Showing 0 to 0 of 0 entries": [
+                "Vista da 0 a 0 di 0 elementi"
+            ],
+            "(filtered from _MAX_ total entries)": [
+                "(filtrati da _MAX_ elementi totali)"
+            ],
+            "Show _MENU_ entries": [
+                "Visualizza _MENU_ elementi"
+            ],
+            "Loading...": [
+                "Caricamento..."
+            ],
+            "Processing...": [
+                "Elaborazione..."
+            ],
+            "Search": [
+                "Ricerca"
+            ],
+            "No matching records found": [
+                "La ricerca non ha portato alcun risultato."
+            ],
+            "First": [
+                "Inizio"
+            ],
+            "Previous": [
+                "Precedente"
+            ],
+            "Next": [
+                "Successivo"
+            ],
+            "Last": [
+                "Fine"
+            ],
+            "All": [
+                "Tutti"
+            ],
+            "Vouchers": [
+                "Buoni"
+            ],
+            "Voucher menu": [
+                "Menu voucher"
+            ],
+            "Overview": [
+                "Panoramica"
+            ],
+            "Create vouchers": [
+                "Crea voucher"
+            ],
+            "Guests": [
+                "Ospiti"
+            ],
+            "Activated vouchers": [
+                "Voucher attivati"
+            ],
+            "Guests online": [
+                "Ospiti online"
+            ],
+            "Guest WLANs": [
+                "Guest WLAN"
+            ],
+            "Admin": [
+                "Admin"
+            ],
+            "Admin menu": [
+                "Menu di amministrazione"
+            ],
+            "Wireless user": [
+                "Utente wireless"
+            ],
+            "Other wireless networks": [
+                "Altre reti wireless"
+            ],
+            "User management": [
+                "Gestione utenti"
+            ],
+            "Translation": [
+                "Traduzione"
+            ],
+            "Translation Tools": [
+                "Strumenti di traduzione"
+            ],
+            "Languages": [
+                "Lingue"
+            ],
+            "Translations": [
+                "Traduzioni"
+            ],
+            "Logout": [
+                "Logout"
+            ],
+            "About": [
+                "Circa"
+            ],
+            "Themes": [
+                "Temi"
+            ],
+            "Number of vouchers": [
+                "Numero di voucher"
+            ],
+            "Validity": [
+                "Validit\u00e0"
+            ],
+            "Comment": [
+                "Commento"
+            ],
+            "Create": [
+                "Creare"
+            ],
+            "Language Management": [
+                "Gestione delle lingue"
+            ],
+            "You can define here new languages for the HotSpot Manager.": [
+                "\u00c8 possibile definire qui nuovi linguaggi per Hotspot Manager."
+            ],
+            "Add language": [
+                "Aggiungi lingua"
+            ],
+            "Reload Now": [
+                "Ricarica ora"
+            ],
+            "Language ID": [
+                "ID lingua"
+            ],
+            "Name in menu": [
+                "Nome nel menu"
+            ],
+            "Browser language": [
+                "Lingua del browser"
+            ],
+            "Action": [
+                "Azione"
+            ],
+            "Delete language": [
+                "Elimina lingua"
+            ],
+            "Warning, do you really want to delete this translation?": [
+                "Attenzione, vuoi davvero cancellare questa traduzione?"
+            ],
+            "Cancel": [
+                "Annulla"
+            ],
+            "List of online clients": [
+                "Lista dei clienti online"
+            ],
+            "Displays all currently active devices or users on the network.": [
+                "Visualizza tutti i dispositivi o gli utenti attualmente attivi sulla rete."
+            ],
+            "List of guests": [
+                "Lista degli ospiti"
+            ],
+            "All guests who currently have a valid voucher on the network will be shown here.": [
+                "Tutti gli ospiti che attualmente hanno un buono valido sulla rete saranno mostrati qui."
+            ],
+            "Show expired vouchers": [
+                "Mostra i voucher scaduti"
+            ],
+            "Voucher comment": [
+                "Voucher commento"
+            ],
+            "Hostname": [
+                "Hostname"
+            ],
+            "Bandwidth": [
+                "Banda"
+            ],
+            "Idle": [
+                "Inattivo"
+            ],
+            "Data Traffic": [
+                "Traffico dati"
+            ],
+            "Valid until": [
+                "Valido fino al"
+            ],
+            "No hostname": [
+                "Nessun hostname"
+            ],
+            "Limits": [
+                "Limiti"
+            ],
+            "Client information": [
+                "Informazioni client"
+            ],
+            "IP address": [
+                "Indirizzo IP"
+            ],
+            "MAC address": [
+                "Indirizzo Mac"
+            ],
+            "Data Sent": [
+                "Dati inviati"
+            ],
+            "Data Received": [
+                "Dati ricevuti"
+            ],
+            "Data Total": [
+                "Totale dati"
+            ],
+            "Wireless information": [
+                "Informazioni wireless"
+            ],
+            "Channel": [
+                "Canale"
+            ],
+            "Radio": [
+                "Radio"
+            ],
+            "Roaming": [
+                "Roaming"
+            ],
+            "Discard voucher": [
+                "Scartare voucher"
+            ],
+            "Enable user": [
+                "Abilita utente"
+            ],
+            "Block user": [
+                "Blocco utente"
+            ],
+            "Reset user device": [
+                "Reimposta dispositivo utente"
+            ],
+            "Wireless networks nearby": [
+                "Reti wireless nelle vicinanze"
+            ],
+            "Here, wireless networks are displayed, which according to MAC address also have vouchers.": [
+                "Qui, le reti wireless sono visualizzati, che secondo l'indirizzo Mac hanno anche buoni."
+            ],
+            "Security": [
+                "Sicurezza"
+            ],
+            "Last Seen": [
+                "Ultimo visto"
+            ],
+            "Report time": [
+                "Tempo di rapporto"
+            ],
+            "Age": [
+                "Et\u00e0"
+            ],
+            "User list": [
+                "Elenco utenti"
+            ],
+            "List of all users connected to our wireless network.": [
+                "Elenco di tutti gli utenti connessi alla nostra rete wireless."
+            ],
+            "First Seen": [
+                "Prima vista"
+            ],
+            "Connection": [
+                "Connessione"
+            ],
+            "Available vouchers": [
+                "Voucher disponibili"
+            ],
+            "Overview of all vouchers that have not been activated at the moment.": [
+                "Panoramica di tutti i voucher che non sono stati attivati al momento."
+            ],
+            "Print selection": [
+                "Selezione stampa"
+            ],
+            "Delete selection": [
+                "Elimina selezione"
+            ],
+            "Created on": [
+                "Creato su"
+            ],
+            "Working. Please wait.": [
+                "Lavoro. Attendere prego."
+            ],
+            "If you want, you can help translate the entire HotSpot Manager into your native language.": [
+                "Se vuoi, puoi aiutare a tradurre l'intero Hotspot Manager nella tua lingua nativa."
+            ],
+            "Target language": [
+                "Lingua di destinazione"
+            ],
+            "References": [
+                "Riferimenti"
+            ],
+            "Source": [
+                "Fonte"
+            ],
+            "empty": [
+                "vuoto"
+            ],
+            "Lets you create, modify, or delete the Hotspot Manager users.": [
+                "Consente di creare, modificare o eliminare gli utenti di Hotspot Manager."
+            ],
+            "New user": [
+                "Nuovo utente"
+            ],
+            "Permissions": [
+                "Autorizzazioni"
+            ],
+            "Actions": [
+                "Azioni"
+            ],
+            "Change password": [
+                "Cambiare la password"
+            ],
+            "Delete user": [
+                "Elimina utente"
+            ],
+            "Are you sure you want to delete the user?": [
+                "Sei sicuro di voler eliminare l'utente?"
+            ],
+            "Add user": [
+                "Aggiungi utente"
+            ]
+        }
+    }
+}

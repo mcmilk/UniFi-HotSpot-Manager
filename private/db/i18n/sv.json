@@ -1,1 +1,416 @@
-{"domain":null,"plural-forms":null,"messages":{"":{"Username":["Anv\u00e4ndarnamn"],"License":["Licens"],"Code":["Koden"],"Language":["Spr\u00e5k"],"Browser":["Webbl\u00e4sare"],"Sign In":["Logga in"],"Password":["L\u00f6senord"],"Please select the permission level.":["V\u00e4lj beh\u00f6righetsniv\u00e5."],"Usergroup":["Anv\u00e4ndargrupp"],"Administrator":["Administrat\u00f6r"],"Default":["Standard"],"Disabled":["Funktionshindrade"],"Confirm Password":["Bekr\u00e4fta l\u00f6senord"],"Voucher prefix":["Verifikationen prefix"],"Voucher headline":["Verifikationen rubrik"],"1 year":["1 \u00e5r"],"years":["\u00e5r"],"1 week":["1 vecka"],"weeks":["veckor"],"1 day":["1 dag"],"days":["dagar"],"1 hour":["1 timme"],"hours":["timmar"],"1 minute":["1 minut"],"minutes":["minuter"],"1 second":["1 sekund"],"seconds":["sekunder"],"Download":["Ladda ner"],"Upload":["Ladda upp"],"Time":["Tid"],"Limit":["Gr\u00e4nsen"],"No data available in table":["Tabellen inneh\u00e5ller ingen data"],"Showing _START_ to _END_ of _TOTAL_ entries":["Visar _START_ till _END_ av totalt _TOTAL_ rader"],"Showing 0 to 0 of 0 entries":["Visar 0 till 0 av totalt 0 rader"],"(filtered from _MAX_ total entries)":["(filtrerade fr\u00e5n totalt _MAX_ rader)"],"Show _MENU_ entries":["Visa _MENU_ rader"],"Loading...":["Laddar..."],"Processing...":["Bearbetar..."],"Search":["S\u00f6k"],"No matching records found":["Hittade inga matchande resultat"],"First":["F\u00f6rsta"],"Previous":["F\u00f6reg\u00e5ende"],"Next":["N\u00e4sta"],"Last":["Sista"],"All":["Alla"],"Vouchers":["Kuponger"],"Voucher menu":["Verifikation-menyn"],"Overview":["\u00d6versikt"],"Create vouchers":["Skapa kuponger"],"Guests":["G\u00e4ster"],"Activated vouchers":["Aktiverade kuponger"],"Guests online":["G\u00e4ster online"],"Guest WLANs":["Guest WLAN"],"Admin":["Admin"],"Admin menu":["Admin-menyn"],"Wireless user":["Tr\u00e5dl\u00f6sa anv\u00e4ndare"],"Other wireless networks":["Andra tr\u00e5dl\u00f6sa n\u00e4tverk"],"User management":["Anv\u00e4ndarhantering"],"Translation":["\u00d6vers\u00e4ttning"],"Translation Tools":["\u00d6vers\u00e4ttningsverktyg"],"Languages":["Spr\u00e5k"],"Translations":["\u00d6vers\u00e4ttningar"],"Logout":["Logga ut"],"About":["Om"],"Themes":["Teman"],"Number of vouchers":["Antal kuponger"],"Validity":["Giltighet"],"Comment":["Kommentar"],"Create":["Skapa"],"Language Management":["Spr\u00e5khantering"],"You can define here new languages for the HotSpot Manager.":["Du kan definiera h\u00e4r nya spr\u00e5k f\u00f6r HotSpot Manager."],"Add language":["L\u00e4gg till spr\u00e5k"],"Reload Now":["Ladda nu"],"Language ID":["Spr\u00e5k-ID"],"Name in menu":["Namn i menyn"],"Browser language":["Webbl\u00e4sarens spr\u00e5k"],"Action":["\u00c5tg\u00e4rd"],"Delete language":["Ta bort spr\u00e5k"],"Warning, do you really want to delete this translation?":["Varning, vill du verkligen ta bort denna \u00f6vers\u00e4ttning?"],"Cancel":["Avbryt"],"List of online clients":["Lista \u00f6ver online klienter"],"Displays all currently active devices or users on the network.":["Visar alla aktiva enheter eller anv\u00e4ndare i n\u00e4tverket."],"List of guests":["Listan \u00f6ver g\u00e4ster"],"All guests who currently have a valid voucher on the network will be shown here.":["Alla g\u00e4ster som f\u00f6r n\u00e4rvarande har giltig voucher p\u00e5 n\u00e4tverket kommer att visas h\u00e4r."],"Show expired vouchers":["Visa utg\u00e5ngna kuponger"],"Voucher comment":["Verifikationen kommentar"],"Hostname":["Hostname"],"Bandwidth":["Bandbredd"],"Idle":["Tomg\u00e5ng"],"Data Traffic":["Datatrafik"],"Valid until":["Giltigt till"],"No hostname":["Ingen hostname"],"Limits":["Gr\u00e4nser"],"Client information":["Klientinformation"],"IP address":["IP-adress"],"MAC address":["MAC-adress"],"Data Sent":["Data som skickas"],"Data Received":["Mottagna data"],"Data Total":["Data totalt"],"Wireless information":["Tr\u00e5dl\u00f6s information"],"Channel":["Kanal"],"Radio":["Radio"],"Roaming":["Roaming"],"Discard voucher":["Kassera verifikation"],"Enable user":["Aktivera anv\u00e4ndare"],"Block user":["Blockera anv\u00e4ndare"],"Reset user device":["\u00c5terst\u00e4ll anv\u00e4ndarens enhet"],"Wireless networks nearby":["Tr\u00e5dl\u00f6sa n\u00e4tverk i n\u00e4rheten"],"Here, wireless networks are displayed, which according to MAC address also have vouchers.":["H\u00e4r visas tr\u00e5dl\u00f6sa n\u00e4tverk, som enligt MAC-adress har ocks\u00e5 kuponger."],"Security":["S\u00e4kerhet"],"Last Seen":["Senast sett"],"Report time":["Rapportera tid"],"Age":["\u00c5lder"],"User list":["Anv\u00e4ndarlista"],"List of all users connected to our wireless network.":["Lista \u00f6ver alla anv\u00e4ndare anslutna till v\u00e5rt tr\u00e5dl\u00f6sa n\u00e4tverk."],"First Seen":["F\u00f6rst ses"],"Connection":["Anslutning"],"Available vouchers":["Tillg\u00e4ngliga kuponger"],"Overview of all vouchers that have not been activated at the moment.":["\u00d6versikt \u00f6ver alla verifikationer som inte har aktiverats f\u00f6r tillf\u00e4llet."],"Print selection":["Utskriftsval"],"Delete selection":["Ta bort markering"],"Created on":["Skapat p\u00e5"],"Working. Please wait.":["Arbetar. Sn\u00e4lla v\u00e4nta."],"If you want, you can help translate the entire HotSpot Manager into your native language.":["Om du vill, kan du \u00f6vers\u00e4tta hela HotSpot chefen till ditt modersm\u00e5l."],"Target language":["M\u00e5lspr\u00e5ket"],"References":["Referenser"],"Source":["K\u00e4lla"],"empty":["Tom"],"Lets you create, modify, or delete the Hotspot Manager users.":["Kan du skapa, \u00e4ndra eller ta bort de Hotspot Manager-anv\u00e4ndarna."],"New user":["Ny anv\u00e4ndare"],"Permissions":["Beh\u00f6righeter"],"Actions":["\u00c5tg\u00e4rder"],"Change password":["\u00c4ndra l\u00f6senord"],"Delete user":["Ta bort anv\u00e4ndare"],"Are you sure you want to delete the user?":["\u00c4r du s\u00e4ker du vill ta bort anv\u00e4ndaren?"],"Add user":["L\u00e4gg till anv\u00e4ndare"]}}}
+{
+    "domain": null,
+    "plural-forms": null,
+    "messages": {
+        "": {
+            "Username": [
+                "Anv\u00e4ndarnamn"
+            ],
+            "License": [
+                "Licens"
+            ],
+            "Code": [
+                "Koden"
+            ],
+            "Language": [
+                "Spr\u00e5k"
+            ],
+            "Browser": [
+                "Webbl\u00e4sare"
+            ],
+            "Sign In": [
+                "Logga in"
+            ],
+            "Password": [
+                "L\u00f6senord"
+            ],
+            "Please select the permission level.": [
+                "V\u00e4lj beh\u00f6righetsniv\u00e5."
+            ],
+            "Usergroup": [
+                "Anv\u00e4ndargrupp"
+            ],
+            "Administrator": [
+                "Administrat\u00f6r"
+            ],
+            "Default": [
+                "Standard"
+            ],
+            "Disabled": [
+                "Funktionshindrade"
+            ],
+            "Confirm Password": [
+                "Bekr\u00e4fta l\u00f6senord"
+            ],
+            "Voucher prefix": [
+                "Verifikationen prefix"
+            ],
+            "Voucher headline": [
+                "Verifikationen rubrik"
+            ],
+            "1 year": [
+                "1 \u00e5r"
+            ],
+            "years": [
+                "\u00e5r"
+            ],
+            "1 week": [
+                "1 vecka"
+            ],
+            "weeks": [
+                "veckor"
+            ],
+            "1 day": [
+                "1 dag"
+            ],
+            "days": [
+                "dagar"
+            ],
+            "1 hour": [
+                "1 timme"
+            ],
+            "hours": [
+                "timmar"
+            ],
+            "1 minute": [
+                "1 minut"
+            ],
+            "minutes": [
+                "minuter"
+            ],
+            "1 second": [
+                "1 sekund"
+            ],
+            "seconds": [
+                "sekunder"
+            ],
+            "Download": [
+                "Ladda ner"
+            ],
+            "Upload": [
+                "Ladda upp"
+            ],
+            "Time": [
+                "Tid"
+            ],
+            "Limit": [
+                "Gr\u00e4nsen"
+            ],
+            "No data available in table": [
+                "Tabellen inneh\u00e5ller ingen data"
+            ],
+            "Showing _START_ to _END_ of _TOTAL_ entries": [
+                "Visar _START_ till _END_ av totalt _TOTAL_ rader"
+            ],
+            "Showing 0 to 0 of 0 entries": [
+                "Visar 0 till 0 av totalt 0 rader"
+            ],
+            "(filtered from _MAX_ total entries)": [
+                "(filtrerade fr\u00e5n totalt _MAX_ rader)"
+            ],
+            "Show _MENU_ entries": [
+                "Visa _MENU_ rader"
+            ],
+            "Loading...": [
+                "Laddar..."
+            ],
+            "Processing...": [
+                "Bearbetar..."
+            ],
+            "Search": [
+                "S\u00f6k"
+            ],
+            "No matching records found": [
+                "Hittade inga matchande resultat"
+            ],
+            "First": [
+                "F\u00f6rsta"
+            ],
+            "Previous": [
+                "F\u00f6reg\u00e5ende"
+            ],
+            "Next": [
+                "N\u00e4sta"
+            ],
+            "Last": [
+                "Sista"
+            ],
+            "All": [
+                "Alla"
+            ],
+            "Vouchers": [
+                "Kuponger"
+            ],
+            "Voucher menu": [
+                "Verifikation-menyn"
+            ],
+            "Overview": [
+                "\u00d6versikt"
+            ],
+            "Create vouchers": [
+                "Skapa kuponger"
+            ],
+            "Guests": [
+                "G\u00e4ster"
+            ],
+            "Activated vouchers": [
+                "Aktiverade kuponger"
+            ],
+            "Guests online": [
+                "G\u00e4ster online"
+            ],
+            "Guest WLANs": [
+                "Guest WLAN"
+            ],
+            "Admin": [
+                "Admin"
+            ],
+            "Admin menu": [
+                "Admin-menyn"
+            ],
+            "Wireless user": [
+                "Tr\u00e5dl\u00f6sa anv\u00e4ndare"
+            ],
+            "Other wireless networks": [
+                "Andra tr\u00e5dl\u00f6sa n\u00e4tverk"
+            ],
+            "User management": [
+                "Anv\u00e4ndarhantering"
+            ],
+            "Translation": [
+                "\u00d6vers\u00e4ttning"
+            ],
+            "Translation Tools": [
+                "\u00d6vers\u00e4ttningsverktyg"
+            ],
+            "Languages": [
+                "Spr\u00e5k"
+            ],
+            "Translations": [
+                "\u00d6vers\u00e4ttningar"
+            ],
+            "Logout": [
+                "Logga ut"
+            ],
+            "About": [
+                "Om"
+            ],
+            "Themes": [
+                "Teman"
+            ],
+            "Number of vouchers": [
+                "Antal kuponger"
+            ],
+            "Validity": [
+                "Giltighet"
+            ],
+            "Comment": [
+                "Kommentar"
+            ],
+            "Create": [
+                "Skapa"
+            ],
+            "Language Management": [
+                "Spr\u00e5khantering"
+            ],
+            "You can define here new languages for the HotSpot Manager.": [
+                "Du kan definiera h\u00e4r nya spr\u00e5k f\u00f6r HotSpot Manager."
+            ],
+            "Add language": [
+                "L\u00e4gg till spr\u00e5k"
+            ],
+            "Reload Now": [
+                "Ladda nu"
+            ],
+            "Language ID": [
+                "Spr\u00e5k-ID"
+            ],
+            "Name in menu": [
+                "Namn i menyn"
+            ],
+            "Browser language": [
+                "Webbl\u00e4sarens spr\u00e5k"
+            ],
+            "Action": [
+                "\u00c5tg\u00e4rd"
+            ],
+            "Delete language": [
+                "Ta bort spr\u00e5k"
+            ],
+            "Warning, do you really want to delete this translation?": [
+                "Varning, vill du verkligen ta bort denna \u00f6vers\u00e4ttning?"
+            ],
+            "Cancel": [
+                "Avbryt"
+            ],
+            "List of online clients": [
+                "Lista \u00f6ver online klienter"
+            ],
+            "Displays all currently active devices or users on the network.": [
+                "Visar alla aktiva enheter eller anv\u00e4ndare i n\u00e4tverket."
+            ],
+            "List of guests": [
+                "Listan \u00f6ver g\u00e4ster"
+            ],
+            "All guests who currently have a valid voucher on the network will be shown here.": [
+                "Alla g\u00e4ster som f\u00f6r n\u00e4rvarande har giltig voucher p\u00e5 n\u00e4tverket kommer att visas h\u00e4r."
+            ],
+            "Show expired vouchers": [
+                "Visa utg\u00e5ngna kuponger"
+            ],
+            "Voucher comment": [
+                "Verifikationen kommentar"
+            ],
+            "Hostname": [
+                "Hostname"
+            ],
+            "Bandwidth": [
+                "Bandbredd"
+            ],
+            "Idle": [
+                "Tomg\u00e5ng"
+            ],
+            "Data Traffic": [
+                "Datatrafik"
+            ],
+            "Valid until": [
+                "Giltigt till"
+            ],
+            "No hostname": [
+                "Ingen hostname"
+            ],
+            "Limits": [
+                "Gr\u00e4nser"
+            ],
+            "Client information": [
+                "Klientinformation"
+            ],
+            "IP address": [
+                "IP-adress"
+            ],
+            "MAC address": [
+                "MAC-adress"
+            ],
+            "Data Sent": [
+                "Data som skickas"
+            ],
+            "Data Received": [
+                "Mottagna data"
+            ],
+            "Data Total": [
+                "Data totalt"
+            ],
+            "Wireless information": [
+                "Tr\u00e5dl\u00f6s information"
+            ],
+            "Channel": [
+                "Kanal"
+            ],
+            "Radio": [
+                "Radio"
+            ],
+            "Roaming": [
+                "Roaming"
+            ],
+            "Discard voucher": [
+                "Kassera verifikation"
+            ],
+            "Enable user": [
+                "Aktivera anv\u00e4ndare"
+            ],
+            "Block user": [
+                "Blockera anv\u00e4ndare"
+            ],
+            "Reset user device": [
+                "\u00c5terst\u00e4ll anv\u00e4ndarens enhet"
+            ],
+            "Wireless networks nearby": [
+                "Tr\u00e5dl\u00f6sa n\u00e4tverk i n\u00e4rheten"
+            ],
+            "Here, wireless networks are displayed, which according to MAC address also have vouchers.": [
+                "H\u00e4r visas tr\u00e5dl\u00f6sa n\u00e4tverk, som enligt MAC-adress har ocks\u00e5 kuponger."
+            ],
+            "Security": [
+                "S\u00e4kerhet"
+            ],
+            "Last Seen": [
+                "Senast sett"
+            ],
+            "Report time": [
+                "Rapportera tid"
+            ],
+            "Age": [
+                "\u00c5lder"
+            ],
+            "User list": [
+                "Anv\u00e4ndarlista"
+            ],
+            "List of all users connected to our wireless network.": [
+                "Lista \u00f6ver alla anv\u00e4ndare anslutna till v\u00e5rt tr\u00e5dl\u00f6sa n\u00e4tverk."
+            ],
+            "First Seen": [
+                "F\u00f6rst ses"
+            ],
+            "Connection": [
+                "Anslutning"
+            ],
+            "Available vouchers": [
+                "Tillg\u00e4ngliga kuponger"
+            ],
+            "Overview of all vouchers that have not been activated at the moment.": [
+                "\u00d6versikt \u00f6ver alla verifikationer som inte har aktiverats f\u00f6r tillf\u00e4llet."
+            ],
+            "Print selection": [
+                "Utskriftsval"
+            ],
+            "Delete selection": [
+                "Ta bort markering"
+            ],
+            "Created on": [
+                "Skapat p\u00e5"
+            ],
+            "Working. Please wait.": [
+                "Arbetar. Sn\u00e4lla v\u00e4nta."
+            ],
+            "If you want, you can help translate the entire HotSpot Manager into your native language.": [
+                "Om du vill, kan du \u00f6vers\u00e4tta hela HotSpot chefen till ditt modersm\u00e5l."
+            ],
+            "Target language": [
+                "M\u00e5lspr\u00e5ket"
+            ],
+            "References": [
+                "Referenser"
+            ],
+            "Source": [
+                "K\u00e4lla"
+            ],
+            "empty": [
+                "Tom"
+            ],
+            "Lets you create, modify, or delete the Hotspot Manager users.": [
+                "Kan du skapa, \u00e4ndra eller ta bort de Hotspot Manager-anv\u00e4ndarna."
+            ],
+            "New user": [
+                "Ny anv\u00e4ndare"
+            ],
+            "Permissions": [
+                "Beh\u00f6righeter"
+            ],
+            "Actions": [
+                "\u00c5tg\u00e4rder"
+            ],
+            "Change password": [
+                "\u00c4ndra l\u00f6senord"
+            ],
+            "Delete user": [
+                "Ta bort anv\u00e4ndare"
+            ],
+            "Are you sure you want to delete the user?": [
+                "\u00c4r du s\u00e4ker du vill ta bort anv\u00e4ndaren?"
+            ],
+            "Add user": [
+                "L\u00e4gg till anv\u00e4ndare"
+            ]
+        }
+    }
+}
