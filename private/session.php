@@ -110,7 +110,7 @@ if (isset($use_saml) && ($use_saml === true)) {
 // check for using SAML and if not, user login form
 // use SAML is set and bypasses password on userdb.json
 if (isset($use_saml) && ($use_saml === true)) {
-    hotspot_login($saml_user, 'use_saml');
+    hotspot_login($saml_user, '', $use_saml);
     $info = "";
     if (isset($_SERVER['REMOTE_ADDR'])) $info .= " ip=" . $_SERVER['REMOTE_ADDR'];
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) $info .= " encodings=[" . $_SERVER['HTTP_ACCEPT_ENCODING'] . "]";
@@ -124,7 +124,7 @@ if (isset($use_saml) && ($use_saml === true)) {
 */
 if (empty($use_saml) || ($use_saml === false)) {
   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginform"]) && isset($_POST["username"]) && isset($_POST["password"])) {
-    hotspot_login($_POST["username"], $_POST["password"]);
+    hotspot_login($_POST["username"], $_POST["password"], $use_saml);
     $info = "";
     if (isset($_SERVER['REMOTE_ADDR'])) $info .= " ip=" . $_SERVER['REMOTE_ADDR'];
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) $info .= " encodings=[" . $_SERVER['HTTP_ACCEPT_ENCODING'] . "]";

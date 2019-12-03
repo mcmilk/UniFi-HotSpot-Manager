@@ -60,7 +60,7 @@ function userdb_flush(&$array) {
  * - check for valid username and password
  * - setup session (is_user, is_admin, ...)
  */
-function hotspot_login($username, $password) {
+function hotspot_login($username, $password, $use_saml) {
 
   // defaults
   $is_admin = false;
@@ -73,7 +73,7 @@ function hotspot_login($username, $password) {
     if ($user->username !== $username) continue;
 
     // skip password check with SAML
-    if ($password !== 'use_saml') {
+    if (empty($use_saml) || ($use_saml === false)) {
       // return without setting session, when password is wrong   
       if (!password_verify($password, $user->password)) return;
     }
