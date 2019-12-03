@@ -30,6 +30,11 @@ require_once("hotspot-i18n.php");
 /* misc functions */
 require_once("functions.php");
 
+/* include saml if enabled */
+if (isset($use_saml) && ($use_saml === true)) {
+    require_once('./simplesamlphp/lib/_autoload.php');
+}
+
 /* userdb functions */
 require_once("userdb.php");
 

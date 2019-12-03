@@ -44,9 +44,20 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - take a look into the file `userdb.json`, search for `pass = [` and use this password together with the username `admin` 
 - for creating an own qr-code of the WiFi settings for your network on the vouchers, just use the script provided here: `contrib/qr-gen.sh`
 
+## SAML Installation
+- Very rough Proof of Concept!
+- Still VERY ROUGH PoC
+- Install without SAML enabled to create userdb.json with admin user as above
+- Setup admin user or other users as needed with random password (do not need to keep records of password)
+- Setup SimpleSAMLphp as per needed (authsources, default-sp, metadata, etc)
+- Tested with Azure AD and this guide <http://www.lewisroberts.com/2015/09/05/single-sign-on-to-azure-ad-using-simplesamlphp/>
+- Verify logins with SimpleSAMLphp portal (/saml/)
+- Enable SAML in config.php
+
 ## Todo
 - show some more information on the "list_clients" action
 - the same for the "list_guest_aps" site
+- Lots of SAML improvements (login/logout proper, etc)
 
 ## Screenshots
 - creating vouchers and language selection

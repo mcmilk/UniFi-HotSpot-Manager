@@ -1,7 +1,7 @@
 <?php
 
 // initialize the autoloader
-require_once(dirname(dirname(__FILE__)) . '/lib/_autoload.php');
+require_once(dirname(dirname(dirname(__FILE__))) . '/private/simplesamlphp/lib/_autoload.php');
 
 // enable assertion handler for all pages
 \SimpleSAML\Error\Assertion::installHandler();
