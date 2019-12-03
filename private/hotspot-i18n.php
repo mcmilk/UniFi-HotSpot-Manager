@@ -89,7 +89,7 @@ function i18n_init() {
     $a[] = array("id" => "sv",    "name" => "Svenska",    "browser" => "sv");
     $a[] = array("id" => "tr",    "name" => "Türkçe",     "browser" => "tr");
     $a[] = array("id" => "zh-cn", "name" => "中文",       "browser" => "zh,zh-cn");
-    file_put_contents($file, json_encode($a));
+    file_put_contents($file, json_encode($a, JSON_PRETTY_PRINT));
   }
 
   // read our lang database
@@ -285,7 +285,7 @@ function i18n_langmod() {
     }
   }
 
-  file_put_contents("$datadir/languages.json", json_encode($r));
+  file_put_contents("$datadir/languages.json", json_encode($r, JSON_PRETTY_PRINT));
   http_204();
 }
 
@@ -325,7 +325,7 @@ function i18n_langadd() {
     $r[] = array("id" => $id, "name" => $name, "browser" => $browser);
   }
 
-  file_put_contents("$datadir/languages.json", json_encode($r));
+  file_put_contents("$datadir/languages.json", json_encode($r, JSON_PRETTY_PRINT));
   http_204();
 }
 

@@ -34,7 +34,7 @@ function userdb_init() {
     $pwhash = password_hash($pwtemp, PASSWORD_BCRYPT);
     $a = [];
     $a[] = array("username" => "admin", "password" => "$pwhash", "prefix" => "", "options" => "a", "headline" => "pass = [$pwtemp]");
-    $r = file_put_contents($file, json_encode($a));
+    $r = file_put_contents($file, json_encode($a, JSON_PRETTY_PRINT));
     if ($r == false) trigger_error('hotspot: writing $filename has failed!');
   }
 
@@ -51,7 +51,7 @@ function userdb_flush(&$array) {
   global $datadir;
 
   $file = "$datadir/userdb.json";
-  file_put_contents($file, json_encode($array));
+  file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
   http_204();
 }
 
