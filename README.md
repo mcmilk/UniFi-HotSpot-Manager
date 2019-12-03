@@ -51,7 +51,7 @@ All [CDN] libraries I am including are using the [MIT license], so I use it also
 - Setup admin user or other users as needed with random password (do not need to keep records of password)
 - Setup SimpleSAMLphp as per needed (authsources, default-sp, metadata, etc)
 - Tested with Azure AD and this guide <http://www.lewisroberts.com/2015/09/05/single-sign-on-to-azure-ad-using-simplesamlphp/>
-- Verify logins with SimpleSAMLphp portal (/saml/)
+- Verify logins with SimpleSAMLphp portal (/saml/module.php/core/authenticate.php?as=default-sp)
 - Enable SAML in config.php
 
 ## Todo
