@@ -29,6 +29,7 @@ require_once("hotspot-i18n.php");
 
 /* misc functions */
 require_once("functions.php");
+require_once("theme_lang.php");
 
 /* include saml if enabled */
 if (isset($use_saml) && ($use_saml === true)) {
