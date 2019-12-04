@@ -44,33 +44,6 @@ if (isset($_GET['logout'])) {
 }
 
 /**
- * theme switching (auth not needed)
- */
-if (isset($_GET['theme'])) {
-  $theme = $_GET['theme'];
-  $_SESSION['theme'] = $theme;
-}
-
-if (isset($_SESSION['theme'])) {
-  $theme = $_SESSION['theme'];
-}
-
-if ($theme === 'bootstrap') {
-  $css_url = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
-} else {
-  $css_url = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/' . trim($theme) . '/bootstrap.min.css';
-}
-
-/**
- * setup i18n variables
- * 1) object $i18n
- * 2) array $languages
- */
-$i18n = null;
-$languages = array();
-$_SESSION['lang'] = i18n_init();
-
-/**
  * setup $action variable
  */
 if (isset($_GET['action'])) {
@@ -95,16 +68,43 @@ $headline = "";
 $note_prefix = "";
 
 /**
- * check POST data (login form)
+ * SAML
  */
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginform"]) && isset($_POST["username"]) && isset($_POST["password"])) {
-  hotspot_login($_POST["username"], $_POST["password"]);
-  $info = "";
-  if (isset($_SERVER['REMOTE_ADDR'])) $info .= " ip=" . $_SERVER['REMOTE_ADDR'];
-  if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) $info .= " encodings=[" . $_SERVER['HTTP_ACCEPT_ENCODING'] . "]";
-  if (isset($_SERVER['HTTP_USER_AGENT'])) $info .= " browser=[" . $_SERVER['HTTP_USER_AGENT'] . "]";
-  log_msg("LOGIN for user=" . $_SESSION['username'] . $info);
-  $info = "";
+if (isset($use_saml) && ($use_saml === true)) {
+  
+  $as = new \SimpleSAML\Auth\Simple('default-sp');
+  $as->requireAuth();
+  $attributes = $as->getAttributes();
+  $saml_user = array_pop($attributes['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress']);
+  $session = \SimpleSAML\Session::getSessionFromRequest();
+  $session->cleanup();
+}
+
+// check for using SAML and if not, user login form
+// use SAML is set and bypasses password on userdb.json
+if (isset($use_saml) && ($use_saml === true)) {
+    hotspot_login($saml_user, '', $use_saml);
+    $info = "";
+    if (isset($_SERVER['REMOTE_ADDR'])) $info .= " ip=" . $_SERVER['REMOTE_ADDR'];
+    if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) $info .= " encodings=[" . $_SERVER['HTTP_ACCEPT_ENCODING'] . "]";
+    if (isset($_SERVER['HTTP_USER_AGENT'])) $info .= " browser=[" . $_SERVER['HTTP_USER_AGENT'] . "]";
+    log_msg("LOGIN for user=" . $_SESSION['username'] . $info);
+    $info = "";
+ }
+
+/**
+* check POST data (login form)
+*/
+if (empty($use_saml) || ($use_saml === false)) {
+  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["loginform"]) && isset($_POST["username"]) && isset($_POST["password"])) {
+    hotspot_login($_POST["username"], $_POST["password"], $use_saml);
+    $info = "";
+    if (isset($_SERVER['REMOTE_ADDR'])) $info .= " ip=" . $_SERVER['REMOTE_ADDR'];
+    if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) $info .= " encodings=[" . $_SERVER['HTTP_ACCEPT_ENCODING'] . "]";
+    if (isset($_SERVER['HTTP_USER_AGENT'])) $info .= " browser=[" . $_SERVER['HTTP_USER_AGENT'] . "]";
+    log_msg("LOGIN for user=" . $_SESSION['username'] . $info);
+    $info = "";
+  }
 }
 
 if (isset($_SESSION['is_user'])) { $is_user = $_SESSION['is_user']; }

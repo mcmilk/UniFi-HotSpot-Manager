@@ -34,7 +34,7 @@ function userdb_init() {
     $pwhash = password_hash($pwtemp, PASSWORD_BCRYPT);
     $a = [];
     $a[] = array("username" => "admin", "password" => "$pwhash", "prefix" => "", "options" => "a", "headline" => "pass = [$pwtemp]");
-    $r = file_put_contents($file, json_encode($a));
+    $r = file_put_contents($file, json_encode($a, JSON_PRETTY_PRINT));
     if ($r == false) trigger_error('hotspot: writing $filename has failed!');
   }
 
@@ -51,7 +51,7 @@ function userdb_flush(&$array) {
   global $datadir;
 
   $file = "$datadir/userdb.json";
-  file_put_contents($file, json_encode($array));
+  file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
   http_204();
 }
 
@@ -60,7 +60,7 @@ function userdb_flush(&$array) {
  * - check for valid username and password
  * - setup session (is_user, is_admin, ...)
  */
-function hotspot_login($username, $password) {
+function hotspot_login($username, $password, $use_saml) {
 
   // defaults
   $is_admin = false;
@@ -72,8 +72,11 @@ function hotspot_login($username, $password) {
   foreach($userdb as $user) {
     if ($user->username !== $username) continue;
 
-    // return without setting session, when password is wrong
-    if (!password_verify($password, $user->password)) return;
+    // skip password check with SAML
+    if (empty($use_saml) || ($use_saml === false)) {
+      // return without setting session, when password is wrong   
+      if (!password_verify($password, $user->password)) return;
+    }
 
     // username ok + password ok
     if ($user->options === "a") {

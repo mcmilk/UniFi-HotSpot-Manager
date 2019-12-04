@@ -38,4 +38,8 @@ $datadir             = "db";
 // default caching time, for responses from the unifi controller, -1 disables caching
 $cachetime           = 30;
 
+// enable SimpleSAMLphp
+// set to true to enable SAML support
+$use_saml            = false;
+
 ?>
