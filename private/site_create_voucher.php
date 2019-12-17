@@ -38,7 +38,7 @@ if (!defined('HOTSPOT')) { exit; }
           <div class="form-group has-feedback">
             <div class="input-group">
               <span class="input-group-addon"><?php echo __("Limit"); ?>:</span>
-              <input type="number" name="limit" min="1" max="50000" value="1000" class="form-control input-lg" tabindex="2" required data-error="Bitte das Limit im Bereich von 1-50000 angeben.">
+              <input type="number" name="limit" min="0" max="1048576" value="0" class="form-control input-lg" tabindex="2" required data-error="Bitte das Limit im Bereich von 1-1048576 angeben.">
               <span class="input-group-addon">MB</span>
             </div>
             <span style="float: right;width: 9em;" class="glyphicon form-control-feedback"></span>
@@ -54,7 +54,7 @@ if (!defined('HOTSPOT')) { exit; }
           <div class="form-group has-feedback">
             <div class="input-group">
               <span class="input-group-addon"><?php echo __("Validity"); ?>:</span>
-              <input type="number" name="duration" min="1" max="500" class="form-control input-lg" tabindex="3" required data-error="Bitte einen Wert von 1-500 angeben.">
+              <input type="number" name="duration" min="1" max="10800" value="480" class="form-control input-lg" tabindex="3" required data-error="Bitte einen Wert von 1-10800 angeben.">
             </div>
             <span class="glyphicon form-control-feedback"></span>
             <div class="help-block with-errors"></div>
