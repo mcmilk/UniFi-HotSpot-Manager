@@ -27,6 +27,11 @@ require_once("hotspot-i18n.php");
 require_once("functions.php");
 require_once("theme_lang.php");
 
+if (isset($_GET["get_form"]) && $_GET["get_form"] === "about") {
+  include("form_about.php");
+  exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
