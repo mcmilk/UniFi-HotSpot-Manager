@@ -410,6 +410,15 @@
             ],
             "Add user": [
                 "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f"
+            ],
+            "Please specify the number in the range of 1-500.": [
+                ""
+            ],
+            "Please specify the limit in the range of 1-1048576.": [
+                ""
+            ],
+            "Please specify a value of 1-10800.": [
+                ""
             ]
         }
     }
