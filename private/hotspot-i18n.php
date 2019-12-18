@@ -212,8 +212,9 @@ function i18n_table_destlang() {
 function i18n_menu_lang() {
   global $languages;
 
+  $querystring = '';
+  
   if (isset($_GET['theme'])) {
-    $querystring = '';
     $querystring = '&theme=' . $_GET['theme'];
   }
 

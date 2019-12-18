@@ -212,8 +212,9 @@ function navbar_themes() {
   "Flatly", "Journal", "Lumen", "Paper", "Readable", "Sandstone", "Simplex",
   "Slate", "Solar", "Spacelab", "Superhero", "United", "Yeti");
 
+  $querystring = '';
+
   if (isset($_GET['lang'])) {
-    $querystring = '';
     $querystring = '&lang=' . $_GET['lang'];
   }
 
