@@ -29,7 +29,6 @@ require_once("hotspot-i18n.php");
 
 /* misc functions */
 require_once("functions.php");
-require_once("theme_lang.php");
 
 /* include saml if enabled */
 if (isset($use_saml) && ($use_saml === true)) {
@@ -41,6 +40,7 @@ require_once("userdb.php");
 
 /* check user auth */
 require_once("session.php");
+require_once("theme_lang.php");
 
 /* show site */
 require_once("site.php");
