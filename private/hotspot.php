@@ -40,7 +40,6 @@ require_once("userdb.php");
 
 /* check user auth */
 require_once("session.php");
-require_once("theme_lang.php");
 
 /* show site */
 require_once("site.php");

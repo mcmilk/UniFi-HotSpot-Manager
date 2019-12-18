@@ -43,6 +43,8 @@ if (isset($_GET['logout'])) {
   exit;
 }
 
+require_once("theme_lang.php");
+
 /**
  * setup $action variable
  */
