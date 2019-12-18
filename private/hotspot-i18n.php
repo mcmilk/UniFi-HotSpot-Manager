@@ -212,11 +212,16 @@ function i18n_table_destlang() {
 function i18n_menu_lang() {
   global $languages;
 
+  if (isset($_GET['theme'])) {
+    $querystring = '';
+    $querystring = '&theme=' . $_GET['theme'];
+  }
+
   foreach($languages as $lang) {
     if ($_SESSION['lang'] === $lang->id) {
-      echo '<li class="active"><a href="?lang=' . $lang->id . '">'.$lang->name . '</a></li>';
+      echo '<li class="active"><a href="?lang=' . $lang->id . $querystring . '">'.$lang->name . '</a></li>';
     } else {
-      echo '<li><a href="?lang=' . $lang->id . '">'.$lang->name . '</a></li>';
+      echo '<li><a href="?lang=' . $lang->id . $querystring . '">'.$lang->name . '</a></li>';
     }
   }
 }

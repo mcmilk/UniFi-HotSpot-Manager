@@ -212,12 +212,17 @@ function navbar_themes() {
   "Flatly", "Journal", "Lumen", "Paper", "Readable", "Sandstone", "Simplex",
   "Slate", "Solar", "Spacelab", "Superhero", "United", "Yeti");
 
+  if (isset($_GET['lang'])) {
+    $querystring = '';
+    $querystring = '&lang=' . $_GET['lang'];
+  }
+
   foreach($themes as $T) {
     $t = strtolower($T);
     if ($theme === $t) {
-      echo '<li class="active"><a href="?theme=' . $t . '">'. $T . '</a></li>';
+      echo '<li class="active"><a href="?theme=' . $t . $querystring . '">'. $T . '</a></li>';
     } else {
-      echo '<li><a href="?theme=' . $t . '">'. $T . '</a></li>';
+      echo '<li><a href="?theme=' . $t . $querystring . '">'. $T . '</a></li>';
     }
   }
 }
