@@ -32,6 +32,22 @@ if (isset($_GET["get_form"]) && $_GET["get_form"] === "about") {
   exit;
 }
 
+$querystring = '';
+
+if (isset($_GET['theme'])) {
+  if (!empty($querystring)) {
+    $querystring = $querystring.'&';
+  }
+  $querystring = $querystring.'theme='.$_GET['theme'];
+}
+
+if (isset($_GET['lang'])) {
+  if (!empty($querystring)) {
+    $querystring = $querystring.'&';
+  }
+  $querystring = $querystring.'lang='.$_GET['lang'];
+}
+
 ?>
 <!DOCTYPE html>
 <html>

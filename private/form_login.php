@@ -18,7 +18,7 @@ if (!defined('HOTSPOT')) { exit; }
 
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-        <form data-toggle="validator" method="POST" action="main.php">
+        <form data-toggle="validator" method="POST" action="main.php<?php if (!empty($querystring)) { echo '?'.($querystring); } ?>">
             <fieldset>
                 <h2>HotSpot Manager - <?php echo __("Sign In"); ?></h2>
                 <hr class="colorgraph">
