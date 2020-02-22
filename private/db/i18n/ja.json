@@ -1,1 +1,425 @@
-{"domain":null,"plural-forms":null,"messages":{"":{"Username":["\u540d"],"License":["\u30e9\u30a4\u30bb\u30f3\u30b9"],"Code":["\u30b3\u30fc\u30c9"],"Language":["\u8a00\u8a9e"],"Browser":["\u30d6\u30e9\u30a6\u30b6\u30fc"],"Sign In":["\u30b5\u30a4\u30f3\u30a4\u30f3"],"Password":["\u30d1\u30b9\u30ef\u30fc\u30c9"],"Please select the permission level.":["\u30a2\u30af\u30bb\u30b9\u8a31\u53ef\u30ec\u30d9\u30eb\u3092\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044\u3002"],"Usergroup":["\u30b0\u30eb\u30fc\u30d7"],"Administrator":["\u7ba1\u7406"],"Default":["\u65e2\u5b9a"],"Disabled":["\u30d0\u30ea\u30a2\u30d5\u30ea\u30fc"],"Confirm Password":["\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u78ba\u8a8d"],"Voucher prefix":["\u4f1d\u7968\u63a5\u982d\u8f9e"],"Voucher headline":["\u30af\u30fc\u30dd\u30f3\u306e\u898b\u51fa\u3057"],"1 year":["1\u5e74"],"years":["\u5e74"],"1 week":["1\u9031\u9593"],"weeks":["\u9031\u9593"],"1 day":["1\u65e5"],"days":["\u65e5"],"1 hour":["1\u6642\u9593"],"hours":["\u6642\u9593"],"1 minute":["1\u5206"],"minutes":["\u5206"],"1 second":["1\u79d2"],"seconds":["\u79d2"],"Download":["\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9"],"Upload":["\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9"],"Time":["\u6642\u9593"],"Limit":["\u5236\u9650"],"No data available in table":["\u30c6\u30fc\u30d6\u30eb\u306b\u30c7\u30fc\u30bf\u304c\u3042\u308a\u307e\u305b\u3093"],"Showing _START_ to _END_ of _TOTAL_ entries":[" _TOTAL_ \u4ef6\u4e2d _START_ \u304b\u3089 _END_ \u307e\u3067\u8868\u793a"],"Showing 0 to 0 of 0 entries":[" 0 \u4ef6\u4e2d 0 \u304b\u3089 0 \u307e\u3067\u8868\u793a"],"(filtered from _MAX_ total entries)":["\uff08\u5168 _MAX_ \u4ef6\u3088\u308a\u62bd\u51fa\uff09"],"Show _MENU_ entries":["_MENU_ \u4ef6\u8868\u793a"],"Loading...":["\u8aad\u307f\u8fbc\u307f\u4e2d..."],"Processing...":["\u51e6\u7406\u4e2d..."],"Search":["\u691c\u7d22"],"No matching records found":["\u4e00\u81f4\u3059\u308b\u30ec\u30b3\u30fc\u30c9\u304c\u3042\u308a\u307e\u305b\u3093"],"First":["\u5148\u982d"],"Previous":["\u524d"],"Next":["\u6b21"],"Last":["\u6700\u7d42"],"All":["\u3059\u3079\u3066\u306e"],"Vouchers":["\u5238"],"Voucher menu":["\u30d0\u30a6\u30c1\u30e3\u30fc\u30e1\u30cb\u30e5\u30fc"],"Overview":["\u6982\u8981"],"Create vouchers":["\u4f1d\u7968\u306e\u767b\u9332"],"Guests":["\u30d0\u30ea\u30a2\u30d5\u30ea\u30fc"],"Activated vouchers":["\u30a2\u30af\u30c6\u30a3\u30d6\u30d0\u30a6\u30c1\u30e3\u30fc"],"Guests online":["\u30b2\u30b9\u30c8\u30aa\u30f3\u30e9\u30a4\u30f3"],"Guest WLANs":["\u30b2\u30b9\u30c8 wlan"],"Admin":["\u7ba1\u7406"],"Admin menu":["\u7ba1\u7406\u30e1\u30cb\u30e5\u30fc"],"Wireless user":["\u30ef\u30a4\u30e4\u30ec\u30b9\u30e6\u30fc\u30b6\u30fc"],"Other wireless networks":["\u305d\u306e\u4ed6\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af"],"User management":["\u30e6\u30fc\u30b6\u30fc\u7ba1\u7406"],"Translation":["\u7ffb\u8a33"],"Translation Tools":["\u7ffb\u8a33\u30c4\u30fc\u30eb"],"Languages":["\u8a00\u8a9e"],"Translations":["\u7ffb\u8a33"],"Logout":["\u30ed\u30b0\u30a2\u30a6\u30c8"],"About":["\u306b\u95a2\u3057\u3066\u306f"],"Themes":["\u30c6\u30fc\u30de"],"Number of vouchers":["\u30d0\u30a6\u30c1\u30e3\u30fc\u306e\u6570"],"Validity":["\u6709\u52b9"],"Comment":["\u30b3\u30e1\u30f3\u30c8"],"Create":["\u4f5c\u6210"],"Language Management":["\u8a00\u8a9e\u7ba1\u7406"],"You can define here new languages for the HotSpot Manager.":["\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u306b\u306f\u3001\u3053\u3053\u3067\u65b0\u3057\u3044\u8a00\u8a9e\u3092\u5b9a\u7fa9\u3067\u304d\u307e\u3059\u3002"],"Add language":["\u8a00\u8a9e\u306e\u8ffd\u52a0"],"Reload Now":["\u4eca\u3059\u3050\u30ea\u30ed\u30fc\u30c9"],"Language ID":["\u8a00\u8a9e ID"],"Name in menu":["\u30e1\u30cb\u30e5\u30fc\u306e\u540d\u524d"],"Browser language":["\u30d6\u30e9\u30a6\u30b6\u8a00\u8a9e"],"Action":["\u30a2\u30af\u30b7\u30e7\u30f3"],"Delete language":["\u8a00\u8a9e\u306e\u524a\u9664"],"Warning, do you really want to delete this translation?":["\u8b66\u544a, \u3042\u306a\u305f\u306f\u672c\u5f53\u306b\u3053\u306e\u7ffb\u8a33\u3092\u524a\u9664\u3057\u305f\u3044\u3067\u3059\u304b?"],"Cancel":["\u30ad\u30e3\u30f3\u30bb\u30eb"],"List of online clients":["\u30aa\u30f3\u30e9\u30a4\u30f3\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u306e\u4e00\u89a7"],"Displays all currently active devices or users on the network.":["\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u4e0a\u306e\u73fe\u5728\u30a2\u30af\u30c6\u30a3\u30d6\u306a\u3059\u3079\u3066\u306e\u30c7\u30d0\u30a4\u30b9\u307e\u305f\u306f\u30e6\u30fc\u30b6\u30fc\u3092\u8868\u793a\u3057\u307e\u3059\u3002"],"List of guests":["\u30b2\u30b9\u30c8\u306e\u30ea\u30b9\u30c8"],"All guests who currently have a valid voucher on the network will be shown here.":["\u73fe\u5728\u3001\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u4e0a\u3067\u6709\u52b9\u306a\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u304a\u6301\u3061\u306e\u304a\u5ba2\u69d8\u306f\u3001\u3053\u3053\u306b\u8868\u793a\u3055\u308c\u307e\u3059\u3002"],"Show expired vouchers":["\u671f\u9650\u5207\u308c\u306e\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u8868\u793a"],"Voucher comment":["\u30d0\u30a6\u30c1\u30e3\u30fc\u30b3\u30e1\u30f3\u30c8"],"Hostname":["\u30db\u30b9\u30c8"],"Bandwidth":["\u5e2f\u57df"],"Idle":["\u30a2\u30a4\u30c9\u30eb"],"Data Traffic":["\u30c7\u30fc\u30bf\u30c8\u30e9\u30d5\u30a3\u30c3\u30af"],"Valid until":["\u307e\u3067\u6709\u52b9"],"No hostname":["\u30db\u30b9\u30c8\u540d\u306a\u3057"],"Limits":["\u5236\u9650"],"Client information":["\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u60c5\u5831"],"IP address":["IP \u30a2\u30c9\u30ec\u30b9"],"MAC address":["MAC \u30a2\u30c9\u30ec\u30b9"],"Data Sent":["\u9001\u4fe1\u3055\u308c\u308b\u30c7\u30fc\u30bf"],"Data Received":["\u53d7\u4fe1\u3057\u305f\u30c7\u30fc\u30bf"],"Data Total":["\u30c7\u30fc\u30bf\u5408\u8a08"],"Wireless information":["\u30ef\u30a4\u30e4\u30ec\u30b9\u60c5\u5831"],"Channel":["\u30c1\u30e3\u30cd\u30eb"],"Radio":["\u30e9\u30b8\u30aa"],"Roaming":["\u30ed\u30fc\u30df\u30f3\u30b0"],"Discard voucher":["\u4f1d\u7968\u306e\u7834\u68c4"],"Enable user":["\u30e6\u30fc\u30b6\u30fc\u306e\u6709\u52b9\u5316"],"Block user":["\u30e6\u30fc\u30b6\u30fc\u306e\u30d6\u30ed\u30c3\u30af"],"Reset user device":["\u30e6\u30fc\u30b6\u30fc\u30c7\u30d0\u30a4\u30b9\u306e\u30ea\u30bb\u30c3\u30c8"],"Wireless networks nearby":["\u8fd1\u304f\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af"],"Here, wireless networks are displayed, which according to MAC address also have vouchers.":["\u3053\u3053\u3067\u306f\u3001\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u306f\u3001MAC \u30a2\u30c9\u30ec\u30b9\u306b\u3082\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u6301\u3063\u3066\u3044\u308b\u306b\u5fdc\u3058\u3066\u8868\u793a\u3055\u308c\u307e\u3059\u3002"],"Security":["\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3"],"Last Seen":["\u6700\u5f8c\u306b\u898b\u305f"],"Report time":["\u30ec\u30dd\u30fc\u30c8\u6642\u9593"],"Age":["\u5e74\u9f62"],"User list":["\u30e6\u30fc\u30b6\u30fc\u30ea\u30b9\u30c8"],"List of all users connected to our wireless network.":["\u79c1\u305f\u3061\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u306b\u63a5\u7d9a\u3055\u308c\u3066\u3044\u308b\u3059\u3079\u3066\u306e\u30e6\u30fc\u30b6\u30fc\u306e\u30ea\u30b9\u30c8\u3002"],"First Seen":["\u6700\u521d\u306b\u898b\u305f"],"Connection":["\u63a5\u7d9a"],"Available vouchers":["\u5229\u7528\u53ef\u80fd\u306a\u30d0\u30a6\u30c1\u30e3\u30fc"],"Overview of all vouchers that have not been activated at the moment.":["\u73fe\u6642\u70b9\u3067\u6709\u52b9\u5316\u3055\u308c\u3066\u3044\u306a\u3044\u3059\u3079\u3066\u306e\u4f1d\u7968\u306e\u6982\u8981\u3002"],"Print selection":["\u5370\u5237\u306e\u9078\u629e"],"Delete selection":["\u9078\u629e\u7bc4\u56f2\u306e\u524a\u9664"],"Created on":["\u306b\u4f5c\u6210\u3055\u308c"],"Working. Please wait.":["\u4f5c\u696d.\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u3002"],"If you want, you can help translate the entire HotSpot Manager into your native language.":["\u5fc5\u8981\u306b\u5fdc\u3058\u3066\u3001\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u5168\u4f53\u3092\u6bcd\u56fd\u8a9e\u306b\u7ffb\u8a33\u3059\u308b\u306e\u306b\u5f79\u7acb\u3061\u307e\u3059\u3002"],"Target language":["\u5bfe\u8c61\u8a00\u8a9e"],"References":["\u53c2\u7167"],"Source":["\u30bd\u30fc\u30b9"],"empty":["\u7a7a"],"Lets you create, modify, or delete the Hotspot Manager users.":["\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u306e\u30e6\u30fc\u30b6\u30fc\u3092\u4f5c\u6210\u3001\u5909\u66f4\u3001\u307e\u305f\u306f\u524a\u9664\u3067\u304d\u307e\u3059\u3002"],"New user":["\u65b0\u3057\u3044\u30e6\u30fc\u30b6\u30fc"],"Permissions":["\u30a2\u30af\u30bb\u30b9"],"Actions":["\u30a2\u30af\u30b7\u30e7\u30f3"],"Change password":["\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u5909\u66f4"],"Delete user":["\u30e6\u30fc\u30b6\u30fc\u306e\u524a\u9664"],"Are you sure you want to delete the user?":["\u30e6\u30fc\u30b6\u30fc\u3092\u524a\u9664\u3057\u3066\u3082\u3088\u308d\u3057\u3044\u3067\u3059\u304b?"],"Add user":["\u30e6\u30fc\u30b6\u30fc\u306e\u8ffd\u52a0"]}}}
+{
+    "domain": null,
+    "plural-forms": null,
+    "messages": {
+        "": {
+            "Username": [
+                "\u540d"
+            ],
+            "License": [
+                "\u30e9\u30a4\u30bb\u30f3\u30b9"
+            ],
+            "Code": [
+                "\u30b3\u30fc\u30c9"
+            ],
+            "Language": [
+                "\u8a00\u8a9e"
+            ],
+            "Browser": [
+                "\u30d6\u30e9\u30a6\u30b6\u30fc"
+            ],
+            "Sign In": [
+                "\u30b5\u30a4\u30f3\u30a4\u30f3"
+            ],
+            "Password": [
+                "\u30d1\u30b9\u30ef\u30fc\u30c9"
+            ],
+            "Please select the permission level.": [
+                "\u30a2\u30af\u30bb\u30b9\u8a31\u53ef\u30ec\u30d9\u30eb\u3092\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+            ],
+            "Usergroup": [
+                "\u30b0\u30eb\u30fc\u30d7"
+            ],
+            "Administrator": [
+                "\u7ba1\u7406"
+            ],
+            "Default": [
+                "\u65e2\u5b9a"
+            ],
+            "Disabled": [
+                "\u30d0\u30ea\u30a2\u30d5\u30ea\u30fc"
+            ],
+            "Confirm Password": [
+                "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u78ba\u8a8d"
+            ],
+            "Voucher prefix": [
+                "\u4f1d\u7968\u63a5\u982d\u8f9e"
+            ],
+            "Voucher headline": [
+                "\u30af\u30fc\u30dd\u30f3\u306e\u898b\u51fa\u3057"
+            ],
+            "1 year": [
+                "1\u5e74"
+            ],
+            "years": [
+                "\u5e74"
+            ],
+            "1 week": [
+                "1\u9031\u9593"
+            ],
+            "weeks": [
+                "\u9031\u9593"
+            ],
+            "1 day": [
+                "1\u65e5"
+            ],
+            "days": [
+                "\u65e5"
+            ],
+            "1 hour": [
+                "1\u6642\u9593"
+            ],
+            "hours": [
+                "\u6642\u9593"
+            ],
+            "1 minute": [
+                "1\u5206"
+            ],
+            "minutes": [
+                "\u5206"
+            ],
+            "1 second": [
+                "1\u79d2"
+            ],
+            "seconds": [
+                "\u79d2"
+            ],
+            "Download": [
+                "\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9"
+            ],
+            "Upload": [
+                "\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9"
+            ],
+            "Time": [
+                "\u6642\u9593"
+            ],
+            "Limit": [
+                "\u5236\u9650"
+            ],
+            "No data available in table": [
+                "\u30c6\u30fc\u30d6\u30eb\u306b\u30c7\u30fc\u30bf\u304c\u3042\u308a\u307e\u305b\u3093"
+            ],
+            "Showing _START_ to _END_ of _TOTAL_ entries": [
+                " _TOTAL_ \u4ef6\u4e2d _START_ \u304b\u3089 _END_ \u307e\u3067\u8868\u793a"
+            ],
+            "Showing 0 to 0 of 0 entries": [
+                " 0 \u4ef6\u4e2d 0 \u304b\u3089 0 \u307e\u3067\u8868\u793a"
+            ],
+            "(filtered from _MAX_ total entries)": [
+                "\uff08\u5168 _MAX_ \u4ef6\u3088\u308a\u62bd\u51fa\uff09"
+            ],
+            "Show _MENU_ entries": [
+                "_MENU_ \u4ef6\u8868\u793a"
+            ],
+            "Loading...": [
+                "\u8aad\u307f\u8fbc\u307f\u4e2d..."
+            ],
+            "Processing...": [
+                "\u51e6\u7406\u4e2d..."
+            ],
+            "Search": [
+                "\u691c\u7d22"
+            ],
+            "No matching records found": [
+                "\u4e00\u81f4\u3059\u308b\u30ec\u30b3\u30fc\u30c9\u304c\u3042\u308a\u307e\u305b\u3093"
+            ],
+            "First": [
+                "\u5148\u982d"
+            ],
+            "Previous": [
+                "\u524d"
+            ],
+            "Next": [
+                "\u6b21"
+            ],
+            "Last": [
+                "\u6700\u7d42"
+            ],
+            "All": [
+                "\u3059\u3079\u3066\u306e"
+            ],
+            "Vouchers": [
+                "\u5238"
+            ],
+            "Voucher menu": [
+                "\u30d0\u30a6\u30c1\u30e3\u30fc\u30e1\u30cb\u30e5\u30fc"
+            ],
+            "Overview": [
+                "\u6982\u8981"
+            ],
+            "Create vouchers": [
+                "\u4f1d\u7968\u306e\u767b\u9332"
+            ],
+            "Guests": [
+                "\u30d0\u30ea\u30a2\u30d5\u30ea\u30fc"
+            ],
+            "Activated vouchers": [
+                "\u30a2\u30af\u30c6\u30a3\u30d6\u30d0\u30a6\u30c1\u30e3\u30fc"
+            ],
+            "Guests online": [
+                "\u30b2\u30b9\u30c8\u30aa\u30f3\u30e9\u30a4\u30f3"
+            ],
+            "Guest WLANs": [
+                "\u30b2\u30b9\u30c8 wlan"
+            ],
+            "Admin": [
+                "\u7ba1\u7406"
+            ],
+            "Admin menu": [
+                "\u7ba1\u7406\u30e1\u30cb\u30e5\u30fc"
+            ],
+            "Wireless user": [
+                "\u30ef\u30a4\u30e4\u30ec\u30b9\u30e6\u30fc\u30b6\u30fc"
+            ],
+            "Other wireless networks": [
+                "\u305d\u306e\u4ed6\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af"
+            ],
+            "User management": [
+                "\u30e6\u30fc\u30b6\u30fc\u7ba1\u7406"
+            ],
+            "Translation": [
+                "\u7ffb\u8a33"
+            ],
+            "Translation Tools": [
+                "\u7ffb\u8a33\u30c4\u30fc\u30eb"
+            ],
+            "Languages": [
+                "\u8a00\u8a9e"
+            ],
+            "Translations": [
+                "\u7ffb\u8a33"
+            ],
+            "Logout": [
+                "\u30ed\u30b0\u30a2\u30a6\u30c8"
+            ],
+            "About": [
+                "\u306b\u95a2\u3057\u3066\u306f"
+            ],
+            "Themes": [
+                "\u30c6\u30fc\u30de"
+            ],
+            "Number of vouchers": [
+                "\u30d0\u30a6\u30c1\u30e3\u30fc\u306e\u6570"
+            ],
+            "Validity": [
+                "\u6709\u52b9"
+            ],
+            "Comment": [
+                "\u30b3\u30e1\u30f3\u30c8"
+            ],
+            "Create": [
+                "\u4f5c\u6210"
+            ],
+            "Language Management": [
+                "\u8a00\u8a9e\u7ba1\u7406"
+            ],
+            "You can define here new languages for the HotSpot Manager.": [
+                "\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u306b\u306f\u3001\u3053\u3053\u3067\u65b0\u3057\u3044\u8a00\u8a9e\u3092\u5b9a\u7fa9\u3067\u304d\u307e\u3059\u3002"
+            ],
+            "Add language": [
+                "\u8a00\u8a9e\u306e\u8ffd\u52a0"
+            ],
+            "Reload Now": [
+                "\u4eca\u3059\u3050\u30ea\u30ed\u30fc\u30c9"
+            ],
+            "Language ID": [
+                "\u8a00\u8a9e ID"
+            ],
+            "Name in menu": [
+                "\u30e1\u30cb\u30e5\u30fc\u306e\u540d\u524d"
+            ],
+            "Browser language": [
+                "\u30d6\u30e9\u30a6\u30b6\u8a00\u8a9e"
+            ],
+            "Action": [
+                "\u30a2\u30af\u30b7\u30e7\u30f3"
+            ],
+            "Delete language": [
+                "\u8a00\u8a9e\u306e\u524a\u9664"
+            ],
+            "Warning, do you really want to delete this translation?": [
+                "\u8b66\u544a, \u3042\u306a\u305f\u306f\u672c\u5f53\u306b\u3053\u306e\u7ffb\u8a33\u3092\u524a\u9664\u3057\u305f\u3044\u3067\u3059\u304b?"
+            ],
+            "Cancel": [
+                "\u30ad\u30e3\u30f3\u30bb\u30eb"
+            ],
+            "List of online clients": [
+                "\u30aa\u30f3\u30e9\u30a4\u30f3\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u306e\u4e00\u89a7"
+            ],
+            "Displays all currently active devices or users on the network.": [
+                "\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u4e0a\u306e\u73fe\u5728\u30a2\u30af\u30c6\u30a3\u30d6\u306a\u3059\u3079\u3066\u306e\u30c7\u30d0\u30a4\u30b9\u307e\u305f\u306f\u30e6\u30fc\u30b6\u30fc\u3092\u8868\u793a\u3057\u307e\u3059\u3002"
+            ],
+            "List of guests": [
+                "\u30b2\u30b9\u30c8\u306e\u30ea\u30b9\u30c8"
+            ],
+            "All guests who currently have a valid voucher on the network will be shown here.": [
+                "\u73fe\u5728\u3001\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u4e0a\u3067\u6709\u52b9\u306a\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u304a\u6301\u3061\u306e\u304a\u5ba2\u69d8\u306f\u3001\u3053\u3053\u306b\u8868\u793a\u3055\u308c\u307e\u3059\u3002"
+            ],
+            "Show expired vouchers": [
+                "\u671f\u9650\u5207\u308c\u306e\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u8868\u793a"
+            ],
+            "Voucher comment": [
+                "\u30d0\u30a6\u30c1\u30e3\u30fc\u30b3\u30e1\u30f3\u30c8"
+            ],
+            "Hostname": [
+                "\u30db\u30b9\u30c8"
+            ],
+            "Bandwidth": [
+                "\u5e2f\u57df"
+            ],
+            "Idle": [
+                "\u30a2\u30a4\u30c9\u30eb"
+            ],
+            "Data Traffic": [
+                "\u30c7\u30fc\u30bf\u30c8\u30e9\u30d5\u30a3\u30c3\u30af"
+            ],
+            "Valid until": [
+                "\u307e\u3067\u6709\u52b9"
+            ],
+            "No hostname": [
+                "\u30db\u30b9\u30c8\u540d\u306a\u3057"
+            ],
+            "Limits": [
+                "\u5236\u9650"
+            ],
+            "Client information": [
+                "\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u60c5\u5831"
+            ],
+            "IP address": [
+                "IP \u30a2\u30c9\u30ec\u30b9"
+            ],
+            "MAC address": [
+                "MAC \u30a2\u30c9\u30ec\u30b9"
+            ],
+            "Data Sent": [
+                "\u9001\u4fe1\u3055\u308c\u308b\u30c7\u30fc\u30bf"
+            ],
+            "Data Received": [
+                "\u53d7\u4fe1\u3057\u305f\u30c7\u30fc\u30bf"
+            ],
+            "Data Total": [
+                "\u30c7\u30fc\u30bf\u5408\u8a08"
+            ],
+            "Wireless information": [
+                "\u30ef\u30a4\u30e4\u30ec\u30b9\u60c5\u5831"
+            ],
+            "Channel": [
+                "\u30c1\u30e3\u30cd\u30eb"
+            ],
+            "Radio": [
+                "\u30e9\u30b8\u30aa"
+            ],
+            "Roaming": [
+                "\u30ed\u30fc\u30df\u30f3\u30b0"
+            ],
+            "Discard voucher": [
+                "\u4f1d\u7968\u306e\u7834\u68c4"
+            ],
+            "Enable user": [
+                "\u30e6\u30fc\u30b6\u30fc\u306e\u6709\u52b9\u5316"
+            ],
+            "Block user": [
+                "\u30e6\u30fc\u30b6\u30fc\u306e\u30d6\u30ed\u30c3\u30af"
+            ],
+            "Reset user device": [
+                "\u30e6\u30fc\u30b6\u30fc\u30c7\u30d0\u30a4\u30b9\u306e\u30ea\u30bb\u30c3\u30c8"
+            ],
+            "Wireless networks nearby": [
+                "\u8fd1\u304f\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af"
+            ],
+            "Here, wireless networks are displayed, which according to MAC address also have vouchers.": [
+                "\u3053\u3053\u3067\u306f\u3001\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u306f\u3001MAC \u30a2\u30c9\u30ec\u30b9\u306b\u3082\u30d0\u30a6\u30c1\u30e3\u30fc\u3092\u6301\u3063\u3066\u3044\u308b\u306b\u5fdc\u3058\u3066\u8868\u793a\u3055\u308c\u307e\u3059\u3002"
+            ],
+            "Security": [
+                "\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3"
+            ],
+            "Last Seen": [
+                "\u6700\u5f8c\u306b\u898b\u305f"
+            ],
+            "Report time": [
+                "\u30ec\u30dd\u30fc\u30c8\u6642\u9593"
+            ],
+            "Age": [
+                "\u5e74\u9f62"
+            ],
+            "User list": [
+                "\u30e6\u30fc\u30b6\u30fc\u30ea\u30b9\u30c8"
+            ],
+            "List of all users connected to our wireless network.": [
+                "\u79c1\u305f\u3061\u306e\u30ef\u30a4\u30e4\u30ec\u30b9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u306b\u63a5\u7d9a\u3055\u308c\u3066\u3044\u308b\u3059\u3079\u3066\u306e\u30e6\u30fc\u30b6\u30fc\u306e\u30ea\u30b9\u30c8\u3002"
+            ],
+            "First Seen": [
+                "\u6700\u521d\u306b\u898b\u305f"
+            ],
+            "Connection": [
+                "\u63a5\u7d9a"
+            ],
+            "Available vouchers": [
+                "\u5229\u7528\u53ef\u80fd\u306a\u30d0\u30a6\u30c1\u30e3\u30fc"
+            ],
+            "Overview of all vouchers that have not been activated at the moment.": [
+                "\u73fe\u6642\u70b9\u3067\u6709\u52b9\u5316\u3055\u308c\u3066\u3044\u306a\u3044\u3059\u3079\u3066\u306e\u4f1d\u7968\u306e\u6982\u8981\u3002"
+            ],
+            "Print selection": [
+                "\u5370\u5237\u306e\u9078\u629e"
+            ],
+            "Delete selection": [
+                "\u9078\u629e\u7bc4\u56f2\u306e\u524a\u9664"
+            ],
+            "Created on": [
+                "\u306b\u4f5c\u6210\u3055\u308c"
+            ],
+            "Working. Please wait.": [
+                "\u4f5c\u696d.\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u3002"
+            ],
+            "If you want, you can help translate the entire HotSpot Manager into your native language.": [
+                "\u5fc5\u8981\u306b\u5fdc\u3058\u3066\u3001\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u5168\u4f53\u3092\u6bcd\u56fd\u8a9e\u306b\u7ffb\u8a33\u3059\u308b\u306e\u306b\u5f79\u7acb\u3061\u307e\u3059\u3002"
+            ],
+            "Target language": [
+                "\u5bfe\u8c61\u8a00\u8a9e"
+            ],
+            "References": [
+                "\u53c2\u7167"
+            ],
+            "Source": [
+                "\u30bd\u30fc\u30b9"
+            ],
+            "empty": [
+                "\u7a7a"
+            ],
+            "Lets you create, modify, or delete the Hotspot Manager users.": [
+                "\u30db\u30c3\u30c8\u30b9\u30dd\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u306e\u30e6\u30fc\u30b6\u30fc\u3092\u4f5c\u6210\u3001\u5909\u66f4\u3001\u307e\u305f\u306f\u524a\u9664\u3067\u304d\u307e\u3059\u3002"
+            ],
+            "New user": [
+                "\u65b0\u3057\u3044\u30e6\u30fc\u30b6\u30fc"
+            ],
+            "Permissions": [
+                "\u30a2\u30af\u30bb\u30b9"
+            ],
+            "Actions": [
+                "\u30a2\u30af\u30b7\u30e7\u30f3"
+            ],
+            "Change password": [
+                "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u5909\u66f4"
+            ],
+            "Delete user": [
+                "\u30e6\u30fc\u30b6\u30fc\u306e\u524a\u9664"
+            ],
+            "Are you sure you want to delete the user?": [
+                "\u30e6\u30fc\u30b6\u30fc\u3092\u524a\u9664\u3057\u3066\u3082\u3088\u308d\u3057\u3044\u3067\u3059\u304b?"
+            ],
+            "Add user": [
+                "\u30e6\u30fc\u30b6\u30fc\u306e\u8ffd\u52a0"
+            ],
+            "Please specify the number in the range of 1-500.": [
+                ""
+            ],
+            "Please specify the limit in the range of 1-1048576.": [
+                ""
+            ],
+            "Please specify a value of 1-10800.": [
+                ""
+            ]
+        }
+    }
+}

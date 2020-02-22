@@ -30,6 +30,9 @@ if (!defined('HOTSPOT')) { exit; }
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+  <!--  suppress alert dialog on errors -->
+  <script type="text/javascript">$.fn.dataTable.ext.errMode = 'throw';</script>
+  
   <!--  jquery dataTables -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css"/>
   <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
@@ -282,7 +285,7 @@ if (!defined('HOTSPOT')) { exit; }
 
   $("#about").click(function(){
     BootstrapDialog.show({
-      title:    'HotSpot Manager Version 0.4b (2017-08-27)',
+      title:    'HotSpot Manager Version 0.5.0.0 (2019-12-03)',
       message:  $('<div></div>').load('?get_form=about')
     });
   });
