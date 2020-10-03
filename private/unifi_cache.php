@@ -63,8 +63,8 @@ function unifi_read($command, $p1 = "", $p2 = "", $p3 = "") {
 
   // this is a error fatal
   if (empty($data)) {
-    log_msg("Fatal Error: $command has no resonse!");
-    HeaderDie("HTTP/1.0 404 Unifi not Found :/");
+    log_msg("Error: $command has no records!");
+    return json_encode("");
   }
 
   return $data;
