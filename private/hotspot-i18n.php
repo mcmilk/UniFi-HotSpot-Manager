@@ -96,7 +96,7 @@ function i18n_init() {
   $languages = json_decode(file_get_contents($file));
 
   // only enable this, when we do new mass translating
-  if ($generate_json_i18n == true) {
+  if (isset($generate_json_i18n) && $generate_json_i18n == true) {
     i18n_update_json();
   }
 
