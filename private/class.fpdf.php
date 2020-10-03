@@ -1,23 +1,13 @@
 <?php
+/*******************************************************************************
+* FPDF                                                                         *
+*                                                                              *
+* Version: 1.82                                                                *
+* Date:    2019-12-07                                                          *
+* Author:  Olivier PLATHEY                                                     *
+*******************************************************************************/
 
-/***************************************************************************************
- * FPDF                                                                                *
- *                                                                                     *
- * Version: 1.81                                                                       *
- * Date:    2015-12-20                                                                 *
- * Author:  Olivier PLATHEY                                                            *
- *                                                                                     *
- * Permission is hereby granted, free of charge, to any person obtaining a copy        *
- * of this software to use, copy, modify, distribute, sublicense, and/or sell          *
- * copies of the software, and to permit persons to whom the software is furnished     *
- * to do so.                                                                           *
- *                                                                                     *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. *
- *                                                                                     *
- * Homepage: http://fpdf.org/                                                          *
- ***************************************************************************************/
-
-define('FPDF_VERSION','1.81');
+define('FPDF_VERSION','1.82');
 
 class FPDF
 {
@@ -1049,9 +1039,6 @@ protected function _dochecks()
 	// Check mbstring overloading
 	if(ini_get('mbstring.func_overload') & 2)
 		$this->Error('mbstring overloading must be disabled');
-	// Ensure runtime magic quotes are disabled
-	if(get_magic_quotes_runtime())
-		@set_magic_quotes_runtime(0);
 }
 
 protected function _checkoutput()
