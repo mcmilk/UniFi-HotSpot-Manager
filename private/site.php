@@ -21,6 +21,7 @@ if (!defined('HOTSPOT')) { exit; }
   <meta name="description" content="A HotSpot Management solution for Ubiquiti Hardware ;)">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Tino Reichardt">
+  <meta name="google" content="notranslate">
 
   <title>UniFi HotSpot Manager</title>
 
